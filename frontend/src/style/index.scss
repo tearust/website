@@ -1,0 +1,92 @@
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  color: #797979;
+  background: #f1f2f7;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size:13px;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+ul li {
+  list-style: none;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+::selection {
+
+  background: #FF6C60;
+  color: #fff;
+}
+::-moz-selection {
+  background: #FF6C60;
+  color: #fff;
+}
+
+/** common css **/
+.c-tree-box{
+  .el-tree{
+    padding: 24px 15px;
+
+    .el-tree-node__expand-icon.is-leaf{
+      color: #666;
+      font-size: 15px;
+    }
+  }
+
+  .el-tree-node{
+    &.is-current{
+      &>.el-tree-node__content>.el-tree-node__label{
+        color: #FF6C60;
+      }
+    }
+  }
+}
+
+.c-no-data{
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background: #eee;
+}
+.c-main{
+  margin: 0;
+  &>section{
+    
+    min-height: 200px;
+  }
+
+  .bg-white{
+    background: #fff;
+  }
+
+  .c-head{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eff2f7;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+}
+
+.c-fullscreen-loading{
+  .el-icon-loading{
+    font-size: 28px;
+    color: #fff;
+  }
+  .el-loading-text{
+    font-size: 15px;
+    color: #fff;
+  }
+}
