@@ -11,3 +11,10 @@ services:
       - SERVER_PORT=3001
     command: "node index.js"
     
+  frontend:
+    image: tearust/website-frontend:0.1
+    container_name: frontend
+    ports:
+      - 80:80
+        
+    
