@@ -1,7 +1,7 @@
-'use strict';
 
 import PubSubJS from 'pubsub-js';
-// declare function about cookie
+import _ from 'lodash';
+
 const F = {
   setCookie(key, value, expireDays){
     const d = new Date();
@@ -35,7 +35,17 @@ const F = {
   getJQuery: ()=>{
     return window.$;
   }
-
 };
 
+const storage = {
+  set(key, value){
+    localStorage.setItem(key, value);
+  },
+  get(key){
+    const val = localStorage.getItem(key);
+    return val || null;
+  }
+};
+
+F.storage = storage;
 export default F;

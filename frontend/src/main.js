@@ -2,27 +2,32 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-// import VueI18n from 'vue-i18n';
+import VueI18n from 'vue-i18n';
 import ElementUI, {Message} from 'element-ui';
+import util from './util';
 
 import 'element-ui/lib/theme-chalk/index.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/index.scss';
 
-// Vue.use(VueI18n)
+Vue.use(VueI18n)
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
+const lang = util.storage.get('lang') || 'en';
+const i18n = new VueI18n({
+  locale: lang,
+  messages : {
+    'zh': require('@/assets/i18n/zh.json'),
+    'en': require('@/assets/i18n/en.json'),
+  }
+})
 
-// const i18n = new VueI18n({
-//   locale: 'en',
-//   messages : language
-// })
-
-// window.changeLanguage = (lang='en')=>{
-//   i18n.locale = lang;
-// }
+window.changeLanguage = (lang='en')=>{
+  i18n.locale = lang;
+  util.storage.set('lang', lang);
+}
 
 export const vue = new Vue({
   data(){
@@ -32,7 +37,7 @@ export const vue = new Vue({
   },
   router,
   store,
-  // i18n,
+  i18n,
   render: h => h(App),
   methods: {
     

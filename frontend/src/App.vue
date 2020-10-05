@@ -1,8 +1,14 @@
 <template>
 
 <section id="app">
-  <h1>sdfsfd</h1>
+  <PageHeader />
+  <keep-alive>
+    <router-view v-if="$route.meta.keepAlive"></router-view>
+  </keep-alive>
+  <router-view v-if="!$route.meta.keepAlive"></router-view>
 
+  <el-divider></el-divider>
+  <PageFooter />
 </section>
 
 </template>
@@ -10,12 +16,18 @@
 <script>
 import request from './request';
 import util from './util';
+import PageHeader from './components/PageHeader';
+import PageFooter from './components/PageFooter';
 export default {
   data(){
     return {
      
     };
   },
+  components: {
+    PageHeader,
+    PageFooter,
+  }
   
 };
 </script>

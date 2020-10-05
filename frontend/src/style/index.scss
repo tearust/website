@@ -4,7 +4,7 @@
 
 body {
   color: #797979;
-  background: #f1f2f7;
+  background: #fff;
   font-family: 'Open Sans', sans-serif;
   padding: 0px !important;
   margin: 0px !important;
@@ -22,35 +22,17 @@ a, a:hover, a:focus {
   text-decoration: none;
   outline: none;
 }
-::selection {
+// ::selection {
 
-  background: #FF6C60;
-  color: #fff;
-}
-::-moz-selection {
-  background: #FF6C60;
-  color: #fff;
-}
+//   background: #FF6C60;
+//   color: #fff;
+// }
+// ::-moz-selection {
+//   background: #FF6C60;
+//   color: #fff;
+// }
 
 /** common css **/
-.c-tree-box{
-  .el-tree{
-    padding: 24px 15px;
-
-    .el-tree-node__expand-icon.is-leaf{
-      color: #666;
-      font-size: 15px;
-    }
-  }
-
-  .el-tree-node{
-    &.is-current{
-      &>.el-tree-node__content>.el-tree-node__label{
-        color: #FF6C60;
-      }
-    }
-  }
-}
 
 .c-no-data{
   width: 100%;
@@ -89,4 +71,15 @@ a, a:hover, a:focus {
     font-size: 15px;
     color: #fff;
   }
+}
+
+/* common */
+.c-m{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.c-page{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 24px 0 40px;
 }

@@ -30,7 +30,7 @@ _axios.interceptors.response.use((res)=>{
   return Promise.reject(error);
 });
 
-// declare each request function
+
 const F = {
   
   

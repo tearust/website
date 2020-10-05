@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
+import Home from '../views/Home';
+
 Vue.use(Router);
 
 //push 
@@ -19,14 +21,11 @@ Router.prototype.replace = function replace (to) {
 // config route
 export default new Router({
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'landpage',
-    //   component: landpage,
-    //   meta : {
-        
-    //   }
-    // },
+    {
+      path: '/',
+      name: 'home',
+      component: Home
+    },
     
   ]
 })
