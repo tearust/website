@@ -32,7 +32,9 @@ _axios.interceptors.response.use((res)=>{
 
 
 const F = {
-  
+  get_docker_compose(){
+    return _axios.get('/tea/get_docker_compose');
+  }
   
 };
 

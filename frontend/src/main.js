@@ -6,11 +6,15 @@ import VueI18n from 'vue-i18n';
 import ElementUI, {Message} from 'element-ui';
 import util from './util';
 
+import VueCodemirror from 'vue-codemirror';
+
+
 import 'element-ui/lib/theme-chalk/index.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/index.scss';
 
+Vue.use(VueCodemirror);
 Vue.use(VueI18n)
 Vue.use(ElementUI);
 Vue.config.productionTip = false;

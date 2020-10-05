@@ -1,6 +1,7 @@
 
 import PubSubJS from 'pubsub-js';
 import _ from 'lodash';
+import * as uuid from 'uuid';
 
 const F = {
   setCookie(key, value, expireDays){
@@ -34,6 +35,10 @@ const F = {
 
   getJQuery: ()=>{
     return window.$;
+  },
+
+  uuid(){
+    return uuid.v4();
   }
 };
 
