@@ -2,7 +2,7 @@ version: "3.1"
 services:
 
   backend:
-    image: tearust/website-backend:0.1
+    image: tearust/website-backend:0.2
     container_name: backend
     ports:
       - 3001:3001
@@ -12,7 +12,7 @@ services:
     command: "node index.js"
     
   frontend:
-    image: tearust/website-frontend:0.1
+    image: tearust/website-frontend:0.2
     container_name: frontend
     ports:
       - 80:80

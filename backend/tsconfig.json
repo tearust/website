@@ -26,12 +26,10 @@
   },
   "include": [
     "index.ts",
-    "src/**/*.ts"
+    "src/**/*"
   ],
   "exclude": [
     "src/**/*.spec.ts",
-    "src/fake/*.json",
-    "src/assets/**",
     "node_modules"
   ]
 }

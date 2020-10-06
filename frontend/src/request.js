@@ -2,7 +2,8 @@ import axios from 'axios';
 import _ from 'lodash';
 import util from './util';
 
-const BASE_URL = 'http://127.0.0.1:3001/api';
+// const BASE_URL = 'http://127.0.0.1:3001/api';
+const BASE_URL = 'http://81.70.96.136:3001/api';
 
 //set request base url
 const _axios = axios.create({
