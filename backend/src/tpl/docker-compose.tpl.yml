@@ -15,21 +15,21 @@ services:
       - ".ipfs:/data/ipfs"
     command: ["daemon", "--migrate", "--enable-pubsub-experiment"]
     
-  layer1:
-    image: tearust/tea-layer1:0.2
-    container_name: layer1
-    ports:
-      - 9944:9944
-      - 30333:30333
-    volumes:
-      - .layer1:/root/.local
-    command: bash -c "tea-layer1 --chain dev --ws-external -lwarn --rpc-external --rpc-cors all --bootnodes /ip4/159.203.101.15/tcp/30333/p2p/QmRs8muPr7dgHrXdf7VRnQiMZ2bR8JBwkp7piSs96QeEAR"
+  # layer1:
+  #   image: tearust/tea-layer1:0.2
+  #   container_name: layer1
+  #   ports:
+  #     - 9944:9944
+  #     - 30333:30333
+  #   volumes:
+  #     - .layer1:/root/.local
+  #   command: bash -c "tea-layer1 --chain dev --ws-external -lwarn --rpc-external --rpc-cors all --bootnodes /ip4/159.203.101.15/tcp/30333/p2p/QmRs8muPr7dgHrXdf7VRnQiMZ2bR8JBwkp7piSs96QeEAR"
 
   facade:
     environment:
       - NATS_URL=nats-server:4222
-      - FACADE_WSURL=ws://layer1:9944
-      - FACADE_ACCOUNT=Dave
+      - FACADE_WSURL=ws://81.70.96.136:9944
+      - FACADE_ACCOUNT_URI=
     image: tearust/layer1-facade:1.4
     container_name: "facade"
 
