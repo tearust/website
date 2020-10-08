@@ -1,6 +1,8 @@
 <template>
 <div class="c-page">
-  <section v-if="html" v-html="html"></section>
+
+  <section class="t-md" v-if="html" v-html="html"></section>
+  
 </div>  
 </template>
 <script>
@@ -25,3 +27,16 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.t-md{
+
+  pre{
+    padding: 12px 15px;
+    background: #f3f3f3;
+    code{
+      
+    }
+  }
+}
+
+</style>
