@@ -3,7 +3,7 @@ import {_} from '../utility';
 import * as fs from 'fs';
 
 const DOC_DIR = process.cwd()+'/../../tea-docs';
-const IGNORE_FILES = ['.git', '.gitignore', 'README.md'];
+const IGNORE_FILES = ['.git', '.github', '.gitignore', 'README.md'];
 
 const doc = {
   replaceName(name){
