@@ -12,7 +12,8 @@
   <el-menu-item @click="changeLang()">{{$t('nav.001')}}</el-menu-item>
 
   <el-menu-item style="display:none;" index="1">{{$t('nav.test')}}</el-menu-item>
-  <el-menu-item index="demo">{{$t('nav.002')}}</el-menu-item>
+  <el-menu-item index="/demo">{{$t('nav.002')}}</el-menu-item>
+  <el-menu-item index="/doc_list">{{$t('nav.003')}}</el-menu-item>
 
 </el-menu>
 

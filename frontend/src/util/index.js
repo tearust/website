@@ -2,6 +2,7 @@
 import PubSubJS from 'pubsub-js';
 import _ from 'lodash';
 import * as uuid from 'uuid';
+import * as marked from 'marked';
 
 const F = {
   setCookie(key, value, expireDays){
@@ -39,6 +40,10 @@ const F = {
 
   uuid(){
     return uuid.v4();
+  },
+  mdToHtml(md_content){
+    marked.setOptions({});
+    return marked(md_content);
   }
 };
 

@@ -43,7 +43,7 @@ services:
       - IPFS_SERVER=ipfs
       - IPFS_PORT=5001
       - IPFS_DAIL=false
-    image: tearust/adapter:0.5
+    image: tearust/adapter:0.6
     container_name: "adapter"
     ports:
       - 8000:8000

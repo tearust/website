@@ -3,6 +3,8 @@ import Router from 'vue-router';
 
 import Home from '../views/Home';
 import DockerComposeDemo from '../views/DockerComposeDemo';
+import DocList from '../views/DocList';
+import DocContent from '../views/DocContent';
 
 Vue.use(Router);
 
@@ -31,6 +33,16 @@ export default new Router({
       path: '/demo',
       name: 'demo',
       component: DockerComposeDemo
+    },
+    {
+      path: '/doc_list',
+      name: 'doc_list',
+      component: DocList
+    },
+    {
+      path: '/doc_content/:doc_path',
+      name: 'doc_content',
+      component: DocContent
     }
     
   ]

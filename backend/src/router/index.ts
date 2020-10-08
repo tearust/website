@@ -6,6 +6,7 @@ import Base from './Base';
 import ping from './ping';
 import user from './user';
 import tea from './tea';
+import doc from './doc';
 
 
 
@@ -41,6 +42,7 @@ router.use('/ping', Base.setRouter([{
 }]));
 router.use('/user', user);
 router.use('/tea', tea);
+router.use('/doc', doc);
 
 
 router.use((req, res) => {
