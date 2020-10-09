@@ -45,6 +45,9 @@ const F = {
     return _axios.post('/doc/get_content', {
       path: encodeURIComponent(path)
     });
+  },
+  get_layer1_info(){
+    return _axios.get('/tea/layer1_info');
   }
   
 };

@@ -12,6 +12,13 @@
   <el-menu-item @click="changeLang()">{{$t('nav.001')}}</el-menu-item>
 
   <el-menu-item style="display:none;" index="1">{{$t('nav.test')}}</el-menu-item>
+  <el-submenu index="2">
+
+    <template slot="title">{{$t('nav.004')}}</template>
+    <el-menu-item index="/tools/layer1_hydrant">Layer1充值</el-menu-item>
+    
+    
+  </el-submenu>
   <el-menu-item index="/demo">{{$t('nav.002')}}</el-menu-item>
   <el-menu-item index="/doc_list">{{$t('nav.003')}}</el-menu-item>
 
@@ -59,6 +66,9 @@
   
 }
 .el-menu--horizontal > .el-menu-item{
+  float: right;
+}
+.el-menu--horizontal > .el-submenu{
   float: right;
 }
 .el-menu.el-menu--horizontal{
