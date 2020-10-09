@@ -1,7 +1,9 @@
 <template>
 <div class="c-page">
-
-  <h4>Please input your layer1 address and system will transfer 1000 unit for test.</h4>
+  
+  <h4>Please input your Blockchain address for 1000 free tokens</h4>
+  <p> Address in Substrate SS58 Address format, such as 5ESEXd4RT43TBqWiPLQfaJj41iK5tWMFoLUBJgm39hJ7uSgz </p>
+  <p>Testing system will send your account 1000 units free of charge. These tokens are for test only, they have no real value and cannot be used in production chain.</p>
   <el-row>
     <el-col :span="15">
       <el-input v-model="address"></el-input>
@@ -48,7 +50,7 @@ export default {
         return false;
       }
       this.$root.loading(true);
-      await this.layer1.hydrant(this.address);
+      await this.layer1.faucet(this.address);
       
       await this.check_balance();
       this.$root.loading(false);

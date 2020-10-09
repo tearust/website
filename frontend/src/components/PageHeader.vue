@@ -15,7 +15,7 @@
   <el-submenu index="2">
 
     <template slot="title">{{$t('nav.004')}}</template>
-    <el-menu-item index="/tools/layer1_hydrant">Layer1充值</el-menu-item>
+    <el-menu-item index="/tools/layer1_faucet">Free test token faucet</el-menu-item>
     
     
   </el-submenu>

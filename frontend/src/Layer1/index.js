@@ -54,7 +54,7 @@ class Layer1 {
     return Math.floor(free*10000)/10000;
   }
 
-  async hydrant(target_address){
+  async faucet(target_address){
     const da = this.getDefaultAccount();
     const total = new BN((1000*this.asUnit()).toString(), 10);
     const transfer = this.api.tx.balances.transfer(target_address, total);

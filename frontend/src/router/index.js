@@ -5,7 +5,7 @@ import Home from '../views/Home';
 import DockerComposeDemo from '../views/DockerComposeDemo';
 import DocList from '../views/DocList';
 import DocContent from '../views/DocContent';
-import Layer1Hydrant from '../views/Layer1Hydrant';
+import Layer1Faucet from '../views/Layer1Faucet';
 
 Vue.use(Router);
 
@@ -46,9 +46,9 @@ export default new Router({
       component: DocContent
     },
     {
-      path: '/tools/layer1_hydrant',
-      name: 'layer1_hydrant',
-      component: Layer1Hydrant
+      path: '/tools/layer1_faucet',
+      name: 'layer1_faucet',
+      component: Layer1Faucet
     }
     
   ]
