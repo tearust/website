@@ -3,7 +3,13 @@
 
   <ul class="t-ul" v-if="list">
     <li v-for="(item, i) in list" :key="i">
-      <el-link type="primary" @click="goto_content(item)">{{item.name}}</el-link>
+      <el-link v-if="!item.children" type="primary" class="fc_3" @click="goto_content(item)">{{item.name}}</el-link>
+
+      <div class="t-div" v-if="item.children">
+        <span class="fc_4">{{item.name}}</span>
+
+        <a href="javascript:void(0)" v-for="(x, j) in item.children" :key="j" type="primary" class="fc_3 t-lk" @click="goto_content(x)">{{x.name}}</a>
+      </div>
     </li>
   </ul>
 
@@ -25,12 +31,7 @@ export default {
     const tmp_list = await request.get_doc_list();
     let list = [];
     _.each(tmp_list, (item)=>{
-      if(item.children){
-        list = _.concat(list, item.children);
-      }
-      else{
-        list.push(item);
-      }
+      list.push(item);
     })
     console.log(list);
     this.list = list;
@@ -58,6 +59,16 @@ export default {
     
     .el-link.el-link--primary{
       font-size: 24px;
+    }
+    .t-div{
+      span{
+        font-size: 24px;
+        display: table;
+      }
+      a.t-lk{
+        font-size: 24px;
+        margin-left: 40px;
+      }
     }
   }
 }

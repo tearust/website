@@ -42,7 +42,15 @@ const F = {
     return uuid.v4();
   },
   mdToHtml(md_content){
-    marked.setOptions({});
+    const renderer = new marked.Renderer();
+    renderer.link = function(href, title, text){
+      const link = marked.Renderer.prototype.link.apply(this, arguments);
+      return link.replace("<a","<a target='_blank'");
+    };
+
+    marked.setOptions({
+      renderer: renderer
+    });
     return marked(md_content);
   }
 };

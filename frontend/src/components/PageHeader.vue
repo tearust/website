@@ -2,12 +2,15 @@
 <div class="c-m">
   
 <el-menu :default-active="activeIndex" class="p-header" mode="horizontal" @select="handleSelect">
-  <el-image
-    @click="$router.replace('/'); activeIndex='1';"
-    style="width: 90px; height: 80px;float:left;"
-    src="/img/tea.png"
-    fit="fit">
-  </el-image>
+  <a href="javascript:void(0)" @click="$router.replace('/'); activeIndex='1';" style="float:left;">
+    <el-image
+      style="width: 80px; height: 80px;"
+      src="/img/logo.png"
+      fit="fit">
+    </el-image>
+    
+  </a>
+  
 
   <el-menu-item @click="changeLang()">{{$t('nav.001')}}</el-menu-item>
 

@@ -7,7 +7,6 @@
   </keep-alive>
   <router-view v-if="!$route.meta.keepAlive"></router-view>
 
-  <el-divider></el-divider>
   <PageFooter />
 </section>
 
@@ -38,7 +37,6 @@ export default {
   top: 0;
   width: 100%;
   min-height: 100%;
-  padding-bottom: 20px;
 }
 
 

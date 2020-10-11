@@ -1,3 +1,5 @@
+@import "./var.scss";
+
 *{
   font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
 }
@@ -22,6 +24,7 @@ a, a:hover, a:focus {
   text-decoration: none;
   outline: none;
 }
+
 // ::selection {
 
 //   background: #FF6C60;
@@ -79,7 +82,8 @@ a, a:hover, a:focus {
   margin: 0 auto;
 }
 .c-page{
-  max-width: 1140px;
+  max-width: $main_width;
   margin: 0 auto;
-  padding: 24px 0 40px;
+  padding: 32px 0 50px;
+  min-height: 250px;
 }
