@@ -1,5 +1,4 @@
-tag=0.2
-
+tag=0.3
 cd backend
 docker build . -t tearust/website-backend:$tag
 cd ..

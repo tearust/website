@@ -3,15 +3,25 @@
 
   <el-row class="p-t1">
     <el-col :span="15">
-      <h2>Rust Function as a Service (FaaS)</h2>
+      <h2>T-Rust: Tea Networks build the Trust</h2>
       <p>
-        Rust is the fastest growing and most beloved programming language for the past several years. Learn Rust today! Write and deploy Rust functions as web services!
+        Looking for TEA (Trusted Execution and Attestation)? </p><p>Yeah you are at the right site. But we are still brewing.... 
       </p>
+      <p>
+       Please come back later, the home page will be available soon...
+      </p>
+      
     </el-col>
     <el-col :span="9">
-      <el-image fit="cover" src="https://www.secondstate.io/assets/img/search-engine.webp"></el-image>
+      <el-image fit="cover" src="/img/brewing-tea.jpg"></el-image>
     </el-col>
   </el-row>
+  <el-row class="p-t1">
+    <hr/>
+  </el-row>
+  <p>
+    <img src="/img/Page-under-construction.png"/>
+  </p>
 </div>
 </template>
 <style lang="scss" scoped>
