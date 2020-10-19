@@ -1,6 +1,7 @@
 <template>
 <div class="c-page">
-  
+  <h4>No money? No problem</h4>
+  <div class=""></div>
   <h4>Please input your Blockchain address for 1000 free tokens</h4>
   <p> Address in Substrate SS58 Address format, such as 5ESEXd4RT43TBqWiPLQfaJj41iK5tWMFoLUBJgm39hJ7uSgz </p>
   <p>Testing system will send your account 1000 units free of charge. These tokens are for test only, they have no real value and cannot be used in production chain.</p>
