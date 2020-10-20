@@ -5,7 +5,6 @@
     "start": "nodemon --config nodemon.json",
     "build": "npm run build:ts",
     "build:ts": "tsc --build tsconfig.json",
-    "postbuild": "cp -r ./src/tpl ./dist/src/tpl",
     "tsc": "tsc || echo TSC compilation has errors.",
     "tslint": "tslint -c tslint.json -p tsconfig.json -t codeFrame",
     "unit": "NODE_ENV=jest jest --config ./test/jest_setup.js --passWithNoTests",
