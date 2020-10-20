@@ -24,6 +24,7 @@
   </el-submenu>
   <el-menu-item index="/demo">{{$t('nav.002')}}</el-menu-item>
   <el-menu-item index="/doc_list">{{$t('nav.003')}}</el-menu-item>
+  <el-menu-item index="/white_paper">{{$t('nav.005')}}</el-menu-item>
 
 </el-menu>
 

@@ -22,7 +22,7 @@
     <ul>A Chrome or Firefox web browser which support Polkadot plugin/extension</ul>
   </p>
   <p>
-    Please follow the <button> Instruction </button> to complete the online demo.
+    Please follow the <a href="doc_content/Online-demo.md#/doc_content/%2F01-Online-demo.md"> Instruction </a> to complete the online demo.
   </p>
   <p>
     Did you see the lion? If not, please submit a <a href="/bug-report">bug report </a> to us. We will fix the problem shortly. 
@@ -48,7 +48,7 @@
     <ul>A Chrome or Firefox web browser which support Polkadot plugin/extension</ul>
   </p>
   <p>
-    <img src="/img/Under_Construction_Tape.png"/>
+    <img src="/img/Under_Construction_Tape.png" width="100%"/>
   </p>
   <h4>Veteran advanture: Becoming a miner by run your own TEA node simulator</h4>
   <p>

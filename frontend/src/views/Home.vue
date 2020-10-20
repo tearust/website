@@ -13,14 +13,14 @@
       
     </el-col>
     <el-col :span="9">
-      <el-image fit="cover" src="/img/brewing-tea.jpg"></el-image>
+      <el-image fit="cover" src="/img/brewing-tea.jpg" ></el-image>
     </el-col>
   </el-row>
   <el-row class="p-t1">
     <hr/>
   </el-row>
   <p>
-    <img src="/img/Page-under-construction.png"/>
+    <img src="/img/Under_Construction_Tape.png" width="100%"/>
   </p>
 </div>
 </template>

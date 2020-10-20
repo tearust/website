@@ -3,6 +3,7 @@ import Router from 'vue-router';
 
 import Home from '../views/Home';
 import DockerComposeDemo from '../views/DockerComposeDemo';
+import WhitePaper from '../views/WhitePaper';
 import DocList from '../views/DocList';
 import DocContent from '../views/DocContent';
 import Layer1Faucet from '../views/Layer1Faucet';
@@ -34,6 +35,11 @@ export default new Router({
       path: '/demo',
       name: 'demo',
       component: DockerComposeDemo
+    },
+    {
+      path: '/white_paper',
+      name: 'white_paper',
+      component: WhitePaper
     },
     {
       path: '/doc_list',
