@@ -7,7 +7,10 @@
   <div>If you have not done yet, please install Polkadot browser extension. Click <a href="https://github.com/polkadot-js/extension">here</a>to install Polkadot extension. You will need to use either Chrome or Firefox browser</div>
  <div class="">After the extension being installed, click the "+" button as shown below</div>
  <img src="/img/extension1.png" width="400px"/>
-<div class="">Follow the instruction on the extension to create a new account. When done, copy and paste the account ID to the account input box in the next section.</div>
+
+<div class="">Follow the instruction on the extension to create a new account.</div>
+<img src="/img/extension2.png" width="400px"/>
+<div class=""> When done, copy and paste the account ID to the account input box in the next section.</div>
 <div class="">Note: the account ID is SS58 format, such as `5ESEXd4RT43TBqWiPLQfaJj41iK5tWMFoLUBJgm39hJ7uSgz`. Do not paste your private key anywhere.</div>
  
   <h4>Please input your Blockchain address for 1000 free tokens</h4>
