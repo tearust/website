@@ -3,7 +3,7 @@ import {_} from '../utility';
 import * as fs from 'fs';
 
 const DOC_DIR = process.cwd()+'/../../tea-docs';
-const IGNORE_FILES = ['.git', '.github', '.gitignore', 'res', 'README.md'];
+const IGNORE_FILES = ['.git', '.github', '.gitignore', 'res', 'tpl', 'README.md'];
 
 const doc = {
   replaceName(name){
@@ -44,6 +44,13 @@ export default class extends Base {
   async getMdFileContent(relative_path): Promise<any> {
     const full_path = DOC_DIR+'/'+relative_path;
     return fs.readFileSync(full_path, {
+      encoding: 'utf-8'
+    });
+  }
+
+  async getDockerComposeFileByName(name): Promise<string>{
+    const path = DOC_DIR+'/tpl/'+name+'.yaml';
+    return fs.readFileSync(path, {
       encoding: 'utf-8'
     });
   }

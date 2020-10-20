@@ -71,10 +71,11 @@
     Please download the following yaml file and store to your local folder. Name is as `docker-compose.yml`.
     Do not just run it yet. You have to modify a few values.
   </p>  
-  <div style="text-align:right;margin-bottom: 8px;">
-    <el-button icon="el-icon-refresh" circle @click="refresh_docker_compose()"></el-button>
+  <div style="text-align:left;">
+    <el-button icon="el-icon-refresh" type="primary" size="small" plain round @click="refresh_docker_compose()">Refresh</el-button>
+    <el-button icon="el-icon-download" type="primary" size="small" plain round @click="download()">Download</el-button>
   </div>
-  <div class="p-editor">
+  <div class="p-editor" style="margin-top:8px;">
     <JSONEditor style="" mode="yaml" :text="yaml_text" :onChange="changeHandler" />
   </div>
   <div class="">Before you run docker-compose up, please make sure you modify the following lines.</div>
@@ -112,6 +113,27 @@ export default {
       this.yaml_text = yaml;
 
       this.$root.loading(false);
+    },
+    async download(){
+      const text = this.yaml_text;
+
+      const blobContent = new Blob([text], {type : 'application/yaml'});
+
+      const blobUrl = window.URL.createObjectURL(blobContent)
+
+      downloadFileByBlob(blobUrl, 'docker-compose.yaml')
+
+      function downloadFileByBlob(blobUrl, filename) {
+        const eleLink = document.createElement('a')
+        eleLink.download = filename
+        eleLink.style.display = 'none'
+        eleLink.href = blobUrl
+        // 触发点击
+        document.body.appendChild(eleLink)
+        eleLink.click()
+        // 然后移除
+        document.body.removeChild(eleLink)
+      }
     }
   },
   async mounted(){
