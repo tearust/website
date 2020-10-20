@@ -9,7 +9,7 @@ export default class extends Base {
 
     const rs = await ds.getMdFileList();
 
-    return this.result(1, rs);
+    return this.result(1, _.sortBy(rs, 'name'));
     
   }
 }

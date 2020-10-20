@@ -1,17 +1,35 @@
 <template>
 <div class="c-page">
 
-  <ul class="t-ul" v-if="list">
-    <li v-for="(item, i) in list" :key="i">
-      <el-link v-if="!item.children" type="primary" class="fc_3" @click="goto_content(item)">{{item.name}}</el-link>
+  <el-row>
+    <el-col :span="6">
+      <ul class="t-ul" v-if="list">
+        <li v-for="(item, i) in list" :key="i">
+          <el-link v-if="!item.children" 
+            type="primary" 
+            :class="['fc_3', {'selected':cur_path===item.path}]" 
+            @click="goto_content(item)">
+            {{item.name}}
+          </el-link>
 
-      <div class="t-div" v-if="item.children">
-        <span class="fc_4">{{item.name}}</span>
+          <div class="t-div" v-if="item.children">
+            <span>{{item.name}}</span>
 
-        <a href="javascript:void(0)" v-for="(x, j) in item.children" :key="j" type="primary" class="fc_3 t-lk" @click="goto_content(x)">{{x.name}}</a>
-      </div>
-    </li>
-  </ul>
+            <a href="javascript:void(0)" 
+              v-for="(x, j) in item.children" :key="j" 
+              type="primary" 
+              :class="['fc_3', 't-lk', {'selected':cur_path===x.path}]" 
+              @click="goto_content(x)">{{x.name}}</a>
+          </div>
+        </li>
+      </ul>
+    </el-col>
+
+    <el-col :span="17" :offset="1">
+      <router-view></router-view>
+    </el-col>
+  </el-row>
+  
 
 
 </div>  
@@ -22,10 +40,24 @@ import _ from 'lodash';
 export default {
   data(){
     return {
-      list: null
+      list: null,
+      cur_path: null
     }
   },
+  beforeRouteUpdate(to, from, next){
+    // console.log(to);
+    this.cur_path = to.params.doc_path;
+
+    if(!this.cur_path){
+      this.default_to_first();
+    }
+    
+    next();
+  },
   async mounted(){
+    this.cur_path = this.$route.params.doc_path;
+    // console.log(this.$route);
+    
     this.$root.loading(true);
 
     const tmp_list = await request.get_doc_list();
@@ -33,14 +65,26 @@ export default {
     _.each(tmp_list, (item)=>{
       list.push(item);
     })
-    console.log(list);
+    // console.log(list);
     this.list = list;
     this.$root.loading(false);
+
+    if(!this.cur_path){
+      this.default_to_first();
+    }
 
   },
   methods: {
     goto_content(item){
-      this.$router.push('/doc_content/'+encodeURIComponent(item.path));
+      this.$router.push('/doc_list/'+encodeURIComponent(item.path));
+    },
+    default_to_first(){
+      let x = this.list[0];
+      if(x.children){
+        x = x.children[0];
+      }
+
+      this.goto_content(x);
     }
   }
 }
@@ -58,16 +102,25 @@ export default {
     border-bottom: 1px solid #d9d9d9;
     
     .el-link.el-link--primary{
-      font-size: 24px;
+      font-size: 20px;
+      &.selected{
+        color: #ec7259;
+      }
     }
     .t-div{
       span{
-        font-size: 24px;
+        font-size: 20px;
         display: table;
+        color: #35a6a6;
+        font-weight: bold;
       }
       a.t-lk{
-        font-size: 24px;
-        margin-left: 40px;
+        font-size: 20px;
+        margin-left: 20px;
+        display: table;
+        &.selected{
+          color: #ec7259;
+        }
       }
     }
   }

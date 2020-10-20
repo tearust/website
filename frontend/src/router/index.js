@@ -44,13 +44,20 @@ export default new Router({
     {
       path: '/doc_list',
       name: 'doc_list',
-      component: DocList
+      component: DocList,
+      children: [
+        {
+          path: ':doc_path',
+          name: 'doc_content',
+          component: DocContent
+        }
+      ]
     },
-    {
-      path: '/doc_content/:doc_path',
-      name: 'doc_content',
-      component: DocContent
-    },
+    // {
+    //   path: '/doc_content/:doc_path',
+    //   name: 'doc_content',
+    //   component: DocContent
+    // },
     {
       path: '/tools/layer1_faucet',
       name: 'layer1_faucet',

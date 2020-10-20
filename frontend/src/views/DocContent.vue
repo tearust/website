@@ -7,6 +7,7 @@
 </template>
 <script>
 import util from '../util';
+import _ from 'lodash';
 import request from '../request';
 export default {
   data(){
@@ -14,16 +15,27 @@ export default {
       html: null
     };
   },
+  beforeRouteUpdate(to, from, next){
+    // console.log(to, from, next)
+    _.delay(async ()=>{
+      await this.update(to);
+    }, 100);
+    next();
+  },
   async mounted(){
-    console.log(this.$route);
-    this.$root.loading(true);
+    await this.update(this.$route);
+  },
+  methods: {
+    async update(route){
+      this.$root.loading(true);
 
-    const md = await request.get_doc_content(this.$route.params.doc_path);
-    if(md){
-      this.html = util.mdToHtml(md);
+      const md = await request.get_doc_content(route.params.doc_path);
+      if(md){
+        this.html = util.mdToHtml(md);
+      }
+
+      this.$root.loading(false);
     }
-
-    this.$root.loading(false);
   }
 }
 </script>
@@ -76,6 +88,7 @@ export default {
   pre{
     padding: 12px 15px;
     background: #f3f3f3;
+    white-space: normal;
     code{
       
     }

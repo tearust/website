@@ -10,8 +10,9 @@ const doc = {
     return name.replace(/\.md$/ig, '').replace(/ /g, '-').replace(/\./g, '-');
   },
   async dir(dir_path, relative_dir=""){
-    const files = fs.readdirSync(dir_path);
+    let files = fs.readdirSync(dir_path);
     const rs_list = [];
+    
     _.each(files, async (file)=>{
       if(_.includes(IGNORE_FILES, file)) return;
       const path = dir_path+'/'+file;
@@ -31,7 +32,6 @@ const doc = {
         });
       }
     });
-
     return rs_list;
   }
 };
