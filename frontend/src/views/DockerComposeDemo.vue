@@ -21,8 +21,10 @@
     <ul>A Mac or Linux computer. Windows should work too, but we just did not have chance to test</ul>
     <ul>A Chrome or Firefox web browser which support Polkadot plugin/extension</ul>
   </p>
+  <h5>Run the demo dApp from IPFS</h5>
   <p>
-    Please follow the <a href="doc_content/Online-demo.md#/doc_content/%2F01-Online-demo.md"> Instruction </a> to complete the online demo.
+    As a <b>pure</b> decentralized app (dApp), it doesn't have a server as regular cloud based webapp. All the static code directly downloaded from IPFS to your browser. the dynamic content runs on trusted TEA network, so called "layer2" of a Substrate blockchain.</p>
+    <p>This may be confuse to you, but you do not need to understand to try it. You just need to click <a href=""> run demo dApp</a>follow the <a href="doc_content/Online-demo.md#/doc_content/%2F01-Online-demo.md"> Instruction </a> to complete the online demo.
   </p>
   <p>
     Did you see the lion? If not, please submit a <a href="/bug-report">bug report </a> to us. We will fix the problem shortly. 
@@ -31,10 +33,16 @@
     Although click and run the dApp seems easy, but what happening behind the scean is very complicated. Please click the button below to figure it out.
   </p>
 
-  <button>Check out what happened under the hood? </button>
+  <a href="/doc_list/%2F02-Demo-instructions%2F01-Easy-start.md">Check out what happened under the hood? </a>
 
-
+  <h4>The lion is boring, can I use other pictures</h4>
+  <div class=""> The first easy start dapp runs on two existing deployments:</div>
+  <ui>A wasm function code: A Tensorflow Image Recognition algorithm compiled into wasm. It take an image as input, output what the AI think it is.</ui>
+  <ui>A picture of a lion</ui>
+  <div class="">Both of the code and the image(data) are deployed by TEA developers. If you do not want to run the Tensorflow algorithm against the lion's picture, you will need to deploy another picture to the TEA network. Then run another version of this dApp.</div>
+  <div class="">This new version will take the deployment_id of your new image as parameter, but still use existing wasm code deployment so that you do not have to build the wasm function</div>
   <h4>Advanced experience: Deploy your own dapp</h4>
+  <div class="">Please follow the instruction to deploy your own picture and run the same wasm function on the picture</div>
   <p>
     Running others dApp is easy but not as fun as create your own dApp serving others. This is the second level demo that you can try to deploy your own dApp.
 
