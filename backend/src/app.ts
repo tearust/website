@@ -48,7 +48,6 @@ import './config';
     app.use(middleware)
     app.use(fileUpload())
 
-
     app.use(prefix, router)
 
     const port = process.env.SERVER_PORT
