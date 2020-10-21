@@ -2,7 +2,7 @@
 <div class="c-page">
 
   <el-row>
-    <el-col :span="6">
+    <el-col :span="5">
       <ul class="t-ul" v-if="list">
         <li v-for="(item, i) in list" :key="i">
           <el-link v-if="!item.children" 
@@ -25,7 +25,7 @@
       </ul>
     </el-col>
 
-    <el-col :span="17" :offset="1">
+    <el-col :span="19" style="padding-left: 20px;">
       <router-view></router-view>
     </el-col>
   </el-row>
@@ -91,34 +91,44 @@ export default {
 </script>
 <style lang="scss" scoped>
 .t-ul{
-  background:#f9f9f9; 
+  // background:#f9f9f9; 
   min-height: 200px;
   list-style:none;
   padding: 24px 0 80px;
 
   li{
-    margin: 0 24px;
-    padding: 10px 0;
-    border-bottom: 1px solid #d9d9d9;
+    margin: 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #e9e9e9;
     
     .el-link.el-link--primary{
-      font-size: 20px;
+      font-size: 15px;
       &.selected{
         color: #ec7259;
       }
+      &:hover{
+        color: #ec7259;
+      }
+    }
+    .el-link.is-underline:hover:after{
+      border-bottom: 1px solid #ec7259;
     }
     .t-div{
       span{
-        font-size: 20px;
+        font-size: 16px;
         display: table;
         color: #35a6a6;
         font-weight: bold;
       }
       a.t-lk{
-        font-size: 20px;
-        margin-left: 20px;
+        font-size: 15px;
+        margin-left: 15px;
         display: table;
         &.selected{
+          color: #ec7259;
+        }
+        &:hover{
+          border-bottom: 1px solid #ec7259;
           color: #ec7259;
         }
       }
