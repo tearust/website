@@ -93,6 +93,11 @@ export default {
       
     }
   }
+
+  img{
+    max-width: 100%;
+    margin: 8px 0;
+  }
 }
 
 </style>
