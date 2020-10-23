@@ -3,7 +3,7 @@
 
   <el-row class="p-t1">
     <el-col :span="15">
-      <h2>T-Rust: Tea Networks build the Trust</h2>
+      <h2>T-rust elevates Decentralized Trusted Computing to a T</h2>
       <p>
         Looking for TEA (Trusted Execution and Attestation)? </p><p>Yeah you are at the right site. But we are still brewing.... 
       </p>
@@ -18,6 +18,20 @@
   </el-row>
   <el-row class="p-t1">
     <hr/>
+    <h3>Turn IPFS(File System) to IPFS(Function-as-a-Service)</h3>
+
+    <hr/>
+
+    <h3>Take over complex computational workloads from blockchain as a trusted layer-2 oracle</h3>
+
+    <hr/>
+
+    <h3>Hardware and crypto protected protocol ensures you own your own data</h3>
+
+    <hr/>
+
+    <h3>Fearless edge computing with trust built-in</h3>
+
   </el-row>
   <p>
     <img src="/img/Under_Construction_Tape.png" width="100%"/>
