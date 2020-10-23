@@ -87,3 +87,66 @@ a, a:hover, a:focus, button:focus {
   padding: 32px 0 50px;
   min-height: 250px;
 }
+
+// main md style 
+.c-md{
+
+  h1{
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eaecef;
+    font-weight: bold;
+  }
+
+  h2{
+    font-size: 28px;
+    color: #000;
+    margin: 20px 0 10px;
+    font-weight: bold;
+  }
+
+  h3{
+    font-size: 24px;
+    color: #000;
+    margin: 20px 0 10px;
+    font-weight: bold;
+  }
+
+  h4{
+    font-size: 22px;
+    color: #222;
+    margin: 12px 0 8px;
+  }
+
+  p, &>div{
+    font-size: 15px;
+    color: #333;
+    margin: 5px 0;
+  }
+
+  ul{
+    font-size: 16px;
+    color: #333;
+    li{
+      list-style: circle;
+      font-size: 15px;
+      color: #333;
+    }
+  }
+
+  pre{
+    padding: 12px 15px;
+    background: #f3f3f3;
+    white-space: normal;
+    code{
+      
+    }
+  }
+
+  img{
+    max-width: 100%;
+    margin: 8px 0;
+  }
+}
