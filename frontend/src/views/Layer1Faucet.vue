@@ -1,6 +1,6 @@
 <template>
-<div class="c-page">
-  <h4>No money? No problem</h4>
+<div class="c-page c-md">
+  <h3>No money? No problem</h3>
   <div class="">To bootstrap your trial experiences, we have a faucet tool to feed you free token to start trial.</div>
   <div class="">In the blockchain world, there is no free lunch. Every transaction need payment. This faucet tool give you free token so that you can start tryintg without actually mining token or through exchange.</div>
   <div class="">Before you can use this faucet, you need to generate an account ID. If you do not have an account yet, please follow the instruction below.</div>
