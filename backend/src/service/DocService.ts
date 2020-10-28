@@ -10,7 +10,7 @@ const doc = {
   replaceName(name){
     return name.replace(/\.md$/ig, '').replace(/ /g, '-').replace(/\./g, '-');
   },
-  async getListSortFile(): Promise<any> {
+  async getListSortFile(key='sort'): Promise<any> {
     const path = DOC_DIR+'/config.yaml';
     const text = fs.readFileSync(path, {
       encoding: 'utf-8'
@@ -18,7 +18,7 @@ const doc = {
 
     return new Promise(resolve => {
       yaml.safeLoadAll(text, (doc) => {
-        resolve(doc.sort);
+        resolve(doc[key]);
       });
 
     });
@@ -64,9 +64,7 @@ const doc = {
       }
       else{
         if(tmp){
-          console.log(222, item.children, tmp.children);
           item.children = doc.sortList(item.children, tmp.children || []);
-          console.log(333, item.children);
         }
       }
 
@@ -78,7 +76,7 @@ const doc = {
 export default class extends Base {
   async getMdFileList(): Promise<any> {
     const list = await doc.dir(DOC_DIR);
-    let sort_list = await doc.getListSortFile();
+    let sort_list = await doc.getListSortFile('sort');
     sort_list = doc.sortList(sort_list, list);
 
     return sort_list;
