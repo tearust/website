@@ -1,22 +1,136 @@
 <template>
-<div class="c-page c-md">
+<div class="c-page">
 
-  <el-row class="p-t1">
-    <el-col :span="16">
+  <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 24px 0 40px; margin: 0 auto; width: 800px;">
+    <h1 style="font-size: 56px; color: #444;font-weight: bold; text-align:center; font-family:sans-serif; line-height:50px;">Easily build decentralized apps</h1>
+    <p style="font-size: 32px; color: #111; text-align:center; line-height: 36px; margin-top: 15px;">TODO: please complete here.</p>
+  </div>
+
+  <el-row class="c-block">
+    <el-col :span="6" style="padding-right: 12px;">
+      <a href="">
+        <img src="https://assets-global.website-files.com/5e7b1a27d160ce49af1c24e1/5f15674dcb91b4492df295e5_Build.svg">
+        <h4>Build an app</h4>
+        <p>Start building your own dapp</p>
+      </a>
+    </el-col>
+    <el-col :span="6" style="padding: 0 8px 0 4px;">
+      <a href="">
+        <img src="https://assets-global.website-files.com/5e7b1a27d160ce49af1c24e1/5f15674dcb91b4492df295e5_Build.svg">
+        <h4>Build an app</h4>
+        <p>Start building your own dapp</p>
+      </a>
+    </el-col>
+    <el-col :span="6" style="padding: 0 4px 0 8px;">
+      <a href="">
+        <img src="https://assets-global.website-files.com/5e7b1a27d160ce49af1c24e1/5f15674dcb91b4492df295e5_Build.svg">
+        <h4>Build an app</h4>
+        <p>Start building your own dapp</p>
+      </a>
+    </el-col>
+    <el-col :span="6" style="padding-left: 12px;">
+      <a href="">
+        <img src="https://assets-global.website-files.com/5e7b1a27d160ce49af1c24e1/5f15674dcb91b4492df295e5_Build.svg">
+        <h4>Build an app</h4>
+        <p>Start building your own dapp</p>
+      </a>
+    </el-col>
+  </el-row>
+
+  <el-row class="c-text-image">
+    <el-col :span="15">
       <h2>T-rust elevates Decentralized Trusted Computing to a T</h2>
       <p>
         TEA (Trusted Execution and Attestation) is an ambitials project aim to build new ways to build, deploy and run apps in pure decentralized manners.
       </p>
       <p>
         There won't be traditional server runs your code. Instead, all code and data are encrypted stored and executed in the p2p network. Only trusted hardware TEA modules can load and decrypt code or data then execute in hardware protected environment to guarantee security and correctness </p>
-     <p>None of Developer, service provider and end user need to trust any other parties. Blockchain smart contracts inspect the Proof-of-trust (PoT) data collected from hardware TPM chips. Only those pass remote attestation may get a chance to execute code and access to data. </p>
+     <!-- <p>None of Developer, service provider and end user need to trust any other parties. Blockchain smart contracts inspect the Proof-of-trust (PoT) data collected from hardware TPM chips. Only those pass remote attestation may get a chance to execute code and access to data. </p>
      <p>Although the execution environment is protected by hardware, we still only allow customer executables running in highly isolated WebAssembly runtime to get highest security level</p>
-     <p>You do not know and do not care which node actually runs your code. you only need to trust silicon and math. </p>
+     <p>You do not know and do not care which node actually runs your code. you only need to trust silicon and math. </p> -->
+
+      <div>
+        <el-button type="primary" size="small">I am Button</el-button>
+        <a href="" style="margin-left: 24px;">I am link</a>
+      </div>
+      
     </el-col>
-    <el-col :span="8" style="text-align:right;">
+    <el-col :span="9" style="text-align:right;">
       <el-image fit="cover" src="/img/brewing-tea.jpg" ></el-image>
     </el-col>
   </el-row>
+
+  <el-row class="c-text-image">
+    <el-col :span="9" style="text-align:left;">
+      <el-image fit="cover" src="/img/brewing-tea.jpg" ></el-image>
+    </el-col>
+    <el-col :span="15">
+      <h2>T-rust elevates Decentralized Trusted Computing to a T</h2>
+      <p>
+        TEA (Trusted Execution and Attestation) is an ambitials project aim to build new ways to build, deploy and run apps in pure decentralized manners.
+      </p>
+      <p>
+        There won't be traditional server runs your code. Instead, all code and data are encrypted stored and executed in the p2p network. Only trusted hardware TEA modules can load and decrypt code or data then execute in hardware protected environment to guarantee security and correctness </p>
+     
+
+      <div style="text-align:left;">
+        <el-button type="primary" size="small">I am Button</el-button>
+        <a href="" style="margin-left: 24px;">I am link</a>
+      </div>
+    </el-col>
+    
+  </el-row>
+
+  <div class="c-case">
+    <h4>Use cases</h4>
+    <h1>Build what's next</h1>
+    <b>With user-owned data and smart contracts, you can build new kinds of apps that couldn’t exist before.</b>
+    <el-row style="margin-top: 32px;">
+      <el-col :span="11" class="x-col">
+        <div class="x-1 flex-center">
+          <i class="el-icon-user"></i>
+        </div>
+        <div class="x-2">
+          <h4>Apps with private data</h4>
+          <p>Create alternatives to everyday apps where users’ privacy is guaranteed with encryption.</p>
+        </div>
+        
+      </el-col>
+      <el-col :span="11" :offset="2" class="x-col">
+        <div class="x-1 flex-center">
+          <i class="el-icon-s-promotion"></i>
+        </div>
+        <div class="x-2">
+          <h4>Apps with private data</h4>
+          <p>Create alternatives to everyday apps where users’ privacy is guaranteed with encryption.</p>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row style="margin-top: 32px;">
+      <el-col :span="11" class="x-col">
+        <div class="x-1 flex-center">
+          <i class="el-icon-orange"></i>
+        </div>
+        <div class="x-2">
+          <h4>Apps with private data</h4>
+          <p>Create alternatives to everyday apps where users’ privacy is guaranteed with encryption.</p>
+        </div>
+        
+      </el-col>
+      <el-col :span="11" :offset="2" class="x-col">
+        <div class="x-1 flex-center">
+          <i class="el-icon-grape"></i>
+        </div>
+        <div class="x-2">
+          <h4>Apps with private data</h4>
+          <p>Create alternatives to everyday apps where users’ privacy is guaranteed with encryption.</p>
+        </div>
+      </el-col>
+    </el-row>
+  </div>
+
+<!-- <div class="c-md">
+ 
   <el-row class="p-t1">
     <hr/>
     <h3>Turn IPFS(File System) to IPFS(Function-as-a-Service)</h3>
@@ -43,14 +157,35 @@
     <h3>Build dApps that censorship-resistent</h3>
 <div class="">Build dApps that encrypted data store in IPFS and code runs in TEA modules. Those kind of dApps cannot be stopped or controlled by any one, even the builder. </div>
    <a href="">Read the detail</a>
-  </el-row>
-  <p>
+  </el-row> </div> -->
+  <p style="margin-top: 120px;">
     <img src="/img/Under_Construction_Tape.png" width="100%"/>
   </p>
 </div>
 </template>
 <style lang="scss" scoped>
 .c-page{
+  .c-text-image{
+    margin-top: 90px;
+    h2{
+      font-size: 32px;
+      color: #222222;
+      font-weight: bold;
+      position: relative;
+      margin-bottom: 24px;
+    }
+    p{
+      font-size: 17px;
+      color: #333;
+    }
+    .el-button--primary{
+      background: #35a696;
+      border-color: #35a696;
+    }
+    // a{
+    //   color: #35a696;
+    // }
+  }
   .p-t1{
     h2{
       font-size: 30px;
@@ -67,6 +202,90 @@
 
     hr{
       margin: 12px 0 20px;
+    }
+  }
+
+  .c-case{
+    margin-top: 120px;
+    h4{
+      color: #333;
+      font-size: 20px;
+    }
+    h1{
+      color: #000;
+      font-size: 36px;
+      font-weight: bold;
+      margin: 15px 0 5px;
+    }
+    b{
+      font-size: 18px;
+      color: #444;
+    }
+
+    .x-col{
+      position: relative;
+      min-height: 100px;
+      padding-left: 120px;
+
+      .x-1{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background: rgb(242, 242, 252);
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        i{
+          color: #35a696;
+          font-size: 42px;
+        }
+      }
+
+      .x-2{
+        padding: 12px 0;
+        h4{
+          color: #000;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        p{
+          color: #333;
+          font-size: 14px;
+          margin: 10px 0 0 0;
+        }
+      }
+    }
+  }
+
+  .c-block{
+    margin-top: 32px;
+    .el-col{
+      a{
+        border-radius: 12px;
+        border: 1px solid #f0f0f5;
+        padding: 50px 20px 24px 20px;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover{
+          transform: scale(.96);
+        }
+        
+        h4{
+          font-size: 24px;
+          font-weight: bold;
+          margin-top: 20px;
+          color: #333;
+        }
+        p{
+          font-size: 18px;
+          margin: 15px 0 0 0;
+          color: #444;
+        }
+      }
+      
     }
   }
 }

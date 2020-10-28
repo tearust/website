@@ -1,6 +1,6 @@
 <template>
 
-<section id="app">
+<section id="app" class="tea-app">
   <PageHeader />
   <keep-alive>
     <router-view v-if="$route.meta.keepAlive"></router-view>
@@ -8,8 +8,10 @@
   <router-view v-if="!$route.meta.keepAlive"></router-view>
 
   <PageFooter />
+  
+  <!-- <el-backtop target=".tea-app"></el-backtop> -->
 </section>
-
+  
 </template>
 
 <script>
