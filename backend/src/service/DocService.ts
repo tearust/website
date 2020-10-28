@@ -8,7 +8,8 @@ const IGNORE_FILES = ['.git', '.github', '.gitignore', 'res', 'tpl', 'README.md'
 
 const doc = {
   replaceName(name){
-    return name.replace(/\.md$/ig, '').replace(/ /g, '-').replace(/\./g, '-');
+    // return name.replace(/\.md$/ig, '').replace(/ /g, '-').replace(/\./g, '-');
+    return name.replace(/\.md$/ig, '');
   },
   async getListSortFile(key='sort'): Promise<any> {
     const path = DOC_DIR+'/config.yaml';
