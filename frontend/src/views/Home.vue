@@ -20,7 +20,7 @@
   <el-row class="p-t1">
     <hr/>
     <h3>Turn IPFS(File System) to IPFS(Function-as-a-Service)</h3>
-    <div class="">By adding a TEA trusted computing module, existing IPFS node can turn to a function-as-a-server node besides storing the code and data.
+    <div class="">By adding a TEA trusted computing module, existing IPFS node can turn to a function-as-a-server node besides storing the code and data.</div>
   <div class="">
     By adding a TEA trusted computing module, existing IPFS node can turn to a function-as-a-server node besides storing the code and data.
    </div>
