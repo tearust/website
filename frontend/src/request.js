@@ -2,7 +2,8 @@ import axios from 'axios';
 import _ from 'lodash';
 import util from './util';
 
-const BASE_URL = `http://${location.hostname}:3001/api`;
+const SERVER_URL = `http://${location.hostname}:3001`
+const BASE_URL = `${SERVER_URL}/api`;
 // const BASE_URL = 'http://81.70.96.136:3001/api';
 
 //set request base url
@@ -33,6 +34,7 @@ _axios.interceptors.response.use((res)=>{
 
 
 const F = {
+  SERVER_URL,
   get_docker_compose(){
     return _axios.get('/tea/get_docker_compose');
   },

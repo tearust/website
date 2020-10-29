@@ -43,12 +43,34 @@ const F = {
   },
   mdToHtml(md_content){
     const renderer = new marked.Renderer();
-    renderer.link = function(href, title, text){
+    renderer.link = function(href){
       let link = marked.Renderer.prototype.link.apply(this, arguments);
-      link = link.replace("<a","<a class='js_click_md'");
+
+      if(/href="http/i.test(link)){
+        link = link.replace("<a","<a target='_blank' ");
+      }
+      else{
+        link = link.replace("<a","<a class='js_click_md'");
+      }
+      
 
       return link;
     };
+
+    renderer.image = function(src){
+      let img = marked.Renderer.prototype.image.apply(this, arguments);
+      if(src.charAt(0) !== '/' && !/^[http|https]/.test(src)){
+        const s_url = require('../request').default.SERVER_URL;
+        const img_file = _.last(src.split('/'));
+        
+
+        const img_src = s_url+'/res/'+img_file;
+
+        return '<img src="'+img_src+'" />';
+      }
+
+      return img;
+    }
 
     marked.setOptions({
       renderer: renderer

@@ -2,8 +2,8 @@ import Base from './Base';
 import {_} from '../utility';
 import * as fs from 'fs';
 import * as yaml from 'js-yaml';
+import {DOC_DIR} from '../config';
 
-const DOC_DIR = process.cwd()+'/../../tea-docs';
 const IGNORE_FILES = ['.git', '.github', '.gitignore', 'res', 'tpl', 'README.md', 'config.yaml'];
 
 const doc = {

@@ -9,10 +9,11 @@ import * as fileUpload from 'express-fileupload'
 import * as compression from 'compression'
 import * as fs from 'fs';
 import * as cookieParser from 'cookie-parser';
+import * as path from 'path';
 
 import router, {middleware} from './router';
 
-import './config';
+import {DOC_DIR} from './config';
 
 
 (async ()=>{
@@ -49,6 +50,8 @@ import './config';
     app.use(fileUpload())
 
     app.use(prefix, router)
+
+    app.use('/res', express.static(DOC_DIR+'/res/'));
 
     const port = process.env.SERVER_PORT
     app.listen(port, () => {
