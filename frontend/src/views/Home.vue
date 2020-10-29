@@ -4,11 +4,11 @@
   <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 24px 0 40px; margin: 0 auto; width: 800px;">
     <h1 style="font-size: 56px; color: #444;font-weight: bold; text-align:center; font-family:sans-serif; line-height:50px;">Elevates Decentralized Trusted Computing to a T</h1>
     <p style="font-size: 32px; color: #111; text-align:center; line-height: 36px; margin-top: 15px;">
-        TEA (Trusted Execution and Attestation) is an ambitials project aim to build new ways to build, deploy and run apps in pure decentralized manners.
+        TEA (Trusted Execution and Attestation) is an ambitious project trying to fill the gap between cloud apps and dApps. A new way to develop, deploy and run apps in pure decentralized manners.
       </p>
   </div>
 
-  <el-row class="c-block">
+  <!-- <el-row class="c-block">
     <el-col :span="6" style="padding-right: 12px;">
       <a href="">
         <img src="https://assets-global.website-files.com/5e7b1a27d160ce49af1c24e1/5f15674dcb91b4492df295e5_Build.svg">
@@ -37,12 +37,12 @@
         <p>Start building your own dapp</p>
       </a>
     </el-col>
-  </el-row>
+  </el-row> -->
 
   <el-row class="c-text-image">
     <el-col :span="15">
       <h2>Turn IPFS(File System) to IPFS(Function-as-a-Service)</h2>
-      <p>By adding a TEA trusted computing module, existing IPFS node can turn to a function-as-a-server node besides storing the code and data.</p>
+      <p>By adding a TEA trusted computing module to an existing IPFS node can turn it to a function-as-a-server node besides storing the code and data.</p>
       <p>IPFS store and cache the code, TEA module load the code and execute</p>
       <p>TEA protocol provides proof-of-trust (Tea Pot) for verification</p>
 
@@ -62,8 +62,8 @@
       <el-image fit="cover" src="https://github.com/tearust/tea-docs/blob/main/res/layer1-and-layer2.png?raw=true" ></el-image>
     </el-col>
     <el-col :span="15">
-      <h2>Take over complex computational workloads from blockchain as a trusted layer-2 oracle</h2>
-      <p>Smart contract running in blockchain (layer-1) call an external function that runs inside TEA network(layer-2). The function result feed back to smart contract with Proof-of-trust for verification</p>
+      <h2>Take over complex computational workloads from blockchain as a trusted layer-2 oracle.</h2>
+      <p>Smart contract running in blockchain (layer-1) call an external function that runs inside TEA network(layer-2). The function result returns to smart contract with Proof-of-trust for verification.</p>
       <div style="text-align:left;">
         <el-button type="primary" size="small">I am Button</el-button>
         <a href="" style="margin-left: 24px;">I am link</a>
@@ -74,7 +74,7 @@
   <el-row class="c-text-image">
     <el-col :span="15">
       <h2>Hardware and crypto protected protocol ensures you own your own data</h2>
-      <p>Encrypt privacy data before upload to IPFS, distribute the decryption key to TEA modules that protected by hardware chips. Only trusted module can access your data after remote attestation</p>
+      <p>Encrypt privacy data before uploading to IPFS, distribute the decryption key to TEA modules that protected by hardware chips. Only trusted modules can access your data after remote attestation.</p>
 
       <div>
         <el-button type="primary" size="small">I am Button</el-button>
@@ -92,8 +92,8 @@
       <el-image fit="cover" src="https://github.com/tearust/tea-docs/blob/main/res/white_no_censorship_button.png?raw=true" ></el-image>
     </el-col>
     <el-col :span="15">
-      <h2>Build dApps that censorship-resistent</h2>
-      <p>Build dApps that encrypted data store in IPFS and code runs in TEA modules. Those kind of dApps cannot be stopped or controlled by any one, even the builder. </p>
+      <h2>Build dApps that censorship-resistant</h2>
+      <p>Build dApps that encrypted data store in IPFS and code runs in TEA modules. This kind of dApps cannot be stopped or controlled by any one, even the builder. </p>
       <div style="text-align:left;">
         <el-button type="primary" size="small">I am Button</el-button>
         <a href="" style="margin-left: 24px;">I am link</a>
@@ -102,7 +102,7 @@
     
   </el-row>
 
-  <div class="c-case">
+  <!-- <div class="c-case">
     <h4>Use cases</h4>
     <h1>Build what's next</h1>
     <b>With T-rust, you can build new kinds of apps that couldn’t exist before.</b>
@@ -148,7 +148,7 @@
         </div>
       </el-col>
     </el-row>
-  </div>
+  </div> -->
 
   <p style="margin-top: 120px;">
     <img src="/img/Under_Construction_Tape.png" width="100%"/>
