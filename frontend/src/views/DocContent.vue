@@ -24,8 +24,43 @@ export default {
   },
   async mounted(){
     await this.update(this.$route);
+
+    _.delay(this.initBind, 2000);
   },
   methods: {
+    initBind(){
+      const el = $(this.$el);
+      el.on('click', '.js_click_md', (e)=>{
+        const file = $(e.target).attr('href');
+        const path = decodeURIComponent(this.$route.path);
+        
+
+        const t1 = file.split('/');
+        const t2 = path.split('/');
+        t2.shift();
+        t2.shift();
+        t2.unshift("");
+        t2.pop();
+
+        _.each(t1, (t)=>{
+          if(t === '..'){
+            t2.pop();
+          }
+          else if(t === '.'){
+
+          }
+          else{
+            t2.push(t);
+          }
+        });
+        const tar = t2.join('/');
+
+        
+        this.$router.push('/doc_list/'+encodeURIComponent(tar));
+
+        return false;
+      })
+    },
     async update(route){
       this.$root.loading(true);
 
