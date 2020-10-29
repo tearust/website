@@ -54,23 +54,29 @@ const doc = {
   },
 
   sortList(tar, src){
-    return _.map(tar, (item)=>{
+    const rs = _.map(tar, (item)=>{
       const tmp = _.find(src, (x)=>x.ori_name === item.name);
       
       if(!item.children){
         if(tmp){
           item.path = tmp.path;
           item.name = tmp.name;
+
+          return item;
         }
       }
       else{
         if(tmp){
           item.children = doc.sortList(item.children, tmp.children || []);
+
+          return item;
         }
       }
 
-      return item;
+      return null;
     });
+
+    return _.filter(rs);
   }
 };
 

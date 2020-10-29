@@ -80,6 +80,7 @@ export default {
     },
     default_to_first(){
       let x = this.list[0];
+      console.log(111, this.list);
       if(x.children){
         x = x.children[0];
       }
