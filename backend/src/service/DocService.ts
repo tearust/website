@@ -60,7 +60,7 @@ const doc = {
       if(!item.children){
         if(tmp){
           item.path = tmp.path;
-          item.name = tmp.name;
+          item.name = tmp.name.replace(/_/g, ' ');
 
           return item;
         }

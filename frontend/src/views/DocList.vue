@@ -13,7 +13,10 @@
           </el-link>
 
           <div class="t-div" v-if="item.children">
-            <span>{{item.name}}</span>
+            <!-- <span>{{item.name}}</span> -->
+            <a href="javascript:void(0)" 
+              :class="['span', {'selected':cur_path===item.path}]" 
+              @click="goto_content(item)">{{item.name}}</a>
 
             <a href="javascript:void(0)" 
               v-for="(x, j) in item.children" :key="j" 
@@ -80,10 +83,10 @@ export default {
     },
     default_to_first(){
       let x = this.list[0];
-      console.log(111, this.list);
-      if(x.children){
-        x = x.children[0];
-      }
+
+      // if(x.children){
+      //   x = x.children[0];
+      // }
 
       this.goto_content(x);
     }
@@ -96,6 +99,10 @@ export default {
   min-height: 200px;
   list-style:none;
   padding: 24px 0 80px;
+
+  *{
+    font-family: sans-serif !important;
+  }
 
   li{
     margin: 0;
@@ -115,11 +122,19 @@ export default {
       border-bottom: 1px solid #ec7259;
     }
     .t-div{
-      span{
+      .span{
         font-size: 16px;
         display: table;
         color: #35a6a6;
         font-weight: bold;
+
+        &.selected{
+          color: #ec7259;
+        }
+        &:hover{
+          border-bottom: 1px solid #ec7259;
+          color: #ec7259;
+        }
       }
       a.t-lk{
         font-size: 15px;
