@@ -15,7 +15,7 @@
     </el-row>
 
     <el-divider></el-divider>
-    <p style="margin:0 auto;text-align:center;font-size:16px;">Copyright © 2019-2020 <b>TeaRust</b> All Right Reserved</p>
+    <p style="margin:0 auto;text-align:center;font-size:16px;">Copyright © 2019-2020 <b>TeaRust</b> All Rights Reserved</p>
   </div>
 </section>
 

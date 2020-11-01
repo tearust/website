@@ -2,9 +2,9 @@
 <div class="c-page">
 
   <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 24px 0 40px; margin: 0 auto; width: 800px;">
-    <h1 style="font-size: 56px; color: #444;font-weight: bold; text-align:center; font-family:sans-serif; line-height:50px;">Elevates Decentralized Trusted Computing to a T</h1>
+    <h1 style="font-size: 56px; color: #444;font-weight: bold; text-align:center; font-family:sans-serif; line-height:50px;">Elevating Decentralized Trusted Computing to a T</h1>
     <p style="font-size: 32px; color: #111; text-align:center; line-height: 36px; margin-top: 15px;">
-        TEA (Trusted Execution and Attestation) is an ambitious project trying to fill the gap between cloud apps and dApps. A new way to develop, deploy and run apps in pure decentralized manners.
+        TEA (Trusted Execution and Attestation) is an ambitious project trying to fill the gap between cloud apps and dApps. Introducing a new way to develop, deploy and run apps in pure decentralized manners.
       </p>
   </div>
 
@@ -41,14 +41,14 @@
 
   <el-row class="c-text-image">
     <el-col :span="15">
-      <h2>Turn IPFS(File System) to IPFS(Function-as-a-Service)</h2>
-      <p>By adding a TEA trusted computing module to an existing IPFS node can turn it to a function-as-a-server node besides storing the code and data.</p>
-      <p>IPFS store and cache the code, TEA module load the code and execute</p>
-      <p>TEA protocol provides proof-of-trust (Tea Pot) for verification</p>
+      <h2>Turning IPFS(File System) to IPFS(Function-as-a-Service)</h2>
+      <p>By adding a TEA trusted computing module to an existing IPFS node, it can turn into a function-as-a-server node besides storing the code and data.</p>
+      <p>IPFS stores and caches the code and the TEA module loads and execute the code</p>
+      <p>TEA protocol provides proof-of-trust (Tea Pot) for verification.</p>
 
       <div>
-        <el-button type="primary" size="small">I am Button</el-button>
-        <a href="" style="margin-left: 24px;">I am link</a>
+        <el-button type="primary" size="small">more...</el-button>
+        <!-- <a href="" style="margin-left: 24px;">I am link</a> -->
       </div>
       
     </el-col>
@@ -62,23 +62,23 @@
       <el-image fit="cover" src="https://github.com/tearust/tea-docs/blob/main/res/layer1-and-layer2.png?raw=true" ></el-image>
     </el-col>
     <el-col :span="15">
-      <h2>Take over complex computational workloads from blockchain as a trusted layer-2 oracle.</h2>
-      <p>Smart contract running in blockchain (layer-1) call an external function that runs inside TEA network(layer-2). The function result returns to smart contract with Proof-of-trust for verification.</p>
+      <h2>Taking over complex computational workloads from blockchain as a trusted layer-2 oracle.</h2>
+      <p>Smart contract running in blockchain (layer-1) calls an external function that runs inside TEA network(layer-2). The function result returns to smart contract with Proof-of-trust for verification.</p>
       <div style="text-align:left;">
-        <el-button type="primary" size="small">I am Button</el-button>
-        <a href="" style="margin-left: 24px;">I am link</a>
+        <el-button type="primary" size="small">more...</el-button>
+        <!-- <a href="" style="margin-left: 24px;">I am lik</a> -->
       </div>
     </el-col>
     
   </el-row>
   <el-row class="c-text-image">
     <el-col :span="15">
-      <h2>Hardware and crypto protected protocol ensures you own your own data</h2>
-      <p>Encrypt privacy data before uploading to IPFS, distribute the decryption key to TEA modules that protected by hardware chips. Only trusted modules can access your data after remote attestation.</p>
+      <h2>Hardware and crypto protected protocol ensures that you own your own data</h2>
+      <p>Encrypting sensitve data before uploading to IPFS, distributing the decryption key to TEA modules that protected by hardware chips. Only trusted modules who passes remote attestation can access your data.</p>
 
       <div>
-        <el-button type="primary" size="small">I am Button</el-button>
-        <a href="" style="margin-left: 24px;">I am link</a>
+        <el-button type="primary" size="small">more...</el-button>
+        <!-- <a href="" style="margin-left: 24px;">I am link</a> -->
       </div>
       
     </el-col>
@@ -92,11 +92,11 @@
       <el-image fit="cover" src="https://github.com/tearust/tea-docs/blob/main/res/white_no_censorship_button.png?raw=true" ></el-image>
     </el-col>
     <el-col :span="15">
-      <h2>Build dApps that censorship-resistant</h2>
-      <p>Build dApps that encrypted data store in IPFS and code runs in TEA modules. This kind of dApps cannot be stopped or controlled by any one, even the builder. </p>
+      <h2>Building dApps that born to be censorship-resistant</h2>
+      <p>Build dApps that encrypted data stores in IPFS and code runs in TEA modules. This kind of dApps cannot be stopped or controlled by anyone, even the builder. </p>
       <div style="text-align:left;">
-        <el-button type="primary" size="small">I am Button</el-button>
-        <a href="" style="margin-left: 24px;">I am link</a>
+        <el-button type="primary" size="small">more...</el-button>
+        <!-- <a href="" style="margin-left: 24px;">I am link</a> -->
       </div>
     </el-col>
     
