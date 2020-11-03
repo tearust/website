@@ -81,6 +81,7 @@ export default {
     font-size: 32px;
     color: #000;
     margin-bottom: 40px;
+    margin-top: 40px;
     padding-bottom: 20px;
     border-bottom: 1px solid #eaecef;
     font-weight: bold;
@@ -132,7 +133,7 @@ export default {
 
   img{
     max-width: 100%;
-    margin: 8px 0;
+    margin:20px 8px;
   }
 }
 
