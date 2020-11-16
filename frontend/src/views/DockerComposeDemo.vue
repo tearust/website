@@ -20,7 +20,7 @@
   <p>You do not need to be a developer to try this demo, but you will need the following items to try as a user.</p>
   <ul>
     <li>A Mac or Linux computer. Windows should work too, but we did not get a chance to test</li>
-    <li>A Chrome or Firefox web browser which supports Polkadot plugin/extension</li>
+    <li>A Chrome or Firefox web browser which supports Polkadot plugin/extension (<a href="/#/doc_list/%2FFAQ%2Fhow_to_install_polkadot_extension.md">How to install?</a>)</li>
   </ul>
   <h4>Run the demo dApp from IPFS</h4>
   <p>
