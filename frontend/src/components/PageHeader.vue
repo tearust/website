@@ -1,7 +1,7 @@
 <template>
 <div class="c-m1">
   
-<el-menu :default-active="activeIndex" class="p-header" mode="horizontal" @select="handleSelect">
+<el-menu :default-active="activeIndex" active-text-color="#35a696" class="p-header" mode="horizontal" @select="handleSelect">
   <a href="javascript:void(0)" @click="$router.replace('/'); activeIndex='1';" style="float:left;">
     <el-image
       style="width: 60px; height: 60px;"
@@ -26,6 +26,8 @@
   <el-menu-item index="/doc_list">{{$t('nav.003')}}</el-menu-item>
   <el-menu-item index="/white_paper">{{$t('nav.005')}}</el-menu-item>
 
+  <el-menu-item index="/">{{'Home'}}</el-menu-item>
+
 </el-menu>
 
 </div>
@@ -38,6 +40,19 @@
       return {
         activeIndex: null,
       };
+    },
+    watch: {
+      '$route': {
+        immediate: true,
+        handler (to, from){
+          let name = to.path;
+          if(to.name === 'doc_content'){
+            name = '/doc_list';
+          }
+
+          this.activeIndex = name;
+        }
+      }
     },
     methods: {
       handleSelect(key, keyPath) {
@@ -57,9 +72,7 @@
 
       }
     },
-    mounted(){
-      this.activeIndex = this.$route.name;
-    }
+
   }
 </script>
 <style lang="scss" scoped>

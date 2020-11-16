@@ -59,7 +59,6 @@ export default {
   },
   async mounted(){
     this.cur_path = this.$route.params.doc_path;
-    // console.log(this.$route);
     
     this.$root.loading(true);
 
@@ -68,7 +67,7 @@ export default {
     _.each(tmp_list, (item)=>{
       list.push(item);
     })
-    // console.log(list);
+  
     this.list = list;
     this.$root.loading(false);
 

@@ -22,9 +22,7 @@ export default {
     }, 100);
     next();
   },
-  afterRouteUpdate(a, b, c){
-    console.log(11, a, b,c);
-  },
+
   async mounted(){
     await this.update(this.$route);
 
@@ -73,7 +71,7 @@ export default {
       }
 
       $('html')[0].scrollTop = 0;
-      
+
       this.$root.loading(false);
     }
   }
