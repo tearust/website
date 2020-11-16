@@ -4,7 +4,7 @@
   <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 24px 0 40px; margin: 0 auto; width: 800px;">
     <h1 style="font-size: 56px; color: #444;font-weight: bold; text-align:center; font-family:sans-serif; line-height:50px;">Elevating Decentralized Trusted Computing to a T</h1>
     <p style="font-size: 32px; color: #111; text-align:center; line-height: 36px; margin-top: 15px;">
-        TEA (Trusted Execution and Attestation) is an ambitious project trying to fill the gap between cloud apps and dApps. Introducing a new way to develop, deploy and run apps in pure decentralized manners.
+        <a href="http://t-rust.org/#/doc_list/What_is_TEA%3F%2FREADME.md">TEA (Trusted Execution and Attestation)</a> is an ambitious project trying to fill the gap between cloud apps and dApps. Introducing a new way to develop, deploy and run apps in pure decentralized manners.
       </p>
   </div>
 
@@ -47,7 +47,7 @@
       <p>TEA protocol provides proof-of-trust (Tea Pot) for verification.</p>
 
       <div>
-        <el-button type="primary" size="small">more...</el-button>
+        <a href="/#/doc_list/%2FWhat_is_TEA%3F%2FTEA_vs_IPFS.md"><el-button type="primary" size="small">more...</el-button></a>
         <!-- <a href="" style="margin-left: 24px;">I am link</a> -->
       </div>
       
@@ -65,7 +65,7 @@
       <h2>Taking over complex computational workloads from blockchain as a trusted layer-2 oracle.</h2>
       <p>Smart contract running in blockchain (layer-1) calls an external function that runs inside TEA network(layer-2). The function result returns to smart contract with Proof-of-trust for verification.</p>
       <div style="text-align:left;">
-        <el-button type="primary" size="small">more...</el-button>
+        <a href="/#/doc_list/%2FWhat_is_TEA%3F%2FTEA_vs_blockchain.md"><el-button type="primary" size="small">more...</el-button></a>
         <!-- <a href="" style="margin-left: 24px;">I am lik</a> -->
       </div>
     </el-col>
@@ -77,7 +77,7 @@
       <p>Encrypting sensitve data before uploading to IPFS, distributing the decryption key to TEA modules that protected by hardware chips. Only trusted modules who passes remote attestation can access your data.</p>
 
       <div>
-        <el-button type="primary" size="small">more...</el-button>
+        <a href="/#/doc_list/%2FWhat_is_TEA%3F%2FTEA_vs_Trusted_computing.md"><el-button type="primary" size="small">more...</el-button></a>
         <!-- <a href="" style="margin-left: 24px;">I am link</a> -->
       </div>
       
@@ -95,7 +95,7 @@
       <h2>Building dApps that born to be censorship-resistant</h2>
       <p>Build dApps that encrypted data stores in IPFS and code runs in TEA modules. This kind of dApps cannot be stopped or controlled by anyone, even the builder. </p>
       <div style="text-align:left;">
-        <el-button type="primary" size="small">more...</el-button>
+        <a href="/#/doc_list/%2FWhat_is_TEA%3F%2FBroken_internet_needs_a_fix.md"><el-button type="primary" size="small">more...</el-button></a>
         <!-- <a href="" style="margin-left: 24px;">I am link</a> -->
       </div>
     </el-col>
