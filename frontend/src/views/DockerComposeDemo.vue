@@ -25,7 +25,7 @@
   <h4>Run the demo dApp from IPFS</h4>
   <p>
     As a <b>pure</b> decentralized app (dApp), it doesn't have a server as regular cloud-based webapps. All the static code directly downloaded from IPFS to your browser. The dynamic content runs on the trusted TEA network, so called "layer2" of a Substrate blockchain.</p>
-    <p>You might be confused, but no worries, you do not need to understand to try it. You just need to follow the <a href="/doc_list/%2FTry_the_demo%2FEasy_start.md"> Instruction </a> to complete the online demo.
+    <p>You might be confused, but no worries, you do not need to understand to try it. You just need to follow the <a href="/#/doc_list/%2FTry_the_demo%2FEasy_start.md"> Instruction </a> to complete the online demo.
   </p>
   <p>
     Did you see the lion? If not, please submit a <a href="/bug-report">bug report </a> to us. We will fix the problem shortly. 
@@ -34,7 +34,7 @@
     Although click and run the dApp seems easy, but what happening behind the scean is very complicated. Please click the button below to figure it out.
   </p>
 
-  <a href="/doc_list/%2FUnder_the_hood%2FEasy_start.md">Check out what happened under the hood? </a>
+  <a href="/#/doc_list/%2FUnder_the_hood%2FEasy_start.md">Check out what happened under the hood? </a>
 
   <h4>The lion is boring, can I use other pictures?</h4>
   <div class=""> The first easy start dapp runs on two existing deployments:</div>
@@ -43,7 +43,7 @@
   <div class="">Both the code and the image(data) are deployed by TEA developers. If you do not want to run the TensorFlow algorithm against the lion's picture, you will need to deploy another picture to the TEA network. Then run another version of this dApp.</div>
   <div class="">This new version will take the deployment_id of your new image as a parameter, but still use existing wasm code deployment so that you do not have to build the wasm function.</div>
   <h4>Advanced experience: Deploy your own dapp</h4>
-  <div class="">Please follow the <a href="/doc_list/%2FTry_the_demo%2FUse_your_own_picture.md">instruction</a> to deploy your own picture and run the same wasm function on this picture.</div>
+  <div class="">Please follow the <a href="/#/doc_list/%2FTry_the_demo%2FDeploy_data_run_adhoc_code.md">instruction</a> to deploy your own picture and run the same wasm function on this picture.</div>
   <p>
     Running other people's dApp is easy but not as fun as create your own dApp serving others. This is the second level demo that you can try to deploy your own dApp.
 
