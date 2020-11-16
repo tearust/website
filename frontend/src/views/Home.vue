@@ -6,10 +6,11 @@
     <p style="font-size: 32px; color: #111; text-align:center; line-height: 36px; margin-top: 15px;">
         <a href="http://t-rust.org/#/doc_list/What_is_TEA%3F%2FREADME.md">TEA (Trusted Execution and Attestation)</a> is an ambitious project trying to fill the gap between cloud apps and dApps. Introducing a new way to develop, deploy and run apps in pure decentralized manners.
       </p>
-
+    <p></p>
+    <hr>
     <p>
-      <el-button  size="large" round style="width: 160px; font-weight: bold; font-size: 21px;" type="success" @click="$router.push('/doc_list')" >Docs</el-button>
-      <el-button  size="large" round style="width: 160px; margin-left: 80px; font-weight: bold; font-size: 21px;" type="success" @click="$router.push('/demo')">Demo</el-button>
+      <el-button  size="large" round style="width: 200px; font-weight: bold; font-size: 21px;" type="success" @click="$router.push('/doc_list')" >Documents</el-button>
+      <el-button  size="large" round style="width: 200px; margin-left: 80px; font-weight: bold; font-size: 21px;" type="success" @click="$router.push('/demo')">Experience</el-button>
     </p>
     
   </div>
