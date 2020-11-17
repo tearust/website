@@ -48,14 +48,16 @@ export default {
     }
   },
   beforeRouteUpdate(to, from, next){
-    // console.log(to);
     this.cur_path = to.params.doc_path;
 
     if(!this.cur_path){
       this.default_to_first();
     }
-    
+
     next();
+  },
+  created(){
+    $('.js_footer').hide();
   },
   async mounted(){
     this.cur_path = this.$route.params.doc_path;

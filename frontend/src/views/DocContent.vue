@@ -19,6 +19,7 @@ export default {
     // console.log(to, from, next)
     _.delay(async ()=>{
       await this.update(to);
+
     }, 100);
     next();
   },
@@ -26,6 +27,9 @@ export default {
   async mounted(){
     await this.update(this.$route);
 
+    _.delay(()=>{
+      $('.js_footer').show();
+    }, 200);
     _.delay(this.initBind, 2000);
   },
   methods: {

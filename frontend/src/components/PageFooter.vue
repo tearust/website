@@ -1,15 +1,16 @@
 <template>
-<section class="t-footer bg_2">
+<section class="t-footer bg_2 js_footer">
   <div class="c-m" style="background:rgb(53, 166,150)">
 
     <el-row>
       <el-col :span="6">
         <h4 class="t-h">Resources</h4>
         <a class="t-a" target="_blank" href="https://github.com/tearust">Github</a>
+        <a class="t-a" target="_blank" href="https://medium.com/@pushbar">Medium</a>
         
       </el-col>
       <el-col :span="12">
-        <h4 class="t-h">Contact</h4>
+        <!-- <h4 class="t-h">Contact</h4> -->
         <!-- <span class="t-a">Email: </span> -->
       </el-col>
     </el-row>
@@ -34,7 +35,9 @@
   .t-a{
     font-size: 18px;
     display: table;
-    
+    &:hover{
+      color: #ec7259;
+    }
   }
 }
 </style>
