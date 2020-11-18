@@ -6,6 +6,7 @@ import types from './types';
 const rpc = require('./rpc');
 import BN from 'bn.js';
 import request from '../request';
+import forge from 'node-forge';
 
 class Layer1 {
   constructor(){
@@ -75,7 +76,59 @@ class Layer1 {
       });
     });
     
+  }
 
+  getDefaultAccount(){
+    const keyring = new Keyring({ type: 'sr25519' });
+    const ac = keyring.addFromUri(`//Alice`, { name: `Alice default` });
+    return ac;
+  }
+
+  async updateManifest(tea_id, cid, cb){
+    const teaId = '0x'+tea_id;
+    const layer1_account = this.getDefaultAccount();
+
+    const next = async () => {
+      await this.api.tx.tea.updateManifest(teaId, cid)
+      .signAndSend(layer1_account, ({ events = [], status }) => {
+        console.log("signAndSend...");
+        if (status.isInBlock) {
+          console.log('Included at block hash', status.asInBlock.toHex())
+          console.log('Events:')
+          events.forEach(({ event: { data, method, section }, phase }) => {
+            console.log('\t', phase.toString(), `: ${section}.${method}`, data.toString())
+          })
+        } else if (status.isFinalized) {
+          console.log('Finalized block hash', status.asFinalized.toHex());
+
+          cb();
+        }
+      });
+    };
+
+    await this.api.tx.tea.addNewNode(teaId)
+      .signAndSend(layer1_account, ({ events = [], status }) => {
+      if (status.isInBlock) {
+            console.log('Add new node with teaId ' + teaId)
+            next();
+          } else {
+            console.log('Status of transfer: ' + status.type)
+          }
+
+          events.forEach(({ phase, event: { data, method, section } }) => {
+            console.log(phase.toString() + ' : ' + section + '.' + method + ' ' + data.toString())
+      })
+    });
+
+  }
+
+  async getCurrentManifestCid(tea_id){
+    const sampleTeaId = '0x'+tea_id;
+
+    const cid_obj = await this.api.query.tea.manifest(sampleTeaId);
+    const cid = cid_obj.toHuman() || null;
+
+    return cid;
   }
 
 

@@ -7,6 +7,7 @@ import WhitePaper from '../views/WhitePaper';
 import DocList from '../views/DocList';
 import DocContent from '../views/DocContent';
 import Layer1Faucet from '../views/Layer1Faucet';
+import AddNode from '../views/AddNode';
 
 Vue.use(Router);
 
@@ -50,7 +51,7 @@ export default new Router({
           path: ':doc_path',
           name: 'doc_content',
           component: DocContent
-        }
+        },
       ]
     },
     // {
@@ -62,6 +63,11 @@ export default new Router({
       path: '/tools/layer1_faucet',
       name: 'layer1_faucet',
       component: Layer1Faucet
+    },
+    {
+      path: '/tools/add_node',
+      name: 'add_node',
+      component: AddNode
     }
     
   ]
