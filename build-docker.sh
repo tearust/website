@@ -1,5 +1,5 @@
-tag=0.4.8
-echo building backend...
+tag=0.4.9
+echo building backend..
 cd backend
 echo building docker backend...
 docker build . -t tearust/website-backend:$tag
