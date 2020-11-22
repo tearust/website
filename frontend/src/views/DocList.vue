@@ -2,7 +2,7 @@
 <div class="c-page">
 
   <el-row>
-    <el-col :span="5">
+    <el-col :span="5" :xs="24">
       <ul class="t-ul" v-if="list">
         <li v-for="(item, i) in list" :key="i">
           <el-link v-if="!item.children" 
@@ -28,7 +28,7 @@
       </ul>
     </el-col>
 
-    <el-col :span="19" style="padding-left: 20px;">
+    <el-col class="m-21" :span="19" :xs="24">
       <router-view></router-view>
     </el-col>
   </el-row>
@@ -95,6 +95,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.m-21{
+  padding-left: 20px;
+}
 .t-ul{
   // background:#f9f9f9; 
   min-height: 200px;
@@ -150,6 +153,11 @@ export default {
         }
       }
     }
+  }
+}
+@media screen and (max-width : 600px) {
+  .m-21{
+    padding-left: 0 !important;
   }
 }
 </style>

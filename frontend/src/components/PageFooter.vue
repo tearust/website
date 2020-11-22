@@ -40,4 +40,10 @@
     }
   }
 }
+@media screen and (max-width : 600px) {
+  .t-footer{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 </style>

@@ -4,7 +4,6 @@
 <el-menu :default-active="activeIndex" active-text-color="#35a696" class="p-header" mode="horizontal" @select="handleSelect">
   <a href="javascript:void(0)" @click="$router.replace('/'); activeIndex='1';" style="float:left;">
     <el-image
-      style="width: 60px; height: 60px;"
       src="/img/logo.png"
       fit="fit">
     </el-image>
@@ -13,7 +12,6 @@
   
 
   <!-- <el-menu-item @click="changeLang()">{{$t('nav.001')}}</el-menu-item> -->
-
   <el-menu-item style="display:none;" index="1">{{$t('nav.test')}}</el-menu-item>
   <el-submenu index="2">
 
@@ -29,8 +27,28 @@
 
   <el-menu-item index="/">{{'Home'}}</el-menu-item>
 
+  <li class="m-icon" @click="openDrawer()"><i class="el-icon-s-grid"></i></li>
 </el-menu>
 
+
+<el-drawer
+  title=""
+  custom-class="m-drawer"
+  append-to-body
+  size="60%"
+  :modal="false"
+  :visible.sync="drawer"
+  direction="rtl"
+>
+  <a href="javascript:void(0)" @click="clickDrawerMenu('/')">{{'Home'}}</a>
+  <a href="javascript:void(0)" @click="clickDrawerMenu('/white_paper')">{{$t('nav.005')}}</a>
+  <a href="javascript:void(0)" @click="clickDrawerMenu('/doc_list')">{{$t('nav.003')}}</a>
+  <a href="javascript:void(0)" @click="clickDrawerMenu('/demo')">{{$t('nav.002')}}</a>
+
+  <a href="javascript:void(0)" @click="clickDrawerMenu('/tools/layer1_faucet')">Free token faucet</a>
+  <a href="javascript:void(0)" @click="clickDrawerMenu('/tools/add_node')">Add New Tea Node</a>
+
+</el-drawer>
 </div>
 
 
@@ -40,6 +58,8 @@
     data() {
       return {
         activeIndex: null,
+
+        drawer: false,
       };
     },
     watch: {
@@ -63,6 +83,10 @@
         }
         this.$router.push(key);
       },
+      clickDrawerMenu(key){
+        this.handleSelect(key);
+        this.drawer = false;
+      },
       changeLang(){
         if(this.$i18n.locale === 'en'){
           window.changeLanguage('zh');
@@ -71,12 +95,15 @@
           window.changeLanguage('en');
         }
 
+      },
+      openDrawer(){
+        this.drawer = true;
       }
     },
 
   }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .c-m1{
   position: sticky;
   top: 0;
@@ -90,6 +117,15 @@
   padding: 10px 0 0 0;
   max-width:1140px;
   margin: 0 auto;
+
+  .el-image{
+    width: 60px; 
+    height: 60px;
+  }
+
+  .m-icon{
+    display: none;
+  }
   
 }
 .el-menu--horizontal > .el-menu-item{
@@ -102,5 +138,60 @@
 }
 .el-menu.el-menu--horizontal{
   border-bottom: none;
+}
+
+@media screen and (max-width : 600px) {
+  
+  .p-header{
+    padding: 5px 15px 5px;
+    max-width: 100%;
+    
+    .el-image{
+      width: 40px;
+      height: 40px;
+    }
+
+    .m-icon{
+      float: right;
+      width: 40px;
+      height: 40px;
+      display: block;
+      position: relative;
+
+      i{
+        font-size: 36px;
+        position: absolute;
+        right: 0;
+        top: 5px;
+      }
+    }
+  }
+
+  .el-menu--horizontal > .el-menu-item{
+    display: none;
+  }
+  .el-menu--horizontal > .el-submenu{
+    display: none;
+  
+  }
+
+  
+}
+
+.m-drawer{
+  
+  .el-drawer__header{
+    margin: 0;
+  }
+  .el-drawer__body{
+    padding: 0 20px;
+  }
+  a{
+    display: block;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
 }
 </style>

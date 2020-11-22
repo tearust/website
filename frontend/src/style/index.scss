@@ -159,3 +159,20 @@ a, a:hover, a:focus, button:focus {
     margin: 8px 0;
   }
 }
+
+@media only screen and (max-width : 600px) {
+  *{
+    // outline: 1px solid red !important;
+  }
+
+  .c-page{
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    img{
+      max-width: 100%;
+    }
+  }
+ 
+}

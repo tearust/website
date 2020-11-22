@@ -1,7 +1,7 @@
 <template>
 <div class="c-page">
 
-  <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 24px 0 40px; margin: 0 auto; width: 800px;">
+  <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 24px 0 40px; margin: 0 auto; max-width: 800px;">
     <h1 style="font-size: 56px; color: #444;font-weight: bold; text-align:center; font-family:sans-serif; line-height:65px;">Elevating Decentralized Trusted Computing to a T</h1>
     <p style="font-size: 32px; color: #111; text-align:center; line-height: 36px; margin-top: 15px;">
       <a href="http://t-rust.org/#/doc_list/What_is_TEA%3F%2FREADME.md">
@@ -12,7 +12,7 @@
 
     <p></p>
     <hr>
-    <p>
+    <p class="m-11">
       <el-button  size="large" round style="width: 200px; font-weight: bold; font-size: 21px;" type="success" @click="$router.push('/doc_list')" >Documents</el-button>
       <el-button  size="large" round style="width: 200px; margin-left: 80px; font-weight: bold; font-size: 21px;" type="success" @click="$router.push('/demo')">Experience</el-button>
     </p>
@@ -51,7 +51,7 @@
   </el-row> -->
 
   <el-row class="c-text-image">
-    <el-col :span="15">
+    <el-col :span="15" :xs="24">
       <h2>Turning IPFS(File System) to IPFS(Function-as-a-Service)</h2>
       <p>By adding a TEA trusted computing module to an existing IPFS node, it can turn into a function-as-a-server node besides storing the code and data.</p>
       <p>IPFS stores and caches the code and the TEA module loads and execute the code</p>
@@ -63,16 +63,16 @@
       </div>
       
     </el-col>
-    <el-col :span="9" style="text-align:right;">
+    <el-col :span="9" :xs="24" style="text-align:right;">
       <el-image fit="cover" src="https://github.com/tearust/tea-docs/blob/main/res/tea-on-top-of-ipfs.png?raw=true" ></el-image>
     </el-col>
   </el-row>
 
   <el-row class="c-text-image">
-    <el-col :span="9" style="text-align:left;">
+    <el-col :span="9" :xs="24" style="text-align:left;">
       <el-image fit="cover" src="https://github.com/tearust/tea-docs/blob/main/res/layer1-and-layer2.png?raw=true" ></el-image>
     </el-col>
-    <el-col :span="15">
+    <el-col :span="15" :xs="24">
       <h2>Taking over complex computational workloads from blockchain as a trusted layer-2 oracle.</h2>
       <p>Smart contract running in blockchain (layer-1) calls an external function that runs inside TEA network(layer-2). The function result returns to smart contract with Proof-of-trust for verification.</p>
       <div style="text-align:left;">
@@ -83,7 +83,7 @@
     
   </el-row>
   <el-row class="c-text-image">
-    <el-col :span="15">
+    <el-col :span="15" :xs="24">
       <h2>Hardware and crypto protected protocol ensures that you own your own data</h2>
       <p>Encrypting sensitve data before uploading to IPFS, distributing the decryption key to TEA modules that protected by hardware chips. Only trusted modules who passes remote attestation can access your data.</p>
 
@@ -93,16 +93,16 @@
       </div>
       
     </el-col>
-    <el-col :span="9" style="text-align:right;">
+    <el-col :span="9" :xs="24" style="text-align:right;">
       <el-image fit="cover" src="/img/logo.png" ></el-image>
     </el-col>
   </el-row>
 
   <el-row class="c-text-image">
-    <el-col :span="9" style="text-align:left;">
+    <el-col :span="9" :xs="24" style="text-align:left;">
       <el-image fit="cover" src="https://github.com/tearust/tea-docs/blob/main/res/white_no_censorship_button.png?raw=true" ></el-image>
     </el-col>
-    <el-col :span="15">
+    <el-col :span="15" :xs="24">
       <h2>Building dApps that born to be censorship-resistant</h2>
       <p>Build dApps that encrypted data stores in IPFS and code runs in TEA modules. This kind of dApps cannot be stopped or controlled by anyone, even the builder. </p>
       <div style="text-align:left;">
@@ -289,6 +289,32 @@
         }
       }
       
+    }
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .c-page{
+    h1{
+      font-size: 36px !important;
+      line-height: 32px !important;
+    }
+
+    p{
+      font-size: 24px !important;
+    }
+
+    .m-11{
+      .el-button{
+        width: 100% !important;
+        margin: 10px 0 !important;
+      }
+    }
+
+    .el-row{
+      img{
+        width: 100% !important;
+      }
     }
   }
 }

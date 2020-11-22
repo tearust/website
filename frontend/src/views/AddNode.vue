@@ -8,10 +8,10 @@
   </el-row>
   <el-row>
     
-    <el-col :span="18">
+    <el-col :span="18" :xs="24">
       <el-input v-model="tea_id"></el-input>
     </el-col>
-    <el-col :span="6" style="text-align:right;">
+    <el-col :span="6" :xs="24" style="text-align:right;">
       <el-button @click="submit()" style="width:150px;" type="primary">Submit</el-button>
     </el-col>
   </el-row>

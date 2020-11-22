@@ -1,5 +1,5 @@
 <template>
-<div class="c-page">
+<div class="c-page c-page1">
 
   <section class="t-md" v-if="html" v-html="html"></section>
   
@@ -144,4 +144,9 @@ export default {
   }
 }
 
+@media screen and (max-width : 600px) {
+  .c-page1{
+    padding: 0 !important;
+  }
+}
 </style>
