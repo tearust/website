@@ -1,5 +1,5 @@
 <template>
-<div class="c-page c-page1">
+<div class="c-page c-page1" ref="page">
 
   <section class="t-md" v-if="html" v-html="html"></section>
   
@@ -21,6 +21,12 @@ export default {
       await this.update(to);
 
     }, 100);
+
+    // jump to link point
+    _.delay(()=>{
+      this.jumpToLinkPoint(to);
+    }, 1000);
+
     next();
   },
 
@@ -31,8 +37,30 @@ export default {
       $('.js_footer').show();
     }, 200);
     _.delay(this.initBind, 2000);
+
+    _.delay(()=>{
+      this.jumpToLinkPoint(this.$route);
+    }, 1000);
   },
   methods: {
+    jumpToLinkPoint(route){
+      const name = route.hash;
+      if(!name) return false;
+      
+      this.$nextTick(()=>{
+        const el = $(name);
+        if(el.length < 1) return false;
+        let top = $(name).offset().top;
+        if(top > 120) top = top - 120;
+        console.log('jump to '+top);
+        
+        $('html').scrollTop(top);
+        
+      });
+      
+
+    },
+
     initBind(){
       const el = $(this.$el);
       el.on('click', '.js_click_md', (e)=>{
