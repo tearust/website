@@ -162,7 +162,7 @@
   </div> -->
 
   <p style="margin-top: 120px;">
-    <img src="/img/Under_Construction_Tape.png" width="100%"/>
+    <img src="/img/Trust-construction.png" width="100%"/>
   </p>
 </div>
 </template>
