@@ -7,6 +7,7 @@
         <h4 class="t-h">Resources</h4>
         <a class="t-a" target="_blank" href="https://github.com/tearust">Github</a>
         <a class="t-a" target="_blank" href="https://medium.com/@pushbar">Medium</a>
+        <a class="t-a" target="_blank" href="https://github.com/tearust/tea-docs/discussions">Discussions</a>
         
       </el-col>
       <el-col :span="12">

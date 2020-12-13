@@ -1,6 +1,11 @@
 <template>
 <div class="c-page">
 
+  <div style="margin: 30px auto 50px; text-align:center">
+    <iframe width="800" height="400" src="https://www.youtube.com/embed/-NgR3ySWwXg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  
+
   <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 24px 0 40px; margin: 0 auto; max-width: 800px;">
     <h1 style="font-size: 56px; color: #444;font-weight: bold; text-align:center; font-family:sans-serif; line-height:65px;">Elevating Decentralized Trusted Computing to a T</h1>
     <p style="font-size: 32px; color: #111; text-align:center; line-height: 36px; margin-top: 15px;">
