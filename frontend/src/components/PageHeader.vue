@@ -43,7 +43,7 @@
   <a href="javascript:void(0)" @click="clickDrawerMenu('/')">{{'Home'}}</a>
   <a href="javascript:void(0)" @click="clickDrawerMenu('/white_paper')">{{$t('nav.005')}}</a>
   <a href="javascript:void(0)" @click="clickDrawerMenu('/doc_list')">{{$t('nav.003')}}</a>
-  <a href="javascript:void(0)" @click="clickDrawerMenu('/demo')">{{$t('nav.002')}}</a>
+  <a href="javascript:void(0)" @click="clickDrawerMenu('/doc_list/Try_the_demo%2FREADME.md')">{{$t('nav.002')}}</a>
 
   <a href="javascript:void(0)" @click="clickDrawerMenu('/tools/layer1_faucet')">Free token faucet</a>
   <a href="javascript:void(0)" @click="clickDrawerMenu('/tools/add_node')">Add New Tea Node</a>
