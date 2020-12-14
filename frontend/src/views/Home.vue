@@ -13,8 +13,8 @@
       is an ambitious project trying to fill the gap between cloud apps and dApps. Introducing a new way to develop, deploy and run apps in pure decentralized manners.
     </p>
 
-     <div style="margin: 30px auto 50px; max-width:800px; width:100%; min-height:320px; text-align:center; background: #eee;">
-      <iframe style="max-width:800px;width:100%; height: 100%;" src="https://www.youtube.com/embed/-NgR3ySWwXg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <div style="margin: 30px auto 50px; max-width:800px; width:100%; text-align:center;">
+      <iframe style="max-width:800px;width:100%; height: 380px;" src="https://www.youtube.com/embed/-NgR3ySWwXg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <hr>
     <p class="m-11">
