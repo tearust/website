@@ -1,9 +1,7 @@
 <template>
 <div class="c-page">
 
-  <div style="margin: 30px auto 50px; text-align:center">
-    <iframe width="800" height="400" src="https://www.youtube.com/embed/-NgR3ySWwXg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+ 
   
 
   <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 24px 0 40px; margin: 0 auto; max-width: 800px;">
@@ -15,11 +13,13 @@
       is an ambitious project trying to fill the gap between cloud apps and dApps. Introducing a new way to develop, deploy and run apps in pure decentralized manners.
     </p>
 
-    <p></p>
+     <div style="margin: 30px auto 50px; text-align:center; background: #eee;">
+      <iframe width="800" height="400" src="https://www.youtube.com/embed/-NgR3ySWwXg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <hr>
     <p class="m-11">
       <el-button  size="large" round style="width: 200px; font-weight: bold; font-size: 21px;" type="success" @click="$router.push('/doc_list')" >Documents</el-button>
-      <el-button  size="large" round style="width: 200px; margin-left: 80px; font-weight: bold; font-size: 21px;" type="success" @click="$router.push('/demo')">Experience</el-button>
+      <el-button  size="large" round style="width: 200px; margin-left: 80px; font-weight: bold; font-size: 21px;" type="success" @click="$router.push('/demo')">Demo</el-button>
     </p>
     
   </div>

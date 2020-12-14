@@ -7,6 +7,7 @@ import ElementUI, {Message} from 'element-ui';
 import util from './util';
 
 import VueCodemirror from 'vue-codemirror';
+import VueAnalytics from 'vue-analytics';
 
 
 import 'element-ui/lib/theme-chalk/index.css';
@@ -18,6 +19,10 @@ Vue.use(VueCodemirror);
 Vue.use(VueI18n)
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
+
+Vue.use(VueAnalytics, {
+  id: 'G-3Z0XPZQXX0'
+})
 
 const lang = util.storage.get('lang') || 'en';
 const i18n = new VueI18n({

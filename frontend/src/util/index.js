@@ -61,9 +61,9 @@ const F = {
       let img = marked.Renderer.prototype.image.apply(this, arguments);
       if(src.charAt(0) !== '/' && !/^[http|https]/.test(src)){
         const s_url = require('../request').default.SERVER_URL;
-        const img_file = _.last(src.split('/'));
-        
 
+        const img_file = _.last(src.split('/res/'));
+        
         const img_src = s_url+'/res/'+img_file;
 
         return '<img src="'+img_src+'" />';
