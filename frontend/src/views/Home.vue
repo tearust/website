@@ -19,7 +19,7 @@
     <hr>
     <p class="m-11">
       <el-button  size="large" round style="width: 200px; font-weight: bold; font-size: 21px;" type="success" @click="$router.push('/doc_list')" >Documents</el-button>
-      <el-button  size="large" round style="width: 200px; margin-left: 80px; font-weight: bold; font-size: 21px;" type="success" href="/doc_list/Try_the_demo%2FREADME.md" target="_self">Demo</el-button>
+      <el-button  size="large" round style="width: 200px; margin-left: 80px; font-weight: bold; font-size: 21px;" type="success" @click="$router.push('/doc_list/Try_the_demo%2FREADME.md')">Demo</el-button>
     </p>
     
   </div>
