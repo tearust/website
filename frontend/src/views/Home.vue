@@ -6,7 +6,7 @@
 
   <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 24px 0 40px; margin: 0 auto; max-width: 800px;">
     <h1 style="font-size: 56px; color: #444;font-weight: bold; text-align:center; font-family:sans-serif; line-height:65px;">Elevating Decentralized Trusted Computing to a T</h1>
-    <p style="font-size: 32px; color: #111; text-align:center; line-height: 36px; margin-top: 15px;">
+    <p style="font-size: 21px; color: #111; text-align:center; line-height: 28px; margin-top: 15px;">
       <a href="http://t-rust.org/#/doc_list/What_is_TEA%3F%2FREADME.md">
         TEA (Trusted Execution and Attestation)
       </a> 
