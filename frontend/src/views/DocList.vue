@@ -142,13 +142,15 @@ export default {
       }
       a.t-lk{
         font-size: 15px;
-        margin-left: 15px;
+        margin-left: 30px;
         display: table;
+        text-indent: -15px;
         &.selected{
           color: #ec7259;
         }
         &:hover{
-          border-bottom: 1px solid #ec7259;
+          // border-bottom: 1px solid #ec7259;
+          text-decoration: underline;
           color: #ec7259;
         }
       }
