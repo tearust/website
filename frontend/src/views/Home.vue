@@ -165,7 +165,9 @@
       </el-col>
     </el-row>
   </div> -->
-
+     <div style="margin: 130px auto 50px; max-width:800px; width:100%; text-align:center;">
+      <iframe style="max-width:800px;width:100%; height: 380px;" src="https://www.youtube.com/embed/6GYwrITSfJo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   <p style="margin-top: 120px;">
     <img src="/img/Trust-construction.png" width="100%"/>
   </p>
