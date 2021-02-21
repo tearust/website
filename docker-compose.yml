@@ -3,7 +3,7 @@ services:
 
   backend:
     image: tearust/website-backend:0.5.2
-    container_name: backend
+    container_name: tearust-backend
     ports:
       - 3001:3001
     volumes: 
@@ -17,10 +17,10 @@ services:
     
   frontend:
     image: tearust/website-frontend:0.5.2
-    container_name: frontend
+    container_name: tearust-frontend
     volumes:
       - /letsencrypt:/etc/letsencrypt
     ports:
-      - 80:80
+      - 90:80
         
     
