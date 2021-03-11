@@ -1,4 +1,4 @@
-tag=0.5.4
+tag=0.5.5
 echo building backend..
 cd backend
 echo building docker backend...

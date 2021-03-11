@@ -2,13 +2,13 @@
   
 <div class="c-page">
 
-  <h4>Economic White-Paper</h4>
-  <a class="c-a" :href="root+'/pdf/tech_white_paper_v0.2.1.pdf'" target="_blank">EN (Click to view)</a>
-  <a class="c-a dis" href="">CN (Coming soon)</a>
+  <h4>TEA Project Technical White Paper v0.2.1</h4>
+  <a class="c-a" :href="root+'/pdf/tech_white_paper_v0.2.1.pdf'" target="_blank">English</a>
+  <a class="c-a dis" href="">Chinese (Coming soon)</a>
   <el-divider />
-  <h4>Technical White-Paper</h4>
-  <a class="c-a dis" href="">EN (Coming soon)</a>
-  <a class="c-a dis" href="">CN (Coming soon)</a>
+  <h4>TEA Project Token Economy White Paper</h4>
+  <a class="c-a dis" href="">English (Coming soon)</a>
+  <a class="c-a dis" href="">Chinese (Coming soon)</a>
 
 </div>
 </template>
