@@ -2,10 +2,45 @@
   
 <div class="c-page">
 
-  <h4>White Paper Download Page</h4>
-  <p>
-    <img src="/img/Page-under-construction.png" />
+  <h4>Economic White-Paper</h4>
+  <a class="c-a" :href="root+'/pdf/tech_white_paper_v0.2.1.pdf'" target="_blank">EN (Click to view)</a>
+  <a class="c-a dis" href="">CN (Coming soon)</a>
+  <el-divider />
+  <h4>Technical White-Paper</h4>
+  <a class="c-a dis" href="">EN (Coming soon)</a>
+  <a class="c-a dis" href="">CN (Coming soon)</a>
 
-  </p>
 </div>
 </template>
+<script>
+import request from '../request';
+
+export default {
+  data(){
+    return {
+      root: request.SERVER_URL
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+.c-a{
+  color: #35a696;
+  font-size: 16px;
+  display: block;
+  font-weight: bold;
+  &:hover{
+    text-decoration: underline;
+  }
+
+  &.dis{
+    color: #999;
+    font-weight: normal;
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  
+}
+</style>

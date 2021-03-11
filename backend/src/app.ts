@@ -52,6 +52,7 @@ import {DOC_DIR} from './config';
     app.use(prefix, router)
 
     app.use('/res', express.static(DOC_DIR+'/res/'));
+    app.use('/pdf', express.static(DOC_DIR+'/pdf/'));
 
     const port = process.env.SERVER_PORT
     app.listen(port, () => {
