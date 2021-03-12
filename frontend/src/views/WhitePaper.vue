@@ -2,8 +2,8 @@
   
 <div class="c-page">
 
-  <h4>TEA Project Technical White Paper v0.2.1</h4>
-  <a class="c-a" :href="root+'/pdf/tech_white_paper_v0.2.1.pdf'" target="_blank">English</a>
+  <h4>TEA Project Technical White Paper</h4>
+  <a class="c-a" :href="root+'/pdf/Tea_Tech_Whitepaper.pdf'" target="_blank">English</a>
   <a class="c-a dis" href="">Chinese (Coming soon)</a>
   <el-divider />
   <h4>TEA Project Token Economy White Paper</h4>
