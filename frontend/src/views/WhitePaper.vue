@@ -7,7 +7,7 @@
   <a class="c-a dis" href="">Chinese (Coming soon)</a>
   <el-divider />
   <h4>TEA Project Token Economy White Paper</h4>
-  <a class="c-a dis" href="">English (Coming soon)</a>
+  <a class="c-a" :href="root+'/pdf/Tea_token_economy_whitepaper.pdf'">English</a>
   <a class="c-a dis" href="">Chinese (Coming soon)</a>
 
 </div>
