@@ -10,15 +10,15 @@
     <a class="c-a dis" href="">English (Coming soon)</a>
     <a
       class="c-a"
-      href="/doc_list/%2F%E4%B8%AD%E6%96%87%E8%B5%84%E6%96%99%2Fchn_token_economy.md"
+      href="/#/doc_list/%2F%E4%B8%AD%E6%96%87%E8%B5%84%E6%96%99%2Fchn_token_economy.md"
       >Chinese 中文</a
     >
     <el-divider />
     <h4>Pitch deck</h4>
-    <a class="c-a" href="">English (PDF)</a>
-    <a class="c-a dis" :href="root + '/pdf/Pitch_deck.pdf'" target="_blank"
-      >Chinese 中文 Coming soon</a
+    <a class="c-a" :href="root + '/pdf/Pitch_deck.pdf'" target="_blank"
+      >English (PDF)</a
     >
+    <a class="c-a dis" href="">Chinese 中文 Coming soon</a>
   </div>
 </template>
 <script>
