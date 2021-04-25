@@ -18,9 +18,17 @@ services:
   frontend:
     image: tearust/website-frontend:0.5.10
     container_name: tearust-frontend
-    volumes:
-      - /letsencrypt:/etc/letsencrypt
     ports:
       - 90:80
+
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./letsencrypt:/etc/letsencrypt
+    command: [nginx-debug, '-g', 'daemon off;']
+    ports:
+      - 80:80
         
     
