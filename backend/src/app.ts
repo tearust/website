@@ -10,10 +10,11 @@ import * as compression from 'compression'
 import * as fs from 'fs';
 import * as cookieParser from 'cookie-parser';
 import * as path from 'path';
+import * as https from 'https';
 
 import router, {middleware} from './router';
 
-import {DOC_DIR} from './config';
+import {DOC_DIR, HTTPS_CERT_DIR} from './config';
 
 
 (async ()=>{
@@ -54,9 +55,27 @@ import {DOC_DIR} from './config';
     app.use('/res', express.static(DOC_DIR+'/res/'));
     app.use('/pdf', express.static(DOC_DIR+'/pdf/'));
 
-    const port = process.env.SERVER_PORT
-    app.listen(port, () => {
-        console.log(`start server at port ${port}`)
-    })
+    const port = process.env.SERVER_PORT || 3001;
+    
+
+    if(process.env.NODE_ENV === 'prod'){
+        // https.createServer({
+        //     key: fs.readFileSync(HTTPS_CERT_DIR+'/live/tearust.com/privkey.pem', 'utf8'),
+        //     cert: fs.readFileSync(HTTPS_CERT_DIR+'/live/tearust.com/cert.pem', 'utf8'),
+        //     ca: fs.readFileSync(HTTPS_CERT_DIR+'/live/tearust.com/chain.pem', 'utf8'),
+        // }, app).listen(port, ()=>{
+        //     console.log(`start https server at port ${port}`)
+        // });
+
+        app.listen(port, () => {
+            console.log(`start server at port ${port}`)
+        })
+    }
+    else{
+        app.listen(port, () => {
+            console.log(`start server at port ${port}`)
+        })
+    }
+    
 
 })()

@@ -4,6 +4,7 @@ import * as path from 'path'
 const env = process.env.NODE_ENV || 'dev'
 
 const DOC_DIR = process.cwd()+'/../../tea-docs';
+const HTTPS_CERT_DIR = process.cwd()+'/../letsencrypt';
 
 try{
     const configFilePath = path.resolve('', process.cwd() + `/env/${env}.env`)
@@ -15,5 +16,6 @@ try{
 }
 
 export {
-    DOC_DIR
+    DOC_DIR,
+    HTTPS_CERT_DIR,
 }
