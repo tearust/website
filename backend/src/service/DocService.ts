@@ -55,20 +55,26 @@ const doc = {
 
   sortList(tar, src){
     const rs = _.map(tar, (item)=>{
-      const tmp = _.find(src, (x)=>(x.ori_name === item.name));
-      
+      const tmp = _.find(src, (x)=>(
+        x.ori_name === item.name || 
+        _.startsWith(item.path, x.ori_name) ||
+        (x.path && item.path && x.path === item.path)
+      ));
+
       if(!item.children){
         if(tmp){
           item.path = tmp.path;
-          item.name = tmp.name.replace(/_/g, ' ');
+          item.name = item.path ? item.name.replace(/_/g, ' ') : tmp.name.replace(/_/g, ' ');
 
           return item;
         }
       }
       else{
         if(tmp){
+          
           item.children = doc.sortList(item.children, tmp.children || []);
-          item.name = tmp.name.replace(/_/g, ' ');
+          item.name = item.path ? item.name.replace(/_/g, ' ') : tmp.name.replace(/_/g, ' ');
+          
           return item;
         }
       }
@@ -85,7 +91,6 @@ export default class extends Base {
     const list = await doc.dir(DOC_DIR);
     let sort_list = await doc.getListSortFile('sort');
     sort_list = doc.sortList(sort_list, list);
-console.log(11, sort_list)
     return sort_list;
   }
 
