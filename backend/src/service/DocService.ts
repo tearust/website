@@ -64,7 +64,7 @@ const doc = {
       if(!item.children){
         if(tmp){
           item.path = tmp.path;
-          item.name = item.path ? item.name.replace(/_/g, ' ') : tmp.name.replace(/_/g, ' ');
+          item.name = item.path ? doc.replaceName(item.name.replace(/_/g, ' ')) : tmp.name.replace(/_/g, ' ');
 
           return item;
         }
@@ -73,7 +73,7 @@ const doc = {
         if(tmp){
           
           item.children = doc.sortList(item.children, tmp.children || []);
-          item.name = item.path ? item.name.replace(/_/g, ' ') : tmp.name.replace(/_/g, ' ');
+          item.name = item.path ? doc.replaceName(item.name.replace(/_/g, ' ')) : tmp.name.replace(/_/g, ' ');
           
           return item;
         }
