@@ -105,7 +105,7 @@
     <el-row class="c-text-image">
       <el-col :span="15" :xs="24">
         <h2>
-          Unlike other layer2 solutiosn, TEA is not attempting to improve
+          Unlike other layer2 solutions, TEA is not attempting to improve
           blockchain consensus
         </h2>
         <p>
@@ -193,53 +193,7 @@
         </div>
       </el-col>
     </el-row>
-    <!-- <div class="c-case">
-    <h4>Use cases</h4>
-    <h1>Build what's next</h1>
-    <b>With T-rust, you can build new kinds of apps that couldn’t exist before.</b>
-    <el-row style="margin-top: 32px;">
-      <el-col :span="11" class="x-col">
-        <div class="x-1 flex-center">
-          <i class="el-icon-user"></i>
-        </div>
-        <div class="x-2">
-          <h4>Apps with private data</h4>
-          <p>Create alternatives to everyday apps where users’ privacy is guaranteed with encryption.</p>
-        </div>
-        
-      </el-col>
-      <el-col :span="11" :offset="2" class="x-col">
-        <div class="x-1 flex-center">
-          <i class="el-icon-s-promotion"></i>
-        </div>
-        <div class="x-2">
-          <h4>Apps with private data</h4>
-          <p>Create alternatives to everyday apps where users’ privacy is guaranteed with encryption.</p>
-        </div>
-      </el-col>
-    </el-row>
-    <el-row style="margin-top: 32px;">
-      <el-col :span="11" class="x-col">
-        <div class="x-1 flex-center">
-          <i class="el-icon-orange"></i>
-        </div>
-        <div class="x-2">
-          <h4>Apps with private data</h4>
-          <p>Create alternatives to everyday apps where users’ privacy is guaranteed with encryption.</p>
-        </div>
-        
-      </el-col>
-      <el-col :span="11" :offset="2" class="x-col">
-        <div class="x-1 flex-center">
-          <i class="el-icon-grape"></i>
-        </div>
-        <div class="x-2">
-          <h4>Apps with private data</h4>
-          <p>Create alternatives to everyday apps where users’ privacy is guaranteed with encryption.</p>
-        </div>
-      </el-col>
-    </el-row>
-  </div> -->
+    <hr />
     <div
       style="
         margin: 130px auto 50px;
