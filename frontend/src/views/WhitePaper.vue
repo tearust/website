@@ -8,6 +8,9 @@
     <el-divider />
     <h4>TEA Project Token Economy White Paper</h4>
     <a class="c-a dis" href="">English (Coming soon)</a>
+    <a class="c-a" href="/#/doc_list/%2FWhat_is_TEA%3F%2FToken_economy.md"
+      >English</a
+    >
     <a
       class="c-a"
       href="/#/doc_list/%2F%E4%B8%AD%E6%96%87%E8%B5%84%E6%96%99%2Fchn_token_economy.md"
