@@ -13,14 +13,14 @@
 
   <!-- <el-menu-item @click="changeLang()">{{$t('nav.001')}}</el-menu-item> -->
   <el-menu-item style="display:none;" index="1">{{$t('nav.test')}}</el-menu-item>
-  <el-submenu index="2">
+  <!-- <el-submenu index="2">
 
     <template slot="title">{{$t('nav.004')}}</template>
     <el-menu-item index="/tools/layer1_faucet">Free token faucet</el-menu-item>
     <el-menu-item index="/tools/add_node">Add New Tea Node</el-menu-item>
     
     
-  </el-submenu>
+  </el-submenu> -->
   <el-menu-item index="/doc_list/Try_the_demo%2FREADME.md">{{$t('nav.002')}}</el-menu-item>
   <el-menu-item index="/doc_list">{{$t('nav.003')}}</el-menu-item>
   <el-menu-item index="/white_paper">{{$t('nav.005')}}</el-menu-item>
@@ -45,8 +45,8 @@
   <a href="javascript:void(0)" @click="clickDrawerMenu('/doc_list')">{{$t('nav.003')}}</a>
   <a href="javascript:void(0)" @click="clickDrawerMenu('/doc_list/Try_the_demo%2FREADME.md')">{{$t('nav.002')}}</a>
 
-  <a href="javascript:void(0)" @click="clickDrawerMenu('/tools/layer1_faucet')">Free token faucet</a>
-  <a href="javascript:void(0)" @click="clickDrawerMenu('/tools/add_node')">Add New Tea Node</a>
+  <!-- <a href="javascript:void(0)" @click="clickDrawerMenu('/tools/layer1_faucet')">Free token faucet</a>
+  <a href="javascript:void(0)" @click="clickDrawerMenu('/tools/add_node')">Add New Tea Node</a> -->
 
 </el-drawer>
 </div>
