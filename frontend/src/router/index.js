@@ -9,6 +9,8 @@ import DocContent from '../views/DocContent';
 import Layer1Faucet from '../views/Layer1Faucet';
 import AddNode from '../views/AddNode';
 
+import AboutTeams from '../views/AboutTeams';
+
 Vue.use(Router);
 
 //push 
@@ -68,6 +70,11 @@ export default new Router({
       path: '/tools/add_node',
       name: 'add_node',
       component: AddNode
+    },
+    {
+      path: '/about/teams',
+      name: 'about_teams',
+      component: AboutTeams,
     }
     
   ]

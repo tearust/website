@@ -17,6 +17,13 @@
             >Discussions</a
           >
         </el-col>
+
+        <el-col :span="6">
+          <h4 class="t-h">About</h4>
+          <a class="t-a" href="javascript:void(0)" @click="goToTeams()">Teams</a>
+          
+        </el-col>
+
         <el-col :span="12">
           <!-- <h4 class="t-h">Contact</h4> -->
           <!-- <span class="t-a">Email: </span> -->
@@ -30,6 +37,15 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  methods: {
+    goToTeams(){
+      this.$router.push('/about/teams');
+    }
+  }
+}
+</script>
 <style lang="scss">
 .t-footer {
   padding: 24px 0 40px;
