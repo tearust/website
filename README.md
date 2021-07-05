@@ -1,10 +1,2 @@
-# website
-
-Website source code for
-- t-rust.com
-- t-rust.org
-- tearust.com
-
-All documents load from the tea-docs repo. 
-
-Please go to t-rust.com to read live.
+website for teaproject.org
+In the document section, it reads from tea-docs repo and convert to HTML

@@ -1,5 +1,5 @@
 import Base from './Base';
-import {_} from '../utility';
+import {_, formatObsidianToMd} from '../utility';
 import * as fs from 'fs';
 import * as yaml from 'js-yaml';
 import {DOC_DIR} from '../config';
@@ -95,9 +95,14 @@ export default class extends Base {
   }
 
   async getMdFileContent(relative_path): Promise<any> {
+    console.log(444, relative_path)
     const full_path = DOC_DIR+'/'+relative_path;
-    return fs.readFileSync(full_path, {
+    const rs = fs.readFileSync(full_path, {
       encoding: 'utf-8'
+    });
+
+    return await formatObsidianToMd(rs, {
+      path: relative_path
     });
   }
 
