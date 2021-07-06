@@ -4,7 +4,7 @@
 <el-menu :default-active="activeIndex" active-text-color="#35a696" class="p-header" mode="horizontal" @select="handleSelect">
   <a href="javascript:void(0)" @click="$router.replace('/'); activeIndex='1';" style="float:left;">
     <el-image
-      src="/tea_logo/Tea Project - full-logo-black.png"
+      src="/tea-logo/logo.png"
       fit="fit">
     </el-image>
     
