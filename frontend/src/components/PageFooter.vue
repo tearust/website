@@ -33,7 +33,7 @@
       <el-divider></el-divider>
       <p style="margin: 0 auto; text-align: center; font-size: 16px">
         Copyright © 2019-2021 
-        <img class="t-copy-right-img" src="/tea_logo/Tea Project - name-white.png" />
+        <b>TeaProject.org</b>
         All Rights Reserved
       </p>
     </div>
