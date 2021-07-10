@@ -75,6 +75,10 @@ const F = {
     marked.setOptions({
       renderer: renderer
     });
+
+
+    md_content = md_content.replace(/\[\/\/TEA\]/g, '<span style="margin-right: 0; font-size: 14px;" class="iconfont icon-a-TeaProject-T"></span>');
+
     return marked(md_content);
   }
 };
