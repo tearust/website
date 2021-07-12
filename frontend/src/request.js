@@ -2,7 +2,10 @@ import axios from 'axios';
 import _ from 'lodash';
 import util from './util';
 
-const SERVER_URL = _.includes(location.hostname, '127.0.0.1') ? `http://127.0.0.1:3001` : `http://${location.hostname}`;
+const SERVER_URL = 
+  _.includes(location.hostname, '127.0.0.1') ||  _.includes(location.hostname, 'localhost')
+  ? `http://127.0.0.1:3001` 
+  : `http://${location.hostname}`;
 const BASE_URL = `${SERVER_URL}/api`;
 // const BASE_URL = 'http://81.70.96.136:3001/api';
 
