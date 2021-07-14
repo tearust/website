@@ -1,2 +1,29 @@
 website for teaproject.org
 In the document section, it reads from tea-docs repo and convert to HTML
+# Run local website
+## clone repo
+git clone this repo to your local file system
+
+## Confirm the tea-docs folder
+Make sure that the tea-docs repo is also cloned and is the sibling with this website repo. 
+that means they are at the same level in local folder structure. This is important, otherwise, the website cannot read tea-docs and won't show the documents on website.
+
+## run backend
+```
+# assume you are in the root of repo
+cd backend
+npm i
+npm start
+```
+
+## run frontend
+```
+# assume you are in the root of repo
+cd frontend
+npm i
+npm start
+```
+Now the frontend should run at your http://localhost:3002
+Please go to localhost:3002 in your browser, you should see the website.
+
+Check the documents to make sure that the tea-docs repo also works fine.
