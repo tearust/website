@@ -26,7 +26,7 @@ export const formatObsidianToMd = async (content, opts:any={}) => {
       const tmp = opts.path.split('/');
       tmp.pop();
       tmp.push(p);
-      const file_path = DOC_DIR+'/'+tmp.join('/');
+      const file_path = DOC_DIR+'/'+tmp.join('/') + ".md";
 
       // console.log(333, file_path);
 
