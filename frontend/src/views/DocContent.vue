@@ -170,6 +170,20 @@ export default {
     max-width: 100%;
     margin:20px 8px;
   }
+
+  table{
+    margin: 15px 18px 12px;
+    th, td{
+      padding: 5px 10px;
+      transition: background-color .25s ease;
+      border: 1px solid #EBEEF5;
+      box-sizing: border-box;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+      position: relative;
+      text-align: left;
+    }
+  }
 }
 
 @media screen and (max-width : 600px) {

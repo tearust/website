@@ -95,7 +95,6 @@ export default class extends Base {
   }
 
   async getMdFileContent(relative_path): Promise<any> {
-    console.log(444, relative_path)
     const full_path = DOC_DIR+'/'+relative_path;
     const rs = fs.readFileSync(full_path, {
       encoding: 'utf-8'
