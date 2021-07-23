@@ -5,7 +5,11 @@
   <a href="javascript:void(0)" @click="$router.replace('/'); activeIndex='1';" style="float:left;">
     <el-image
       src="/tea-logo/logo.png"
+      :lazy="true"
       fit="fit">
+      <div slot="error"  >
+        Image error.
+      </div>
     </el-image>
     
   </a>

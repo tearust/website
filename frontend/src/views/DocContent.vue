@@ -166,6 +166,12 @@ export default {
     }
   }
 
+  blockquote{
+    margin: 15px 40px;
+    background: #eee;
+    padding: 5px 2px;
+  }
+
   img{
     max-width: 100%;
     margin:20px 8px;
