@@ -1,6 +1,6 @@
 <template>
   <div class="c-page">
-    <h4>TEA Project Technical White Paper</h4>
+    <h4>TEA Project Technical Whitepaper</h4>
     <a class="c-a" href="/#/doc_list/%2FWhitepaper%2FLegal_Disclaimer.md">
       Legal Disclaimer
     </a>
@@ -44,7 +44,7 @@
       >Chinese 中文</a
     >
     <el-divider /> -->
-    <h4>Pitch deck</h4>
+    <h4>Pitch Deck</h4>
     <a class="c-a" :href="root + '/pdf/Pitch_deck.pdf'" target="_blank"
       >English (PDF)</a
     >
