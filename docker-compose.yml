@@ -16,7 +16,7 @@ services:
     command: "node index.js"
     
   frontend:
-    image: tearust/website-frontend:0.5.26
+    image: tearust/website-frontend:0.5.27
     container_name: tearust-frontend
     ports:
       - 90:80
