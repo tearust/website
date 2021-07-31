@@ -1,0 +1,45 @@
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="/tea-logo/favicon32.ico">
+  <script src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
+  <link rel="preload" href="//at.alicdn.com/t/font_2651648_4qbjfdk1ka.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2651648_k9tsl3u8ko.css">
+
+  <link rel="stylesheet" href="/docs/mdlibs/index.css?v=1627757468626">
+</head>
+<body>
+
+<div class="t-md"><h1 id="tea-can-function-as-a-layer-2-solution-for-blockchains">TEA Can Function as a Layer-2 Solution for Blockchains</h1>
+<p>The TEA project is built with Polkadot&#39;s substrate. Its essential consensus algorithm runs inside of our layer-1 blockchain component. TEA&#39;s layer-1 blockchain can function like a layer-2 oracle that runs on top of existing blockchains and act as a computation oracle for them. </p>
+<h2 id="tea-as-a-computation-oracle-for-other-blockchains">TEA as a Computation Oracle For Other Blockchains</h2>
+<p>Smart contracts form the logical layer running inside of blockchains. You can use anything that happened previously in the block as input parameters for a smart contract function. But if some data happens outside of the blockchain, smart contracts need a way to trust this event. An <a target='_blank'  href="https://academy.binance.com/en/articles/blockchain-oracles-explained">oracle</a> is needed as the trusted input source. There are many kinds of oracles. TEA is a computation oracle that takes input from the blockchain, runs complex algorithms outside the chain, and then sends the computation result back to the chain. </p>
+<p>There are some good reasons why you don&#39;t do the computing inside blockchain:</p>
+<ul>
+<li>Complicated algorithms cannot run in smart contracts due to computational cost and time.</li>
+<li>Computational tasks often require additional hardware support such as a GPU or an AI TPU.</li>
+<li>Some functions need to run against big data which is not practical to run in blockchain nodes.</li>
+<li>Some functions need external data input from the real world. </li>
+</ul>
+<h2 id="blockchain-is-the-client-and-tea-is-the-server">Blockchain is the Client, and TEA is the Server</h2>
+<p><img src="https://github.com/tearust/tea-docs/blob/main/res/layer1-and-layer2.png?raw=true" alt="relationship-between-layer1-and-2"></p>
+<p>The diagram above shows how TEA nodes run on top of other blockchains. Any blockchain can send a computational oracle request in a blockchain event and receive the result along with PoT (Proof of Trust) data in a tx at a later time.</p>
+<p>The request (we call it a task) is then submitted to the TEA network. One of the qualified executors will run the task under remote attestation by other qualified TEA nodes. The result is then returned back to the blockchain in the format of a transaction. Once the blockchain receives the answer, it can verify the PoT data returned and continue the smart contract logic.</p>
+<p>The TEA Project has its own layer-1 blockchain (not shown in the diagram). This internal use layer-1 blockchain has the following purposes:</p>
+<ul>
+<li>Consensus on Proof of Trust.</li>
+<li>Token incentive logic.</li>
+<li>Key config and stats storage.</li>
+</ul>
+<p>Based on this concept, we can consider blockchain as the client while the TEA Project is the server. </p>
+<h2 id="verify-pot-between-chains">Verify PoT Between Chains</h2>
+<p>As a client, there are two concerns when using an external oracle.</p>
+<ul>
+<li>The result should be the exact computational result from the specific code and input data.</li>
+<li>There should be no data breach during the entire process.</li>
+</ul>
+<p>TEA layer-1 is a blockchain running parallel with the client&#39;s blockchain. Inter-chain communication allows the client to send verification requests and get back confirmations. </p>
+<p>TEA&#39;s layer-1 is built using Polkadot&#39;s Substrate. Any blockchains compatible with Polkadot can easily integrate with the TEA Project in our early stages. Chains from all other platforms will be integrated at a future date.</p>
+</div>
+  
+</body>
+</html>

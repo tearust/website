@@ -1,0 +1,35 @@
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="/tea-logo/favicon32.ico">
+  <script src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
+  <link rel="preload" href="//at.alicdn.com/t/font_2651648_4qbjfdk1ka.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2651648_k9tsl3u8ko.css">
+
+  <link rel="stylesheet" href="/docs/mdlibs/index.css?v=1627757468692">
+</head>
+<body>
+
+<div class="t-md"><h1 id="sources-of-truth-blockchain-and-hardware">Sources of Truth: Blockchain and Hardware</h1>
+<p>There are two souces of trust that the TEA project relies on: the blockchain and hardware.</p>
+<p>Every node stores their essential data to the blockchain. Based on blockchain&#39;s secure nature, the data stored in blockchain is considered trustable. When doing remote attestation, the verifier won&#39;t trust anything the testee claims; everything needs to come from either the historical data in blockchain or the hardware signed message. All other decisions are made based on those two sources of truth. </p>
+<h1 id="there-are-three-chains-in-the-tea-project">There are Three Chains in the TEA Project</h1>
+<p>The most frequently asked question about the TEA project is if it&#39;s really a blockchain project? Well, the simple answer is no it&#39;s not. The longer answer is that the TEA project sits on top of a blockchain as a so-called layer-2 solution. But it&#39;s not a blockchain itself. The biggest advantage is that TEA won’t compete with any existing blockchain projects, they cooperate instead.</p>
+<p>Not only does TEA sit on top of a blockchain, but it includes two other chains that don&#39;t exist in any other blockchain projects: a Trust Chain and a Delegation Chain. These 3 chains work together like a sandwich to build the decentralized trust computing network.</p>
+<p><img src="https://miro.medium.com/max/980/1*mkkpAyQl9Ot4bAET30gO_g.png" alt="3chains"></p>
+<h2 id="blockchain---the-layer-1-supporter">Blockchain - the Layer-1 Supporter</h2>
+<p>As I mentioned above, TEA itself is not a blockchain, but it&#39;s built on top of blockchain technologies. TEA uses the blockchain as a layer-1 to provide:</p>
+<ul>
+<li>Economic incentives and penalties that shape its token economy.</li>
+<li>Immutable trust information storage such as credit history, key IDs and hashes.</li>
+<li>Block height as a universal clock between TEA nodes.</li>
+</ul>
+<p>Continue <a class='js_click_md' href="Tea_on_layer1.md">reading...</a></p>
+<p>[[Delegation_chain]]</p>
+<h2 id="trust-chain---our-hardware-security-guard">Trust Chain - Our Hardware Security Guard</h2>
+<p>We support 2 trusted hardware solutions, TEE or TPM/HSM. In the case of TEE, the validation is centralized, so no chain is requried. In the case of TPM/HSM, a trust chain runs through the entire remote attestation workflow.</p>
+<p>Unlike most other layer-2 trusted computing projects, we don&#39;t trust pure software solutions and we don&#39;t use expensive and unrealistic cryptographic solutions either. We use mature and widely used Trusted Computing technologies, such as TPM / HSM, as our hardware root of trust. We know TPM alone is not secure enough as TPM has many known vulnerabilities. That’s why we insert it between the blockchain and the delegation chain. TPM can be broken, but the potential damage is limited and can be contained.</p>
+<p>[[Trust_chain]]</p>
+</div>
+  
+</body>
+</html>

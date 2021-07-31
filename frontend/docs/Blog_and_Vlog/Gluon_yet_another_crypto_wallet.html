@@ -1,0 +1,50 @@
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="/tea-logo/favicon32.ico">
+  <script src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
+  <link rel="preload" href="//at.alicdn.com/t/font_2651648_4qbjfdk1ka.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2651648_k9tsl3u8ko.css">
+
+  <link rel="stylesheet" href="/docs/mdlibs/index.css?v=1627757468663">
+</head>
+<body>
+
+<div class="t-md"><h1 id="gluon-distributed-hardware-wallet-yet-another-crypto-wallet-why-whats-new">Gluon (Distributed hardware wallet)— Yet another crypto wallet? Why? What’s new?</h1>
+<p>You can read my previous blog <a class='js_click_md' href="../Can_trusted_computing_protect_your_digital_assets.md">Can trusted-computing protect your digital assets</a> which helps explain what the Gluon Wallet is. After reading it, you can better understand that Gluon is not so much a wallet as it&#39;s actually a Trust-as-a-Service (TaaS) application focused on crypto keys.</p>
+<p><img src="http://64.227.49.206:3001/res/blog/0_q-o2ME7lRtdgCqkC.png" /></p>
+<h2 id="i-need-a-hardware-wallet-really-means-i-need-some-way-to-protect-my-private-key">&quot;I need a hardware wallet&quot; really means &quot;I need some way to protect my private key&quot;</h2>
+<p>It doesn&#39;t matter what kind of wallet you use as long as you have a secure way to protect your private key. Hardware wallets have caveats that put your digital assets at risk. What Gluon provides a wallet holder is actually a trust as a service. The trust comes from thousands of other hardware wallets although you don&#39;t own them. You don&#39;t need to trust the owners of those hardware wallets, because they have no access to your secret. As a matter of fact, even you won&#39;t have access to your private key!</p>
+<h2 id="what-i-do-not-even-have-access-to-the-private-key-as-an-owner">What? I do not even have access to the private key as an owner?</h2>
+<p>Sorry but you do not. You could have a partial key as additional protection (although we don&#39;t think it&#39;s necessary). Having a full private key in your pocket is actually a bad idea. If you think you have stronger protection than those thousands of hardware wallets, then you probably don&#39;t realize what protection means. In my mind, as long as there is a decrypted secret that was ever exposed to any computing device which potentially is able to connect to a network, the secret is no longer secure. The device would have to be particularly designed and hardware protected. So I think it would be more secure to generate and store your private key in Gluon for the lifetime of its use. It should never leave the protected environment even when it&#39;s used to sign your transaction.</p>
+<h2 id="the-gluon-password-is-your-only-master-password-to-the-blockchain-world">The Gluon password is your only master password to the blockchain world</h2>
+<p>Since all of your private keys to other blockchains are generated and stored inside of Gluon, the only thing you need to remember is the Gluon password. It is actually a standard Substrate blockchain private key. You can use a browser extension, a software wallet, or a hardware wallet.</p>
+<p><img src="http://64.227.49.206:3001/res/blog/WX20201215-105514@2x.png" /></p>
+<h2 id="password-why">Password? Why?</h2>
+<p>You might feel cheated because you still have to manage a key (password) to use all of your other keys. Aren&#39;t we trying to get away from passwords, which are basically exploitable? Don&#39;t worry, let me explain.</p>
+<p>The Gluon password is not the single method of authentication. You can (and you should) configure your security settings to add 2FA or 3FA to your Gluon account.</p>
+<p>Because Gluon is built on top of the TEA project, a so-called &quot;layer-2&quot; solution framework. It can easily be integrated with other modern authentication solutions like OTP, Hardware Authenticator, Bio-ID, etc.</p>
+<p>When you use Gluon to sign a transaction, based on your reconfiguration, you will be asked to punch in your additional authenticator’s one-time passkey, face recognition, fingerprint, voice recognition, etc.</p>
+<p><img src="http://64.227.49.206:3001/res/blog/WX20201215-105650@2x.png" /></p>
+<p>Those methods are also used for your Gluon master key recovery along with social recovery. Social recovery means you can preset a few family or friends&#39; accounts. If you lose your Gluon key, you can physically ask them to group sign a transaction to recover your account key.</p>
+<p>All these authentications or recoveries are not done in a traditional centralized way. They are handled in blockchain in a decentralized manner. No one can control or force recover your account, not even the government.</p>
+<p><img src="http://64.227.49.206:3001/res/blog/WX20201215-105927@2x.png" /></p>
+<h2 id="are-there-actually-hardware-wallets-running-in-gluon">Are there actually hardware wallets running in Gluon?</h2>
+<p>Internally, we do not call them hardware wallets; we call them TEA nodes. We use hardware wallets because it is a common marketing term that everyone understands. Technically, a TEA node becomes a hardware wallet when the Gluon actor (program) is loaded into it. It&#39;s a hardware protected security module (HSM) which works the same as hardware wallets.</p>
+<h2 id="tea-nodes-do-not-work-alone-they-work-together">TEA nodes do not work alone, they work together</h2>
+<p>TEA nodes cannot work alone. They can only work together with many other TEA nodes to get consensuses on just about everything. Because there are many TEA nodes running 24x7 on the peer-to-peer network, you can always get your services you need. Any single TEA node may hold a small portion of your secret that cannot be recovered without consensus with other TEA nodes. Even if they are offline, stolen, burned, or hacked, you won’t lose your secret. This is the methodology of blockchain.</p>
+<h2 id="in-what-situation-gluon-can-get-hacked">In what situation, Gluon can get hacked?</h2>
+<p>There is no 100% security when you still need a little usability and performance. Just like any Blockchain project, Gluon and other TEA projects can be hacked too. But they can only be hacked under the following condition: (assuming Shamir (k,n) algorithm k = 70, n=100)</p>
+<ul>
+<li><p>Among thousands of TEA nodes (there might be more, let’s assume we have thousands), there are 100 undetermined nodes each holds 1/100 of your private key.</p>
+</li>
+<li><p>Hacker happens to hack into 70 TEA nodes of those 100 at the same time and is not detected by TEA’s hardware remote attestation consensus.</p>
+</li>
+</ul>
+<p>Because the TEA node is a black box to everyone, no one knows which of the 100 block boxes among the thousands hold your secret. Hacking into any single hardware protected TEA node is not an easy job, let alone the many different technical stacks used by each of the TEA nodes. Hackers have to use different tools in every case. It has to be completed successfully in a rather short period of time as ongoing key rotations during constant remote attestation may detect the intrusion after a few seconds. I cannot say it&#39;s impossible, but I can tell you that it would be very hard and very expensive. As long as it&#39;s harder than hacking into your own computer, smartphone, or your hardware wallet, the Gluon wallet is a better choice.</p>
+<h2 id="where-to-get-more-information-about-gluon">Where to get more information about Gluon?</h2>
+<p>I am working on a separate Gluon Wallet project from the main TEA project website. In the meantime, you can get the basic information from <a target='_blank'  href="https://teaproject.org">the TEA project website</a>. The TEA Project is actually what Gluon will be running on. Gluon is an application of the T-rust framework by the TEA Project team to demonstrate what TEA can do. So if you understand TEA, you would understand Gluon.</p>
+<p>The future Gluon Wallet website will be <a target='_blank'  href="http://gluonwallet.com">Gluonwallet.com</a>. Work on the Gluon Wallet is ongoing, please stay tuned.</p>
+</div>
+  
+</body>
+</html>

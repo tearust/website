@@ -1,0 +1,32 @@
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="/tea-logo/favicon32.ico">
+  <script src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
+  <link rel="preload" href="//at.alicdn.com/t/font_2651648_4qbjfdk1ka.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2651648_k9tsl3u8ko.css">
+
+  <link rel="stylesheet" href="/docs/mdlibs/index.css?v=1627757468731">
+</head>
+<body>
+
+<div class="t-md"><h1 id="why-does-teas-dapp-show-as-not-secure-in-the-browser">Why Does TEA&#39;s dApp Show as &quot;Not Secure&quot; in the Browser</h1>
+<p>The short answser is that we don&#39;t need https because we don&#39;t transfer any secrets in plain text between you and anyone else.</p>
+<p>In most browsers, if a webserver runs an https server, it&#39;s considered &quot;Secure&quot;. If a server runs an http server, it&#39;s considered &quot;Not Secure&quot;. </p>
+<p>Https encrypts all the traffic between the browser and the server. Any sniffer in between cannot get the content, and only the browser and the server can decrypt the content.</p>
+<p>But why doesn&#39;t TEA need https? Let&#39;s explore the longer answer.</p>
+<h2 id="traditional-cloud-apps-assume-servers-can-be-trusted-but-we-dont">Traditional Cloud Apps Assume Servers Can Be Trusted, But We Don&#39;t</h2>
+<p>In traditional centralized cloud computing, the basic assumption is that the server can be trusted. So https is invented to prevent a sniffer interloping in the middle between client and server. Https encrypts in transit, making the content available once it reaches the server.</p>
+<p>In the decentralized TEA world, we don&#39;t assume the server is innocent. As long as information reaches a server, the hacker can read the secrete content stored there. </p>
+<p>This is the reason privacy breaching happens almost every day. I am not saying the service providers are bad guys. I&#39;m saying that as long as hackers can break into the server, they can get whatever information on the server as long as it&#39;s not encrypted.</p>
+<p>In TEA, we don&#39;t trust the server. We do trust the small hardware protected modules inside of the server. We call this a TEA module. All the information outside of the TEA module is not secure. Secrets are decrypted only when they enter the TEA module, and encrypted again when leaving the TEA module. </p>
+<p>For the TEA Project to maintain a secure network, making sure the server stays protected amounts to protecting a much smaller target - the TEA module. Smaller targets have a smaller attack surface and are easier to secure.</p>
+<h2 id="tea-dapps-live-on-ipfs-not-the-server">TEA DApps Live on IPFS, Not the Server.</h2>
+<p>When you click the demo dApp, you actually connect to one of the IPFS servers from all over the world. You don&#39;t care which IPFS node it is since they&#39;re all the same to the end user. You ask the IPFS server to download the html / js / css code to you. You then run the code on your browser. The whole process has nothing to do with any web server as the dApp runs on your own browser.</p>
+<h2 id="but-where-do-computationally-intense-apps-run">But Where Do Computationally Intense Apps Run?</h2>
+<p>We don&#39;t run computationally intensive apps (eg. the Tensorflow algorithm) in your browser. It actually runs on one of the TEA nodes running somewhere in the world. Again, you don&#39;t care and don&#39;t need to know which one actually runs your code. The blockchain consensus protects your data security and ensures the answer is correct. You can read more in the &quot;Under the Hood&quot; section in our sidebar to get more details.</p>
+<h2 id="how-do-my-secrets-safely-transfer-to-tea-modules">How Do My Secrets Safely Transfer to TEA Modules?</h2>
+<p>Because we don&#39;t trust servers, all the secrets need to encrypted end to end. It&#39;s similar to https, just that instead of being encrypted between your browser and server, it&#39;s done between the browser and the TEA module. Only TEA modules can decrypt the content using a hardware-protected key.</p>
+</div>
+  
+</body>
+</html>

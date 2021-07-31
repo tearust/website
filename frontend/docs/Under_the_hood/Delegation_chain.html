@@ -1,0 +1,26 @@
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="/tea-logo/favicon32.ico">
+  <script src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
+  <link rel="preload" href="//at.alicdn.com/t/font_2651648_4qbjfdk1ka.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2651648_k9tsl3u8ko.css">
+
+  <link rel="stylesheet" href="/docs/mdlibs/index.css?v=1627757468701">
+</head>
+<body>
+
+<div class="t-md"><p><img src="http://64.227.49.206:3001/res/key-flows.png" /></p>
+<h2 id="delegation-chain---where-the-data-and-code-flow">Delegation Chain - Where the Data and Code Flow</h2>
+<p>The delegation chain is a network protocol. It guarantees that all the secrets are kept inside and are only transferred between verified trusted hardware modules. The protocol also maintains verifiable randomness when distributing the data to its hosts (we call it pin and repin). The entire data distribution flow can be traced by a series of signatures chained together, which is why it&#39;s called a delegation chain.</p>
+<ul>
+<li>A client sends secure data or code to a trusted TEA node as a delegator. If the client doesn&#39;t trust any other nodes, they would be best served owning a TEA node so that they will act as a delegator for their own data or code.</li>
+<li>A delegator will be looking for qualified executors among all the TEA nodes in the IPFS p2p network. Remote attestation is done between each node before exchanging any sensitive information</li>
+<li>Data or code will be transferred via a <strong>repin</strong> to a new delegator (called a <strong>pinner</strong>) to host, or to an executor to run.</li>
+<li>No matter where the data or code goes, the proof of delegation (PoD) will be attached at each step. It therefore becomes a delegation chain.</li>
+<li>Anyone can verify the delegation chain from the latest step all the way up to the first delegator or the client to make sure the chain is valid. Any hacks in the middle would be easily discovered via the blockchain.</li>
+<li>TEA&#39;s layer-1 blockchain will be used to do the verification. Any incentives or punishments is then applied to the participating nodes.</li>
+</ul>
+</div>
+  
+</body>
+</html>

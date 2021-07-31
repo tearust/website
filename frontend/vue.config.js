@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   publicPath : process.env.NODE_ENV === 'production' ? './' : '/',
   outputDir : 'dist',
@@ -15,7 +17,7 @@ module.exports = {
   devServer: {
     port : 3000,
     https : false,
-    disableHostCheck: true
+    disableHostCheck: true,
   }
 
 }

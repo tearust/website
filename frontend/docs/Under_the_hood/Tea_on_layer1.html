@@ -1,0 +1,30 @@
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="/tea-logo/favicon32.ico">
+  <script src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
+  <link rel="preload" href="//at.alicdn.com/t/font_2651648_4qbjfdk1ka.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2651648_k9tsl3u8ko.css">
+
+  <link rel="stylesheet" href="/docs/mdlibs/index.css?v=1627757468696">
+</head>
+<body>
+
+<div class="t-md"><h1 id="tea-runs-on-top-of-blockchain">TEA Runs on Top of Blockchain</h1>
+<p>TEA itself is not a blockchain, but it is built on top of blockchain technologies. TEA uses blockchain as a layer-1 to provide</p>
+<ul>
+<li>Economical incentive and penalty that forms the basis of its token economy.</li>
+<li>Immutable trust information storage, such as credit history, key IDs and hashes.</li>
+<li>Block height as a universal clock between TEA nodes.</li>
+</ul>
+<p>As explained in <a class='js_click_md' href="../What_is_TEA?/TEA_vs_blockchain.md">TEA vs Blockchain</a>:</p>
+<blockquote>
+<p>The TEA nodes runs above other blockchains. Any blockchain can send a computational oracle request in a blockchain event and receive the result along with PoT (proof of trust) in a tx at the later time.</p>
+</blockquote>
+<p>In our milestone 1 demo, we use Substrate as our layer-1 blockchain provider. But this doesn’t mean TEA can only work with Substrate. In fact, any blockchain layer-1 with smart contract support will work with TEA, such as ETH etc. Of course, newer blockchain projects are prefered. That’s why we chose Substrate: it&#39;s written in Rust and WASM (the same tech that the TEA Project is built on), it&#39;s modern, fast and release-ready.</p>
+<h1 id="tea-works-for-blockchain">TEA Works for Blockchain</h1>
+<p>TEA not only utilizes blockchain, but TEA also works as a layer-2 solution for layer-1. It can offload expensive and computationally complex tasks from layer-1, run the code in a trusted environment and send the result back to the blockchain together with verifiable Proof of Trust (PoT) data. In our milestone 1 demo, we run a Tensorflow image recognization algorithm offloaded from the blockchain. Have you ever dared run Tensorflow algorithm in a smart contract? Before the TEA Project, you&#39;d have to have been crazy rich to try such a thing.</p>
+<p><img src="https://github.com/tearust/tea-docs/blob/main/res/layer1-and-layer2.png?raw=true" alt="lyaer1-and-layer2"></p>
+</div>
+  
+</body>
+</html>
