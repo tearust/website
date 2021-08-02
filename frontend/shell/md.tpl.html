@@ -1,5 +1,6 @@
 <html>
 <head>
+  <meta charset="UTF-8">
   <link rel="icon" type="image/x-icon" href="/tea-logo/favicon32.ico">
   <script src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
   <link rel="preload" href="//at.alicdn.com/t/font_2651648_4qbjfdk1ka.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -9,7 +10,23 @@
 </head>
 <body>
 
+<div class="t-main">
+<div class="t-left">
+  <div class="a"><a href="https://teaproject.org">Home</a></div>
+  {{NAV}}
+</div>
+
 <div class="t-md">{{$}}</div>
-  
+</div>
 </body>
 </html>
+<script type="text/javascript">
+$(()=>{
+  $('.js_click_md').each(function(){
+    let href = $(this).attr('href');
+    href = href.replace('.md', '.html');
+    $(this).attr('href', href);
+  })
+})
+
+</script>

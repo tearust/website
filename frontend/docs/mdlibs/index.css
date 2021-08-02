@@ -5,11 +5,25 @@ body{
 
 *{
   font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
+  box-sizing: border-box;
 }
 
-.t-md{
-  width: 960px;
+.t-main{
+  min-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.t-left{
+  width: 250px;
+  text-align: left;
+}
+.t-md{
+  text-align: left;
+  flex: 1;
 }
 
 .t-md h1{
@@ -86,4 +100,26 @@ body{
   vertical-align: middle;
   position: relative;
   text-align: left;
+}
+
+.t-left{
+  padding: 20px 30px 40px 0;
+}
+.t-left .a{
+  margin-top: 20px;
+  font-size: 19px;
+
+}
+.t-left .a a{
+  font-size: 19px;
+
+}
+.t-left .b{
+  padding-left: 20px;
+  margin-top: 12px;
+  word-break: break-all;
+
+}
+.t-left .b a{
+  font-size: 16px;
 }

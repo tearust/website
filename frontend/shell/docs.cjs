@@ -9,6 +9,7 @@ const OUT_DIR = root+'/docs';
 const TEA_DOCS = root+'/../../tea-docs';
 const SERVER_URL = 'http://64.227.49.206:3001';
 
+
 const F = {
 
   async init(){
@@ -107,25 +108,63 @@ const F = {
       file_name = 'readme';
     }
 
-    console.log(file_name, out_path);
-    const md_content = fs.readFileSync(path, {encoding:'utf-8'});
-    let html = F.mdToHtml(md_content);
+    // console.log(file_name, out_path);
+    try{
+      const md_content = fs.readFileSync(path, {encoding:'utf-8'});
+      let html = F.mdToHtml(md_content);
 
-    const html_tpl = fs.readFileSync(root+'/shell/md.tpl.html', {encoding: 'utf-8'});
+      const html_tpl = fs.readFileSync(root+'/shell/md.tpl.html', {encoding: 'utf-8'});
 
-    html = html_tpl.replace('{{$}}', html);
+      html = html_tpl.replace('{{$}}', html);
+      
+      const v = Date.now().toString();
+      html = html.replace(/\{\{v\}\}/g, v);
+
+      const nav_html = await F.getNavHtml();
+      html = html.replace(/\{\{NAV\}\}/g, nav_html);
+
+      const file_out_path = out_path+'/'+file_name+'.html';
+      fs.writeFileSync(file_out_path, html);
+    }catch(e){
+      console.error('error for ['+file_name+'] with path ['+out_path+']');
+    }
     
-    const v = Date.now().toString();
-    html = html.replace(/\{\{v\}\}/g, v);
-
-    const file_out_path = out_path+'/'+file_name+'.html';
-    fs.writeFileSync(file_out_path, html);
 
   },
 
   async copyLibs(){
     fs.mkdirSync(OUT_DIR+'/mdlibs');
     fs.copyFileSync(root+'/shell/mdlibs/index.css', OUT_DIR+'/mdlibs/index.css');
+  },
+
+  async getNavHtml(){
+    const arr = await F.getConfigYaml();
+    let html = '';
+    for(let i=0, len=arr.length; i<len; i++){
+      const json = arr[i];
+
+      if(json.children){
+        html += `<div class="a">${json.name}</div>`;
+
+        html += '';
+        for(let j=0, jlen=json.children.length; j<jlen; j++){
+          const t = json.children[j];
+          let href = `/docs/${encodeURIComponent(json.name)}/${encodeURIComponent(t.name.replace('.md', '.html'))}`;
+          if(t.path){
+            href = `/docs/${t.path.replace('.md', '.html')}`
+          }
+
+          html += `<div class="b"><a href="${href}">${t.name}</a></div>`
+        }
+        html += '';
+      }
+      else{
+        
+      }
+    }
+
+    return html;
+
   }
 };
 
