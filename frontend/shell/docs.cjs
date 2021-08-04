@@ -126,7 +126,7 @@ const F = {
       const file_out_path = out_path+'/'+file_name+'.html';
       fs.writeFileSync(file_out_path, html);
     }catch(e){
-      console.error('error for ['+file_name+'] with path ['+out_path+']');
+      console.error('error for ['+file_name+'] with path ['+out_path+'] err:'+e);
     }
     
 
