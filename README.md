@@ -27,3 +27,13 @@ Now the frontend should run at your http://localhost:3002
 Please go to localhost:3002 in your browser, you should see the website.
 
 Check the documents to make sure that the tea-docs repo also works fine.
+
+## Compiling ../tea-docs md file to static html
+The tea-docs repo contains all documents. Run the following command can compile all md files in tea-docs repo and stored in frontend/docs folder
+```
+cd frontend
+node shell/docs.cjs
+
+```
+Check the static html files under frontend/docs
+those static html is google bot friendly. 
