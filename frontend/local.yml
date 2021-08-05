@@ -21,6 +21,7 @@ services:
     volumes:
       - ./nginx/proxy.conf:/etc/nginx/conf.d/proxy.conf
       - ./docs:/www/docs
+      - ./landingpage:/www/landingpage
     ports:
       - 3000:80
 
