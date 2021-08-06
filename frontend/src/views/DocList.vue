@@ -80,7 +80,7 @@ export default {
   },
   methods: {
     goto_content(item){
-      this.$router.push('/doc_list/'+encodeURIComponent(item.path));
+      this.$router.push('/doc_list/'+encodeURIComponent(item.path.replace(/^\//, '')));
     },
     default_to_first(){
       let x = this.list[0];

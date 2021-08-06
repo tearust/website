@@ -15,7 +15,6 @@ export const formatObsidianToMd = async (content, opts:any={}) => {
   const reg = /!?\[\[(([^\]#\|]*)(#[^\|\]]+)*(\|[^\]]*)*)\]\]/g;
 
   content = content.replace(reg, (match, target, ori)=>{
-    // console.log(22, match, target, ori);
     let tar;
 
     if(_.startsWith(match, '!')){
@@ -28,7 +27,6 @@ export const formatObsidianToMd = async (content, opts:any={}) => {
       tmp.push(p);
       const file_path = DOC_DIR+'/'+tmp.join('/') + ".md";
 
-      // console.log(333, file_path);
 
       const content = fs.readFileSync(file_path, {
         encoding: 'utf-8'
@@ -45,7 +43,7 @@ export const formatObsidianToMd = async (content, opts:any={}) => {
       tar = `[${tar}]`;
     }
 
-    tar += `(${_.trim(ori)})`;
+    tar += `(./${_.trim(ori)}.md)`;
     return tar;
   });
 
