@@ -7,7 +7,7 @@
         <li v-for="(item, i) in list" :key="i">
           <el-link v-if="!item.children" 
             type="primary" 
-            :class="['fc_3', {'selected':cur_path===item.path}]" 
+            :class="['fc_3', {'selected':(cur_path===item.path||'/'+cur_path===item.path)}]" 
             @click="goto_content(item)">
             {{item.name}}
           </el-link>
@@ -15,13 +15,13 @@
           <div class="t-div" v-if="item.children">
             <!-- <span>{{item.name}}</span> -->
             <a href="javascript:void(0)" 
-              :class="['span', {'selected':cur_path===item.path}]" 
+              :class="['span', {'selected':(cur_path===item.path||'/'+cur_path===item.path)}]" 
               @click="goto_content(item)">{{item.name}}</a>
 
             <a href="javascript:void(0)" 
               v-for="(x, j) in item.children" :key="j" 
               type="primary" 
-              :class="['fc_3', 't-lk', {'selected':cur_path===x.path}]" 
+              :class="['fc_3', 't-lk', {'selected':(cur_path===x.path||'/'+cur_path===x.path)}]" 
               @click="goto_content(x)">{{x.name}}</a>
           </div>
         </li>
