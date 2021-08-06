@@ -37,3 +37,17 @@ node shell/docs.cjs
 ```
 Check the static html files under frontend/docs
 those static html is google bot friendly. 
+
+
+### Local run for landing page
+- make sure you have **docker** and **docker-compose** in local.
+
+```
+cd frontend
+docker-compose -f local.yml up
+```
+
+- After docker image running. open browser and visit [http://127.0.0.1:3000/landingpage/preview_1/index.html](http://127.0.0.1:3000/landingpage/preview_1/index.html) to the landingpage.
+
+- The landing page source code path is **frontend/landingpage/preview_1**. 
+- After edit html or css. just refresh the browser to view the chaning.

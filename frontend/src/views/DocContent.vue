@@ -67,14 +67,14 @@ export default {
         const file = $(e.target).attr('href');
         const path = decodeURIComponent(this.$route.path);
         
-
+console.log(333, file);
         const t1 = file.split('/');
         const t2 = path.split('/');
         t2.shift();
         t2.shift();
         t2.unshift("");
         t2.pop();
-
+console.log(22, t1, t2);
         _.each(t1, (t)=>{
           if(t === '..'){
             t2.pop();
@@ -87,7 +87,7 @@ export default {
           }
         });
         const tar = t2.join('/');
-
+console.log(111, tar);
         
         this.$router.push('/doc_list/'+encodeURIComponent(tar));
 
