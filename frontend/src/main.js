@@ -21,7 +21,7 @@ Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
 Vue.use(VueAnalytics, {
-  id: 'G-3Z0XPZQXX0'
+  id: 'G-FL13ZV631M'
 })
 
 const lang = util.storage.get('lang') || 'en';
