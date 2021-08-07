@@ -15,7 +15,11 @@
   </a>
   
 
-  <!-- <el-menu-item @click="changeLang()">{{$t('nav.001')}}</el-menu-item> -->
+  <el-menu-item>
+    <a href="https://wallet.teaproject.org" target="_blank">Wallet</a>
+    
+  </el-menu-item>
+
   <el-menu-item style="display:none;" index="1">{{$t('nav.test')}}</el-menu-item>
   <!-- <el-submenu index="2">
 
