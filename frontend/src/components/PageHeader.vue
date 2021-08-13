@@ -1,4 +1,5 @@
 <template>
+<div>
 <div class="c-m1">
   
 <el-menu :default-active="activeIndex" active-text-color="#35a696" class="p-header" mode="horizontal" @select="handleSelect">
@@ -30,6 +31,11 @@
     
   </el-submenu> -->
   <el-menu-item index="/doc_list/Try_the_demo%2FREADME.md">{{$t('nav.002')}}</el-menu-item>
+
+  <el-menu-item>
+    <a href="https://github.com/tearust/teaproject/wiki" target="_blank">Wiki</a>
+    
+  </el-menu-item>
   <el-menu-item index="/doc_list">{{$t('nav.003')}}</el-menu-item>
   <el-menu-item index="/white_paper">{{$t('nav.005')}}</el-menu-item>
 
@@ -59,7 +65,13 @@
 </el-drawer>
 </div>
 
+<div style="width:100%;text-align:center;">
+  <a href="https://teaproject.org/landingpage/preview_1/" target="_blank"><img style="margin:0 auto;" src="/img/banner.png" /></a>
 
+  <a style="display:block;" href="https://teaproject.org/landingpage/preview_1/" target="_blank">Click here to enter the mining competition</a>
+</div>
+
+</div>
 </template>
 <script>
   export default {
