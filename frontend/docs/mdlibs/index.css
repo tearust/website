@@ -11,7 +11,7 @@ body{
 .t-main{
   min-width: 960px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 80px auto 40px;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -108,18 +108,19 @@ body{
 .t-left .a{
   margin-top: 20px;
   font-size: 19px;
-
+  color: #35a696;
 }
 .t-left .a a{
   font-size: 19px;
-
+  color: #35a696;
 }
 .t-left .b{
   padding-left: 20px;
-  margin-top: 12px;
+  margin-top: 2px;
   word-break: break-all;
 
 }
 .t-left .b a{
   font-size: 16px;
+  color: #35a696;
 }
