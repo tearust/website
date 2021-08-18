@@ -4,18 +4,10 @@
       <el-row>
         <el-col :span="6">
           <h4 class="t-h">Resources</h4>
-          <a class="t-a" target="_blank" href="https://github.com/tearust"
-            >Github</a
-          >
-          <a class="t-a" target="_blank" href="https://medium.com/@pushbar"
-            >Medium</a
-          >
-          <a
-            class="t-a"
-            target="_blank"
-            href="https://github.com/tearust/tea-docs/discussions"
-            >Discussions</a
-          >
+          <a class="t-a" target="_blank" href="https://github.com/tearust">Github</a>
+          <a class="t-a" target="_blank" href="https://medium.com/@pushbar">Medium</a>
+          <a class="t-a" target="_blank" href="https://github.com/tearust/teaproject/discussions">Discussions</a>
+          <a class="t-a" target="_blank" href="https://wallet.teaproject.org">Wallet</a>
         </el-col>
 
         <el-col :span="6">
