@@ -82,7 +82,7 @@
         <el-image fit="cover" src="/img/3.jpg"></el-image>
       </el-col>
       <el-col :span="15" :xs="24">
-        <h2>Rich apps or decentralized apps? Wow! both!!</h2>
+        <h2>Rich apps or decentralized apps? Why not both?</h2>
         <p>
           TEA Project is a decentralized cloud computing platform that hosts
           rich, yet decentralized applications, also known as "Rich dApps."
@@ -105,7 +105,7 @@
     <el-row class="c-text-image">
       <el-col :span="15" :xs="24">
         <h2>
-          Unlike other layer2 solutions, TEA is not attempting to improve
+          Unlike other layer-2 solutions, TEA is not attempting to improve
           blockchain consensus
         </h2>
         <p>
@@ -133,19 +133,15 @@
     </el-row>
     <el-row class="c-text-image">
       <el-col :span="9" :xs="24" style="text-align: left">
-        <el-image fit="cover" src="/img/10.jpg"></el-image>
+        <el-image style="width:400px;" fit="cover" src="/img/10.jpg"></el-image>
       </el-col>
       <el-col :span="15" :xs="24">
-        <h2>Basic assumption:</h2>
+        <h2>Trusted execution:</h2>
         <p>
-          if the execution environment, code, and input data are trusted, then
-          the execution result can also be trusted. Running consensus to verify
-          the PoT (Proof of Trust) is much easier than the execution result. At
-          least there is no need to rerun the same code on many nodes over and
-          over again.
+          Our basic assumption is that if the execution environment, code, and input data are trusted, then the execution result can also be trusted. Running consensus to verify the PoT (Proof of Trust) is much easier than the execution result. At least there is no need to rerun the same code on many nodes over and over again.
         </p>
         <div style="text-align: left">
-          <a href="/#/doc_list/%2FWhat_is_TEA%3F%2FTEA_vs_Trusted_computing.md"
+          <a href="/#/doc_list/What_is_TEA%3F%2FTEA_vs_Trusted_Computing.md"
             ><el-button type="primary" size="small">more...</el-button></a
           >
           <!-- <a href="" style="margin-left: 24px;">I am lik</a> -->
@@ -194,7 +190,7 @@
       </el-col>
     </el-row>
     <hr />
-    <div
+    <!-- <div
       style="
         margin: 130px auto 50px;
         max-width: 800px;
@@ -202,13 +198,6 @@
         text-align: center;
       "
     >
-      <!-- <iframe
-        style="max-width: 800px; width: 100%; height: 380px"
-        src="https://www.youtube.com/embed/6GYwrITSfJo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe> -->
       <iframe
         style="max-width: 800px; width: 100%; height: 380px"
         src="https://www.youtube.com/embed/YneSF3ltxCg"
@@ -219,7 +208,7 @@
     </div>
     <p style="margin-top: 120px">
       <img src="/img/Trust-construction.png" width="100%" />
-    </p>
+    </p> -->
   </div>
 </template>
 <style lang="scss" scoped>

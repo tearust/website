@@ -5,14 +5,14 @@
         <el-col :span="6">
           <h4 class="t-h">Resources</h4>
           <a class="t-a" target="_blank" href="https://github.com/tearust">Github</a>
-          <a class="t-a" target="_blank" href="https://medium.com/@pushbar">Medium</a>
+          <a class="t-a" target="_blank" href="https://teaproject.medium.com">Medium</a>
           <a class="t-a" target="_blank" href="https://github.com/tearust/teaproject/discussions">Discussions</a>
           <a class="t-a" target="_blank" href="https://wallet.teaproject.org">Wallet</a>
         </el-col>
 
         <el-col :span="6">
           <h4 class="t-h">About</h4>
-          <a class="t-a" href="javascript:void(0)" @click="goToTeams()">Teams</a>
+          <a class="t-a" href="javascript:void(0)" @click="goToTeams()">Team</a>
           
         </el-col>
 
