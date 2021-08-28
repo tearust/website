@@ -136,7 +136,7 @@
         <el-image style="width:400px;" fit="cover" src="/img/10.jpg"></el-image>
       </el-col>
       <el-col :span="15" :xs="24">
-        <h2>Trusted execution:</h2>
+        <h2>Trusted execution</h2>
         <p>
           Our basic assumption is that if the execution environment, code, and input data are trusted, then the execution result can also be trusted. Running consensus to verify the PoT (Proof of Trust) is much easier than the execution result. At least there is no need to rerun the same code on many nodes over and over again.
         </p>
