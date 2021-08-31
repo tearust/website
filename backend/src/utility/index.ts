@@ -17,6 +17,8 @@ export const formatObsidianToMd = async (content, opts:any={}) => {
   content = content.replace(reg, (match, target, ori)=>{
     let tar;
 
+    let is_image = false;
+
     if(_.startsWith(match, '!')){
       // embed file, need to replace content by path
       let p = _.trim(target.split('|')[0]);
@@ -25,12 +27,22 @@ export const formatObsidianToMd = async (content, opts:any={}) => {
       const tmp = opts.path.split('/');
       tmp.pop();
       tmp.push(p);
-      const file_path = DOC_DIR+'/'+tmp.join('/') + ".md";
+      
+      let file_path = DOC_DIR+'/'+tmp.join('/');
+      if(_.endsWith(file_path, '.png')){
+        is_image = true;
+      }
+      else{
+        file_path += ".md";
+      }
 
-
-      const content = fs.readFileSync(file_path, {
-        encoding: 'utf-8'
+      let content = fs.readFileSync(file_path, {
+        encoding: is_image ? 'base64' : 'utf-8'
       });
+
+      if(is_image){
+        content = '<img src="data:image/png;base64,'+content+'" />';
+      }
 
       return content;
     }
