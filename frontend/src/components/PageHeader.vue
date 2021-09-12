@@ -66,9 +66,9 @@
 </div>
 
 <div style="width:100%;text-align:center;">
-  <a href="https://teaproject.org/landingpage/preview_1/" target="_blank"><img style="margin:0 auto;" src="/img/banner.png" /></a>
+  <a href="https://teaproject.medium.com/tea-project-mining-contest-epoch-3-7604e8562f92" target="_blank"><img style="margin:0 auto;" src="/img/banner.png" /></a>
 
-  <a style="display:block;" href="https://teaproject.org/landingpage/preview_1/" target="_blank">Click here to enter the mining competition</a>
+  <a style="display:block;" href="https://teaproject.medium.com/tea-project-mining-contest-epoch-3-7604e8562f92" target="_blank">Click here to enter the mining competition</a>
 </div>
 
 </div>
