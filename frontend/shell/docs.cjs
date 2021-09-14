@@ -5,7 +5,7 @@ const marked = require('marked');
 
 const root = process.cwd();
 
-const OUT_DIR = root+'/docs';
+const OUT_DIR = '/var/www/html/docs';//#root+'/docs';
 const TEA_DOCS = root+'/../../tea-docs';
 const SERVER_URL = 'http://64.227.49.206:3001';
 
