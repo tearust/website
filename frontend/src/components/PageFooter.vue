@@ -12,7 +12,7 @@
 
         <el-col :span="6">
           <h4 class="t-h">About</h4>
-          <a class="t-a" href="javascript:void(0)" @click="goToTeams()">Team</a>
+          <!-- <a class="t-a" href="javascript:void(0)" @click="goToTeams()">Team</a> -->
           
         </el-col>
 

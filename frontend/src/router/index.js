@@ -71,11 +71,7 @@ export default new Router({
       name: 'add_node',
       component: AddNode
     },
-    {
-      path: '/about/teams',
-      name: 'about_teams',
-      component: AboutTeams,
-    }
+
     
   ]
 })
