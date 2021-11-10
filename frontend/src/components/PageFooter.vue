@@ -4,6 +4,8 @@
       <el-row>
         <el-col :span="6">
           <h4 class="t-h">Resources</h4>
+          <a class="t-a" target="_blank" href="https://t.me/teaprojectorg">Telegram</a>
+          <a class="t-a" target="_blank" href="https://github.com/tearust">Twitter</a>
           <a class="t-a" target="_blank" href="https://github.com/tearust">Github</a>
           <a class="t-a" target="_blank" href="https://teaproject.medium.com">Medium</a>
           <a class="t-a" target="_blank" href="https://github.com/tearust/teaproject/discussions">Discussions</a>
