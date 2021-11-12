@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Home from '../views/Home';
+import DarkStaticHome from '../views/DarkStaticHome';
 import DockerComposeDemo from '../views/DockerComposeDemo';
 import WhitePaper from '../views/WhitePaper';
 import DocList from '../views/DocList';
@@ -33,6 +34,13 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+      // component: DarkStaticHome,
+    },
+    {
+      path: '/home1',
+      name: 'home1',
+      // component: Home
+      component: DarkStaticHome,
     },
     {
       path: '/demo',

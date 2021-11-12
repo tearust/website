@@ -1,13 +1,13 @@
 <template>
 
 <section id="app" class="tea-app">
-  <PageHeader />
+  <PageHeader v-if="!static_home" />
   <keep-alive>
     <router-view v-if="$route.meta.keepAlive"></router-view>
   </keep-alive>
   <router-view v-if="!$route.meta.keepAlive"></router-view>
 
-  <PageFooter />
+  <PageFooter v-if="!static_home" />
   
   <!-- <el-backtop target=".tea-app"></el-backtop> -->
 </section>
@@ -22,12 +22,25 @@ import PageFooter from './components/PageFooter';
 export default {
   data(){
     return {
-     
+      static_home: false,
     };
   },
   components: {
     PageHeader,
     PageFooter,
+  },
+  watch: {
+    '$route': {
+      immediate: true,
+      handler (to, from){
+        if(to.name === 'home'){
+          this.static_home = true;
+        }
+        else{
+          this.static_home = false;
+        }
+      }
+    }
   }
   
 };
