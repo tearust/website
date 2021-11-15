@@ -33,15 +33,9 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
-      // component: DarkStaticHome,
-    },
-    {
-      path: '/home1',
-      name: 'home1',
-      // component: Home
       component: DarkStaticHome,
     },
+    
     {
       path: '/demo',
       name: 'demo',

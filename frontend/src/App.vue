@@ -33,12 +33,12 @@ export default {
     '$route': {
       immediate: true,
       handler (to, from){
-        if(to.name === 'home1'){
-          this.static_home = true;
-        }
-        else{
-          this.static_home = false;
-        }
+        // if(to.name === 'home1'){
+        //   this.static_home = true;
+        // }
+        // else{
+        //   this.static_home = false;
+        // }
       }
     }
   }

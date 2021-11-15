@@ -2,7 +2,7 @@
 <div>
 <div class="c-m1">
   
-<el-menu :default-active="activeIndex" active-text-color="#35a696" class="p-header" mode="horizontal" @select="handleSelect">
+<el-menu :default-active="activeIndex" active-text-color="#fff" class="p-header" mode="horizontal" @select="handleSelect">
   <a href="javascript:void(0)" @click="$router.replace('/'); activeIndex='1';" style="float:left;">
     <el-image
       src="/tea-logo/logo.png"
@@ -65,10 +65,10 @@
 </el-drawer>
 </div>
 
-<div style="width:100%;text-align:center;">
-  <a href="https://github.com/tearust/teaproject/wiki/Mining-Contest:-Competitor-Checklist" target="_blank"><img style="margin:0 auto;" src="/img/banner.png" /></a>
+<div style="width:100%;text-align:center;background:#0b1126;">
+  <a href="https://github.com/tearust/teaproject/wiki/Mining-Contest:-Competitor-Checklist" target="_blank"><img style="margin:5px auto;" src="/img/banner.png" /></a>
 
-  <a style="display:block;" href="https://github.com/tearust/teaproject/wiki/Mining-Contest:-Competitor-Checklist" target="_blank">Click here to enter the mining competition</a>
+  <a style="display:block; color: #fff; position:relative; background: #0b1126;" href="https://github.com/tearust/teaproject/wiki/Mining-Contest:-Competitor-Checklist" target="_blank">Click here to enter the mining competition</a>
 </div>
 
 </div>
@@ -124,25 +124,46 @@
   }
 </script>
 <style lang="scss">
+.x-header{
+  
+  .box{
+    height: 72px;
+    position: relative;
+
+    .t-dd{
+      width: 900px;
+      right: 0;
+      position: absolute;
+      top: 20px;
+      text-align: right;
+      .t-a{
+        display: inline-block;
+        color: #fff;
+        font-size: 18px;
+        margin-left: 20px;
+      }
+    }
+  }
+}
 .c-m1{
+  background: #0b1126;
   position: sticky;
   top: 0;
   display: block;
-  border-bottom: 1px solid #eee;
-  background: #fff;
   z-index: 99;
   text-align: center;
 }
 .p-header{
-  padding: 10px 0 0 0;
   max-width:1140px;
   margin: 0 auto;
+  height: 100px;
+  background: transparent;
 
   .el-image{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     position: absolute;
-    top: -10px;
+    top: 10px;
   }
 
   .m-icon{
@@ -150,13 +171,26 @@
   }
   
 }
+.el-menu--horizontal>.el-menu-item a{
+  color: rgb(56,198,139);
+  font-size: 17px;
+  font-weight: bold;
+}
 .el-menu--horizontal > .el-menu-item{
   float: right;
-  
+  color: rgb(56,198,139);
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
 }
 .el-menu--horizontal > .el-submenu{
   float: right;
   
+}
+.el-menu--horizontal>.el-menu-item:not(.is-disabled):focus,
+.el-menu--horizontal>.el-menu-item:not(.is-disabled):hover{
+  background: transparent;
+  color: #fff;
 }
 .el-menu.el-menu--horizontal{
   border-bottom: none;
@@ -216,4 +250,5 @@
     padding: 10px 0;
   }
 }
+
 </style>

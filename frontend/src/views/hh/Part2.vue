@@ -1,7 +1,7 @@
 <template>
 <div class="x-part">
 
-<div class="c-dark">
+<div class="c-light">
   <div class="box ww">
 
     <el-row class="c-text-image">
@@ -22,7 +22,7 @@
         <div style="text-align: left">
           <a
             href="/#/doc_list/%2FWhat_is_TEA%3F%2FBroken_internet_needs_a_fix.md"
-            ><el-button type="primary" size="small">more...</el-button></a
+            ><el-button type="primary" class="t-more" round size="normal">more...</el-button></a
           >
           <!-- <a href="" style="margin-left: 24px;">I am link</a> -->
         </div>
@@ -32,7 +32,7 @@
   </div>
 </div>
 
-<div class="c-light">
+<div class="c-dark">
   <div class="box ww">
 
     <el-row class="c-text-image">
@@ -55,7 +55,7 @@
 
         <div>
           <a href="/#/doc_list/%2FWhat_is_TEA%3F%2FHow_TEA_fix_internet.md"
-            ><el-button type="primary" size="small">more...</el-button></a
+            ><el-button type="primary" round class="t-more" size="small">more...</el-button></a
           >
           <!-- <a href="" style="margin-left: 24px;">I am link</a> -->
         </div>
@@ -68,7 +68,7 @@
   </div>
 </div> 
 
-<div class="c-dark">
+<div class="c-light">
   <div class="box ww">
 
     <el-row class="c-text-image">
@@ -82,7 +82,7 @@
         </p>
         <div style="text-align: left">
           <a href="/#/doc_list/What_is_TEA%3F%2FTEA_vs_Trusted_Computing.md"
-            ><el-button type="primary" size="small">more...</el-button></a
+            ><el-button type="primary" round class="t-more" size="small">more...</el-button></a
           >
           <!-- <a href="" style="margin-left: 24px;">I am lik</a> -->
         </div>
@@ -92,7 +92,7 @@
   </div>
 </div> 
 
-<div class="c-light">
+<div class="c-dark">
   <div class="box ww">
 
     <el-row class="c-text-image">
@@ -106,7 +106,7 @@
         <div>
           <a
             href="/#/doc_list/%2FBlog_and_Vlog%2FTurn_ipfs_file_system_to_ipfs_function_service.md"
-            ><el-button type="primary" size="small">more...</el-button></a
+            ><el-button type="primary" round class="t-more" size="small">more...</el-button></a
           >
           <!-- <a href="" style="margin-left: 24px;">I am link</a> -->
         </div>
@@ -119,7 +119,7 @@
   </div>
 </div> 
 
-<div class="c-dark" style="background: #0b1126;">
+<div class="c-light" style="background: rgba(199,211,213,0.3);">
   <div class="box ww">
 
     <el-row class="c-text-image">
@@ -136,7 +136,7 @@
         </p>
         <div style="text-align: left">
           <a href="/#/doc_list/%2FBlog_and_Vlog%2FTEA_Project_business_model.md"
-            ><el-button type="primary" size="small">more...</el-button></a
+            ><el-button type="primary" round class="t-more" size="small">more...</el-button></a
           >
           <!-- <a href="" style="margin-left: 24px;">I am lik</a> -->
         </div>
@@ -159,7 +159,7 @@ export default {
     padding: 40px 0;
     h2 {
       font-size: 32px;
-      color: #222222;
+      color: #35a696;
       font-weight: bold;
       position: relative;
       margin-bottom: 24px;
@@ -172,20 +172,31 @@ export default {
       background: #35a696;
       border-color: #35a696;
     }
+    .t-more{
+      font-size: 16px;
+      font-weight: bold;
+    }
 
   }
 }
 .c-dark{
   // background: #1A2859;
-  background: #0b1126;
+  background: #35a696;
   .c-text-image{
     h2{
-      color: #00c0ff;
+      color: #fff;
     }
     p{
       color: #fff;
     }
+
+    .t-more{
+      background: #fff;
+      color: #35a696;
+      border-color: #fff;
+    }
   }
+  
 }
 .c-light{
   background: #fff;
