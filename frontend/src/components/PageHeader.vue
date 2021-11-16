@@ -41,7 +41,7 @@
 
   <el-menu-item index="/">{{'Home'}}</el-menu-item>
 
-  <li class="m-icon" @click="openDrawer()"><i class="el-icon-s-grid"></i></li>
+  <li class="m-icon" @click="openDrawer()"><i class="el-icon-s-operation"></i></li>
 </el-menu>
 
 
@@ -66,7 +66,7 @@
 </div>
 
 <div style="width:100%;text-align:center;background:#0b1126;">
-  <a href="https://github.com/tearust/teaproject/wiki/Mining-Contest:-Competitor-Checklist" target="_blank"><img style="margin:5px auto;" src="/img/banner.png" /></a>
+  <a href="https://github.com/tearust/teaproject/wiki/Mining-Contest:-Competitor-Checklist" target="_blank"><img style="margin:5px auto;max-width:100%;" src="/img/banner.png" /></a>
 
   <a style="display:block; color: #fff; position:relative; background: #0b1126;" href="https://github.com/tearust/teaproject/wiki/Mining-Contest:-Competitor-Checklist" target="_blank">Click here to enter the mining competition</a>
 </div>
@@ -124,27 +124,7 @@
   }
 </script>
 <style lang="scss">
-.x-header{
-  
-  .box{
-    height: 72px;
-    position: relative;
 
-    .t-dd{
-      width: 900px;
-      right: 0;
-      position: absolute;
-      top: 20px;
-      text-align: right;
-      .t-a{
-        display: inline-block;
-        color: #fff;
-        font-size: 18px;
-        margin-left: 20px;
-      }
-    }
-  }
-}
 .c-m1{
   background: #0b1126;
   position: sticky;
@@ -201,10 +181,12 @@
   .p-header{
     padding: 5px 15px 5px;
     max-width: 100%;
+    height: 60px;
     
     .el-image{
-      width: 40px;
-      height: 40px;
+      width: 60px;
+      height: 60px;
+      top: 0;
     }
 
     .m-icon{
@@ -215,10 +197,11 @@
       position: relative;
 
       i{
-        font-size: 36px;
+        font-size: 40px;
         position: absolute;
         right: 0;
-        top: 5px;
+        top: 8px;
+        color: rgb(56,198,139);
       }
     }
   }
@@ -235,6 +218,7 @@
 }
 
 .m-drawer{
+  background: #0b1126;
   
   .el-drawer__header{
     margin: 0;
@@ -244,10 +228,11 @@
   }
   a{
     display: block;
-    font-size: 16px;
-    color: #333;
+    font-size: 18px;
+    color: rgb(56,198,139);
     border-bottom: 1px solid #eee;
     padding: 10px 0;
+    font-weight: bold;
   }
 }
 

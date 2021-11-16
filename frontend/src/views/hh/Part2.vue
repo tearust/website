@@ -1,14 +1,14 @@
 <template>
-<div class="x-part">
+<div class="x-part x-p2">
 
 <div class="c-light">
   <div class="box ww">
 
     <el-row class="c-text-image">
-      <el-col :span="8" :xs="24" style="text-align: left">
+      <el-col :span="9" :xs="24" style="text-align: left">
         <el-image fit="cover" src="/img/3.jpg"></el-image>
       </el-col>
-      <el-col :span="15" :offset="1" :xs="24">
+      <el-col :span="15" :xs="24" class="w-l m-h-gap m-v-gap">
         <h2>Rich apps or decentralized apps? Why not both?</h2>
         <p>
           TEA Project is a decentralized cloud computing platform that hosts
@@ -36,7 +36,7 @@
   <div class="box ww">
 
     <el-row class="c-text-image">
-      <el-col :span="15" :xs="24">
+      <el-col :span="15" :xs="24" class="w-r m-h-gap">
         <h2>
           Unlike other layer-2 solutions, TEA is not attempting to improve
           blockchain consensus
@@ -73,9 +73,9 @@
 
     <el-row class="c-text-image">
       <el-col :span="9" :xs="24" style="text-align: left">
-        <el-image style="width:400px;" fit="cover" src="/img/10.jpg"></el-image>
+        <el-image style="width:100%;" fit="cover" src="/img/10.jpg"></el-image>
       </el-col>
-      <el-col :span="15" :xs="24">
+      <el-col :span="15" :xs="24" class="w-l m-h-gap m-v-gap">
         <h2>Trusted execution</h2>
         <p>
           Our basic assumption is that if the execution environment, code, and input data are trusted, then the execution result can also be trusted. Running consensus to verify the PoT (Proof of Trust) is much easier than the execution result. At least there is no need to rerun the same code on many nodes over and over again.
@@ -96,7 +96,7 @@
   <div class="box ww">
 
     <el-row class="c-text-image">
-      <el-col :span="15" :xs="24">
+      <el-col :span="15" :xs="24" class="w-r m-h-gap">
         <h2>Turning IPFS(File System) to IPFS(Function-as-a-Service)</h2>
         <p>
           By adding a TEA hardware security module, the IPFS node can also serve
@@ -123,10 +123,10 @@
   <div class="box ww">
 
     <el-row class="c-text-image">
-      <el-col :span="8" :xs="24" style="text-align: left">
+      <el-col :span="9" :xs="24" style="text-align: left">
         <el-image fit="cover" src="/img/9.jpg"></el-image>
       </el-col>
-      <el-col :span="15" :offset="1" :xs="24">
+      <el-col :span="15" :xs="24" class="w-l m-h-gap m-v-gap">
         <h2>Dual token system: A stable utility token and an NFT</h2>
         <p>
           TEA project has two tokens; TEA and Camellia. TEA token is a stable
@@ -178,6 +178,13 @@ export default {
     }
 
   }
+
+  .w-l{
+    padding-left: 30px;
+  }
+  .w-r{
+    padding-right: 30px;
+  }
 }
 .c-dark{
   // background: #1A2859;
@@ -200,5 +207,42 @@ export default {
 }
 .c-light{
   background: #fff;
+}
+
+@media screen and (max-width : 600px) {
+  .x-part{
+    .c-text-image{
+      padding: 0;
+    }
+
+    .m-h-gap{
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+    .m-v-gap{
+      padding-top: 30px !important;
+      padding-bottom: 40px !important;
+    }
+    .w-l{
+      padding-left: 0;
+    }
+    .w-r{
+      padding-right: 0;
+    }
+  }
+
+  .c-light{
+    padding-top: 40px;
+  }
+
+  .c-dark{
+    padding-top: 40px;
+    padding-bottom: 0;
+
+    .el-image{
+      margin-top: 30px;
+    }
+  }
+  
 }
 </style>

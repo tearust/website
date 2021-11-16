@@ -3,7 +3,7 @@
 
 
 <div class="x-body">
-  <Part1 />
+  <!-- <Part1 /> -->
   <Part2 />
 </div>
 
@@ -34,6 +34,12 @@ export default {
 
 .x-body{
   min-height: 800px;
+}
+
+@media screen and (max-width : 600px) {
+  .ww{
+    width: 100%;
+  }
 }
 
 </style>

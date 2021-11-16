@@ -1,40 +1,10 @@
 <template>
-  <!-- <section class="t-footer bg_2 js_footer">
-    <div class="c-m" style="background: rgb(53, 166, 150)">
-      <el-row>
-        <el-col :span="6">
-          <h4 class="t-h">Resources</h4>
-          <a class="t-a" target="_blank" href="https://t.me/teaprojectorg">Telegram</a>
-          <a class="t-a" target="_blank" href="https://github.com/tearust">Twitter</a>
-          <a class="t-a" target="_blank" href="https://github.com/tearust">Github</a>
-          <a class="t-a" target="_blank" href="https://teaproject.medium.com">Medium</a>
-          <a class="t-a" target="_blank" href="https://github.com/tearust/teaproject/discussions">Discussions</a>
-          <a class="t-a" target="_blank" href="https://wallet.teaproject.org">Wallet</a>
-        </el-col>
-
-        <el-col :span="6">
-          <h4 class="t-h">About</h4>
-          
-        </el-col>
-
-        <el-col :span="12">
-
-        </el-col>
-      </el-row>
-
-      <el-divider></el-divider>
-      <p style="margin: 0 auto; text-align: center; font-size: 16px">
-        Copyright © 2019-2021 
-        <b>TeaProject.org</b>
-        All Rights Reserved
-      </p>
-    </div>
-  </section> -->
 
 <div class="x-footer">
   <div class="box ww">
 
     <el-image
+      class="t-img"
       src="/tea-logo/logoname-green.png"
       :lazy="true"
       style="position:absolute;width:150px;left:-20px;top:20px;"
@@ -69,46 +39,12 @@ export default {
 }
 </script>
 <style lang="scss">
-// .t-footer {
-//   padding: 24px 0 40px;
-
-//   * {
-//     color: #fff;
-//   }
-//   .t-copy-right-img{
-//     display: inline;
-//     width: 100px;
-//     height: 40px;
-//     top: -2px;
-//     position: relative;
-//   }
-
-//   .t-h {
-//     margin: 0 0 20px 0;
-//   }
-//   .t-a {
-//     font-size: 18px;
-//     display: table;
-//     &:hover {
-//       color: #ec7259;
-//     }
-//   }
-// }
-
 .x-footer{
   background: #0b1126;
   .box{
     height: 220px;
     position: relative;
 
-    h2{
-      font-size: 24px;
-      color: #fff;
-      font-weight: bold;
-      position: absolute;
-      top: 30px;
-
-    }
     .t-dd{
       width: 900px;
       right: 0;
@@ -136,9 +72,34 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
-  .t-footer {
-    padding-left: 20px;
-    padding-right: 20px;
+  .x-footer{
+    background: #0b1126;
+    .box{
+      padding: 30px 0 20px;
+      width: 100%;
+      height: auto;
+      position: relative;
+
+      .t-img{
+        display: none;
+      }
+      .t-dd{
+        width: 100%;
+        position: static;
+        text-align: center;
+        .t-a{
+          display: inline-block;
+          color: #fff;
+          font-size: 15px;
+          margin: 0 5px;
+        }
+      }
+      .t-df{
+        margin-top: 20px;
+        position: static;
+        text-align: center;
+      }
+    }
   }
 }
 </style>
