@@ -3,7 +3,7 @@
 
 
 <div class="x-body">
-  <!-- <Part1 /> -->
+  <Part1 />
   <Part2 />
 </div>
 
