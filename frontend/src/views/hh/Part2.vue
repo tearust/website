@@ -119,7 +119,7 @@
   </div>
 </div> 
 
-<div class="c-light" style="background: rgba(199,211,213,0.3);">
+<div class="c-light">
   <div class="box ww">
 
     <el-row class="c-text-image">
@@ -136,6 +136,54 @@
         </p>
         <div style="text-align: left">
           <a href="/#/doc_list/%2FBlog_and_Vlog%2FTEA_Project_business_model.md"
+            ><el-button type="primary" round class="t-more" size="small">more...</el-button></a
+          >
+          <!-- <a href="" style="margin-left: 24px;">I am lik</a> -->
+        </div>
+      </el-col>
+    </el-row>
+
+  </div>
+</div> 
+
+<div class="c-dark">
+  <div class="box ww">
+
+    <el-row class="c-text-image">
+      <el-col :span="15" :xs="24" class="w-r m-h-gap">
+        <h2>Proof of Time</h2>
+        <p>
+          The TEA Project uses Proof of Time to ensure the proper ordering of transactions. Replicas of delegator transactions are continuously added in a conflict-free manner that ensures transactions are reliably ordered.
+        </p>
+        <div>
+          <!-- <a
+            href="/#/doc_list/%2FBlog_and_Vlog%2FTurn_ipfs_file_system_to_ipfs_function_service.md"
+            ><el-button type="primary" round class="t-more" size="small">more...</el-button></a
+          > -->
+        </div>
+      </el-col>
+      <el-col :span="9" :xs="24" style="text-align: right">
+        <el-image fit="cover" src="/img/hh_1.png"></el-image>
+      </el-col>
+    </el-row>
+
+  </div>
+</div> 
+
+<div class="c-light c-last">
+  <div class="box ww">
+
+    <el-row class="c-text-image">
+      <el-col :span="9" :xs="24" style="text-align: left">
+        <el-image fit="cover" src="/img/9.jpg"></el-image>
+      </el-col>
+      <el-col :span="15" :xs="24" class="w-l m-h-gap m-v-gap">
+        <h2>Bonded Token Sales for Bootstrapping Projects</h2>
+        <p>
+          Every developer releasing a TApp on the system can deploy project tokens. When their TApp is used, more of these tokens are automatically created and then distributed to existing holders.
+        </p>
+        <div style="text-align: left">
+          <a href="/#/doc_list/%2FWhat_is_TEA%3F%2FHow_TEA_Project_TApps_Benefit_Everyone.md"
             ><el-button type="primary" round class="t-more" size="small">more...</el-button></a
           >
           <!-- <a href="" style="margin-left: 24px;">I am lik</a> -->
@@ -207,6 +255,9 @@ export default {
 }
 .c-light{
   background: #fff;
+}
+.c-last{
+  background: rgba(199,211,213,0.3);
 }
 
 @media screen and (max-width : 600px) {
