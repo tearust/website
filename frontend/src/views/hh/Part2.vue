@@ -175,7 +175,7 @@
 
     <el-row class="c-text-image">
       <el-col :span="9" :xs="24" style="text-align: left">
-        <el-image fit="cover" src="/img/hh_2.jpg"></el-image>
+        <el-image fit="cover" src="/img/hh_2.png"></el-image>
       </el-col>
       <el-col :span="15" :xs="24" class="w-l m-h-gap m-v-gap">
         <h2>Bonded Token Sales for Bootstrapping Projects</h2>
