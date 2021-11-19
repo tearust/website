@@ -2,7 +2,7 @@ version: "3.1"
 services:
 
   backend:
-    image: tearust/website-backend:0.5.50
+    image: tearust/website-backend:0.6.1
     container_name: tearust-backend
     ports:
       - 3001:3001
@@ -16,7 +16,7 @@ services:
     command: "node index.js"
     
   frontend:
-    image: tearust/website-frontend:0.5.50
+    image: tearust/website-frontend:0.6.1
     container_name: tearust-frontend
     volumes:
       - ./frontend/nginx/proxy.conf:/etc/nginx/conf.d/proxy.conf
