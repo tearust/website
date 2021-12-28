@@ -176,6 +176,14 @@
         color: $black-color;
         line-height: 30px;
     }
+ 
+    .row > div:first-of-type img {
+        margin-bottom: 7px;
+    }
+
+    .row > div:last-of-type img {
+        margin-bottom: -8px;
+    }
 }
 
 .sep {
