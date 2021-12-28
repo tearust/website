@@ -1,0 +1,472 @@
+@import 'partials/base';
+@import 'partials/header';
+@import 'partials/footer';
+
+/********************
+ Top Section
+ *******************/
+
+.top-section {
+    color: $primary-color;
+    padding: 110px 0px 155px 0px;
+
+    h1 {
+        font-size: 100px;
+        line-height: 117px;
+        font-family: $primary-font--n;
+        margin-top: -24px;
+
+        span {
+            color: $secondary-color;
+        }
+        
+        b {
+            display: block;
+        }
+    }
+
+    h2 {
+        font-size: 32px;
+        letter-spacing: 12.3px;
+        font-family: $secondary-font;
+        text-align: center;
+    }
+}
+
+.res-iframe {
+    position: relative;
+    padding-bottom: 56.25%;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/********************
+ Section--2
+ *******************/
+
+.section {
+    position: relative;
+}
+
+.section-fixed {
+    position: sticky;
+}
+
+.section-light {
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+
+.section-dark {
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
+.section--2 {
+    
+    position: relative;
+    z-index: 0;
+    padding: 70px 0 140px 0;
+
+    p {
+        font-size: 28px;
+        max-width: 530px;
+        line-height: 32px;
+    }
+}
+
+.heading--md {
+    font-size: 60px;
+    font-family: $primary-font--n;
+}
+
+.btn {
+    background-color: transparent;
+    border: solid 1px $secondary-color;
+    border-radius: 30px;
+    width: 258px;
+    text-align: center;
+    padding: 11px 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $primary-color;
+    }
+}
+
+/********************
+ Section--3
+ *******************/
+
+.section--3 {
+    font-family: $primary-font--n;
+    padding: 70px 0 100px 0;
+
+    p {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+}
+
+.heading {
+    font-size: 80px;
+}
+
+.section--3__blocks {
+    > div > div {
+        border-radius: 8px;
+        border: solid 1px $primary-color;
+        padding: 30px 10px 10px 10px;
+        height: 100%;
+    }
+
+    p {
+        font-size: 28px;
+    }
+}
+
+/********************
+ Section--4
+ *******************/
+
+.section--4 {
+    font-family: $primary-font--n;
+    padding: 100px 0 120px 0;
+}
+
+.section--4__list {
+    p {
+        font-size: 38px;
+
+        span {
+            width: 110px;
+            display: inline-block;
+        }
+
+        b {
+            width: calc(100% - 110px);
+            display: inline-block;
+        }
+    }
+}
+
+/********************
+ Section--5
+ *******************/
+
+.section--5 {
+    font-family: $primary-font--n;
+    padding: 70px 0 150px 0;
+
+    h3 {
+        font-size: 30px;
+    }
+
+    p {
+        font-family: $primary-font;
+        color: $black-color;
+        line-height: 30px;
+    }
+}
+
+.sep {
+    border-top: solid 1px $primary-color;
+    margin: 90px 0 90px 0;
+}
+
+/********************
+ Section--6
+ *******************/
+
+/***********************************
+ Responsive
+ **********************************/
+
+@media(min-width: #{$mobile+1px}) and (max-width: 1199px) {
+
+    .top-section {
+        h1 {
+            font-size: 80px;
+            line-height: 98px;
+            margin-top: -21px;
+        }
+
+        h2 {
+            letter-spacing: 9.3px;
+            font-size: 30px;
+        }
+    }
+
+}
+
+@media(min-width: #{$mobile+1px}) {
+
+    .top-section {
+        background: url('../img/bg.jpg') no-repeat fixed center center;
+        background-color: #032322;
+    }
+
+}
+
+@media(min-width: #{$mobile+1px}) {
+
+    .section--2:after {
+        content: "";
+        background: url('../img/mining worker.png') right bottom no-repeat;
+        background-size: 45%;
+        max-width: $maxresolution;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .section--3 .section--3__blocks p span {
+        display: block;
+    }
+
+    .section--4 {
+        h2 {
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .section--6 {
+        .row > div > div {
+            max-width: 320px;
+        }
+    }
+
+}
+
+@media(min-width: #{$mobile}) and (max-width: $laptop) {
+
+    .section--2:after {
+        background: url('../img/mining worker.png') right bottom no-repeat;
+        background-size: 65%;
+    }
+
+}
+
+@media(max-width: $laptop) {
+
+    .heading {
+        font-size: 70px;
+    }
+
+    .section--3 {
+        p {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .section--3__blocks {
+        p {
+            font-size: 24px;
+        }
+    }
+
+    .section--5 {
+        padding-bottom: 80px;
+    }
+
+    .sep {
+        margin: 50px 0 50px 0;
+    }
+
+}
+
+@media(max-width: $medium) { 
+
+    .top-section {
+        padding: 25px 0 35px 0;
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 24px;
+            line-height: 32px;
+            font-family: $primary-font;
+            letter-spacing: 0;
+            margin-top: 30px;
+        }
+    }
+
+}
+
+@media(max-width: $mobile) {
+
+    .top-section {
+
+        background: url('../img/bg-m.jpg') no-repeat fixed center center;
+        background-color: #032322;
+
+        h1 {
+            font-size: 60px;
+            line-height: 65px;
+        }
+    }
+
+    .section--2 {
+        background-color: $primary-color;
+        padding: 30px 0 0 0;
+
+        p {
+            font-size: 18px;
+            line-height: 24px;
+            max-width: 100%;
+        }
+
+        p,
+        a {
+            max-width: 286px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .heading {
+        font-size: 40px;
+    }
+
+    .heading--md {
+        font-size: 30px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 20px;
+        padding: 6px 10px;
+    }
+
+    .section--3 {
+        padding: 30px 0 40px 0;
+
+        .row  {
+
+            margin: 0 -15px;
+
+            > div {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 0;
+            max-width: 299px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #{&}__blocks {
+            > div {
+                margin-bottom: 30px;
+
+                > div {
+                    padding: 15px 2px 24px 2px;
+                }
+            }
+
+            > div:first-of-type {
+                img {
+                    margin-bottom: -5px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .section--4 {
+        padding: 50px 0 60px 0;
+
+        h2 {
+            span {
+                display: block;
+            }
+        }
+
+        #{&}__list {
+            p {
+                font-size: 20px;
+
+                span {
+                    width: 70px;
+
+                    img {
+                        width: 60px;
+                        transform: translateZ(0);
+                    }
+                }
+
+                b {
+                    width: calc(100% - 70px);
+                }
+            }
+        }
+    }
+
+    .section--5 {
+        padding: 40px 0 60px 0;
+
+        h2 {
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .section--6 {
+
+        h2 {
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .footer__socials {
+        justify-content: space-between;
+
+        li:not(:last-of-type) {
+            margin-right: 0;
+        }
+    }
+
+}
+
+@media(min-width: 320px) and (max-width: 350px) {
+
+    .top-section {
+
+        h1 {
+            font-size: 50px;
+        }
+
+    }
+
+}

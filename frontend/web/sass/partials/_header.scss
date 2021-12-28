@@ -1,0 +1,211 @@
+.header {
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: $black-color;
+
+    img {
+        transform: translateZ(0);
+    }
+
+    nav > ul > li > a {
+        font-weight: 700;
+    }
+    
+    ul {
+        @extend %ul-reset;
+    }
+
+    li {
+        position: relative;
+        a {
+            color: $primary-color;
+            font-size: 22px;
+            display: block;
+            padding: 34px 65px 34px 0;
+            
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+
+        &.active a {
+            color: $secondary-color;
+        }
+
+        &:last-of-type a{
+            padding-right: 0;
+        }
+    }
+
+    .submenu {
+        top: 100%;
+        left: 0;
+
+        ul {
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 0;
+            left: 100%;
+        }
+
+        li {
+            a {
+                font-size: 20px;
+                padding: 8px 20px;
+            }
+
+            &.active,
+            &:hover > a {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+@media(min-width: #{$mobile+1px}) {
+
+    .header {
+        .submenu {
+            background-color: $black-color;
+
+            ul {
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            }
+
+            li {
+                a {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        .submenu,
+        .submenu ul {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            width: 180px;
+            transition: opacity $transition-duration, visibility $transition-duration;
+            padding-bottom: 20px;
+            display: block !important;
+        }
+
+        li:hover > ul {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+}
+
+@media(max-width: $mobile) {
+
+    .header {
+        padding: 9.99px 0;
+        
+        img {
+            width: 30.82px;
+        }
+
+        nav {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 50px);
+            overflow-y: scroll;
+            background-color: $secondary-color;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all $transition-duration;
+
+            &.visible {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        li {
+            padding: 0 5px;
+            a {
+                padding: 20px 15px 20px 15px !important;
+                position: relative;
+                font-size: 50px;
+                &:hover {
+                    color: $black-color;
+                }
+            }
+
+            &.active a {
+                color: $black-color;
+            }
+
+            &:not(:last-of-type):after {
+                content: "";
+                width: 271px;
+                display: block;
+                border-bottom: 1px solid $primary-color;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .submenu,
+        .submenu ul {
+            display: none;
+        }
+
+        .submenu {
+            margin-bottom: 15px;
+            ul {
+                background-color: rgba(128,128,128,0.21);
+            }
+
+            li {
+                a {
+                    color: $black-color;
+                }
+
+                &:not(:last-of-type):after {
+                    border-color: $black-color;
+                }
+            }
+        }
+    }
+
+    .mobile-menu-btn {
+
+        display: inline-block;
+        cursor: pointer;
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 30px;
+            height: 4px;
+            background-color: $primary-color;
+            margin: 4px 0;
+            transition: 0.4s;
+            display: block;
+        }
+
+        &.active span{
+            background-color: $secondary-color;
+        }
+
+        &.active .bar1 {
+            transform: rotate(-45deg) translate(-7px, 6px);
+        }
+
+        &.active .bar2 {opacity: 0;}
+
+        &.active .bar3 {
+            transform: rotate(45deg) translate(-5px, -5px);
+        }
+
+    }
+
+}
