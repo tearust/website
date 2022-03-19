@@ -4,7 +4,7 @@ import * as fs from 'fs';
 import * as yaml from 'js-yaml';
 import {DOC_DIR} from '../config';
 
-const IGNORE_FILES = ['.git', '.github', '.gitignore', 'res', 'tpl', 'README.md', 'config.yaml'];
+const IGNORE_FILES = ['.git', '.github', '.gitignore', 'res', 'tpl', 'config.yaml'];
 
 const doc = {
   replaceName(name){

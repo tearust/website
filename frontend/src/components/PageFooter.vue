@@ -1,7 +1,7 @@
 <template>
 
 <div class="x-footer">
-  <div class="box ww">
+  <!-- <div class="box ww">
 
     <el-image
       class="t-img"
@@ -26,7 +26,7 @@
       <b>TeaProject.org</b>
       All Rights Reserved
     </p>
-  </div>
+  </div> -->
 </div>
 </template>
 <script>

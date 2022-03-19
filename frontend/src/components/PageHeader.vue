@@ -16,12 +16,12 @@
   </a>
   
 
-  <el-menu-item>
+  <!-- <el-menu-item>
     <a href="https://wallet.teaproject.org" target="_blank">Wallet</a>
     
   </el-menu-item>
 
-  <el-menu-item style="display:none;" index="1">{{$t('nav.test')}}</el-menu-item>
+  <el-menu-item style="display:none;" index="1">{{$t('nav.test')}}</el-menu-item> -->
   <!-- <el-submenu index="2">
 
     <template slot="title">{{$t('nav.004')}}</template>
@@ -30,22 +30,22 @@
     
     
   </el-submenu> -->
-  <el-menu-item index="/doc_list/Try_the_demo%2FREADME.md">{{$t('nav.002')}}</el-menu-item>
+  <!-- <el-menu-item index="/doc_list/Try_the_demo%2FREADME.md">{{$t('nav.002')}}</el-menu-item> -->
 
-  <el-menu-item>
+  <!-- <el-menu-item>
     <a href="https://github.com/tearust/teaproject/wiki" target="_blank">Wiki</a>
     
-  </el-menu-item>
+  </el-menu-item> -->
   <el-menu-item index="/doc_list">{{$t('nav.003')}}</el-menu-item>
-  <el-menu-item index="/white_paper">{{$t('nav.005')}}</el-menu-item>
+  <!-- <el-menu-item index="/white_paper">{{$t('nav.005')}}</el-menu-item> -->
 
-  <el-menu-item index="/">{{'Home'}}</el-menu-item>
+  <!-- <el-menu-item index="/">{{'Home'}}</el-menu-item> -->
 
-  <li class="m-icon" @click="openDrawer()"><i class="el-icon-s-operation"></i></li>
+  <!-- <li class="m-icon" @click="openDrawer()"><i class="el-icon-s-operation"></i></li> -->
 </el-menu>
 
 
-<el-drawer
+<!-- <el-drawer
   title=""
   custom-class="m-drawer"
   append-to-body
@@ -59,17 +59,16 @@
   <a href="javascript:void(0)" @click="clickDrawerMenu('/doc_list')">{{$t('nav.003')}}</a>
   <a href="javascript:void(0)" @click="clickDrawerMenu('/doc_list/Try_the_demo%2FREADME.md')">{{$t('nav.002')}}</a>
 
-  <!-- <a href="javascript:void(0)" @click="clickDrawerMenu('/tools/layer1_faucet')">Free token faucet</a>
-  <a href="javascript:void(0)" @click="clickDrawerMenu('/tools/add_node')">Add New Tea Node</a> -->
+  
 
-</el-drawer>
+</el-drawer> -->
 </div>
 
-<div style="width:100%;text-align:center;background:#0b1126;">
+<!-- <div style="width:100%;text-align:center;background:#0b1126;">
   <a href="https://github.com/tearust/teaproject/wiki/Mining-Contest:-Competitor-Checklist" target="_blank"><img style="margin:5px auto;max-width:100%;" src="/img/banner.png" /></a>
 
   <a style="display:block; color: #fff; position:relative; background: #0b1126;" href="https://github.com/tearust/teaproject/wiki/Mining-Contest:-Competitor-Checklist" target="_blank">Click here to enter the mining competition</a>
-</div>
+</div> -->
 
 </div>
 </template>
@@ -126,8 +125,7 @@
 <style lang="scss">
 
 .c-m1{
-  background: #0b1126;
-  position: sticky;
+  background: #000;
   top: 0;
   display: block;
   z-index: 99;
@@ -140,10 +138,10 @@
   background: transparent;
 
   .el-image{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    top: 10px;
+    top: 2px;
   }
 
   .m-icon{
@@ -152,13 +150,13 @@
   
 }
 .el-menu--horizontal>.el-menu-item a{
-  color: rgb(56,198,139);
+  color: #fff;
   font-size: 17px;
   font-weight: bold;
 }
 .el-menu--horizontal > .el-menu-item{
   float: right;
-  color: rgb(56,198,139);
+  color: #fff;
   font-size: 17px;
   font-weight: bold;
   margin-top: 20px;

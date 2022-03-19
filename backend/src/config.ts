@@ -3,7 +3,7 @@ import * as path from 'path'
 
 const env = process.env.NODE_ENV || 'dev'
 
-const DOC_DIR = process.cwd()+'/../../tea-docs';
+const DOC_DIR = process.cwd()+'/../../tapp-tutor';
 const HTTPS_CERT_DIR = process.cwd()+'/../letsencrypt';
 
 try{

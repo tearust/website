@@ -32,20 +32,20 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: DarkStaticHome,
+      redirect: '/doc_list',
+      
     },
     
-    {
-      path: '/demo',
-      name: 'demo',
-      component: DockerComposeDemo
-    },
-    {
-      path: '/white_paper',
-      name: 'white_paper',
-      component: WhitePaper
-    },
+    // {
+    //   path: '/demo',
+    //   name: 'demo',
+    //   component: DockerComposeDemo
+    // },
+    // {
+    //   path: '/white_paper',
+    //   name: 'white_paper',
+    //   component: WhitePaper
+    // },
     {
       path: '/doc_list',
       name: 'doc_list',
@@ -63,16 +63,16 @@ export default new Router({
     //   name: 'doc_content',
     //   component: DocContent
     // },
-    {
-      path: '/tools/layer1_faucet',
-      name: 'layer1_faucet',
-      component: Layer1Faucet
-    },
-    {
-      path: '/tools/add_node',
-      name: 'add_node',
-      component: AddNode
-    },
+    // {
+    //   path: '/tools/layer1_faucet',
+    //   name: 'layer1_faucet',
+    //   component: Layer1Faucet
+    // },
+    // {
+    //   path: '/tools/add_node',
+    //   name: 'add_node',
+    //   component: AddNode
+    // },
 
     
   ]

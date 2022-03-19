@@ -40,8 +40,8 @@ router.use('/ping', Base.setRouter([{
   method : 'get',
   router : ping
 }]));
-router.use('/user', user);
-router.use('/tea', tea);
+// router.use('/user', user);
+// router.use('/tea', tea);
 router.use('/doc', doc);
 
 

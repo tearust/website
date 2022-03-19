@@ -39,7 +39,7 @@ export default {
     _.delay(this.initBind, 2000);
 
     _.delay(()=>{
-      this.jumpToLinkPoint(this.$route);
+      // this.jumpToLinkPoint(this.$route);
     }, 1000);
   },
   methods: {
