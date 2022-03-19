@@ -5,7 +5,7 @@
 <el-menu :default-active="activeIndex" active-text-color="#fff" class="p-header" mode="horizontal" @select="handleSelect">
   <a href="javascript:void(0)" @click="$router.replace('/'); activeIndex='1';" style="float:left;">
     <el-image
-      src="/tea-logo/logo.png"
+      src="/img/logo.png"
       :lazy="true"
       fit="fit">
       <div slot="error"  >
@@ -138,10 +138,11 @@
   background: transparent;
 
   .el-image{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     position: absolute;
-    top: 2px;
+    top: 10px;
+    left: 0;
   }
 
   .m-icon{
