@@ -104,6 +104,12 @@ export default class extends Base {
       path: relative_path
     });
   }
+  async getMdFileTitle(relative_path): Promise<string> {
+    let title = (_.last(relative_path.split('/')) || 'ERROR_FILE_TITLE').toString();
+    title = title.replace('.md', '');
+    
+    return title;
+  }
 
   async getDockerComposeFileByName(name): Promise<string>{
     const path = DOC_DIR+'/tpl/'+name+'.yaml';

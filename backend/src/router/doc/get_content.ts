@@ -9,8 +9,12 @@ export default class extends Base {
 
     const path = this.getParam('path');
     const rs = await ds.getMdFileContent(decodeURIComponent(path));
+    const title = await ds.getMdFileTitle(decodeURIComponent(path));
 
-    return this.result(1, rs);
+    return this.result(1, {
+      title,
+      body: rs,
+    });
     
   }
 }

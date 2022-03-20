@@ -41,18 +41,32 @@ const F = {
   uuid(){
     return uuid.v4();
   },
+
+  formatFileTitle(title){
+    const rs = title.replace(/[_]{1,2}/gm, (a)=>{
+      if(a === '_') return ' ';
+      if(a === '__') return '_';
+      return a;
+    });
+    return rs;
+  },
+
   mdToHtml(md_content){
     const renderer = new marked.Renderer();
     renderer.link = function(href){
       let link = marked.Renderer.prototype.link.apply(this, arguments);
 
+      const title_reg = /(<a.*?[^>]>)(.*)?(<\/a>)/g;
+      link = link.replace(title_reg, (all, tag_pre, title, tag_last)=>{
+        return `${tag_pre}${F.formatFileTitle(title)}${tag_last}`;
+      });
+
       if(/href="http/i.test(link)){
         link = link.replace("<a","<a target='_blank' ");
       }
       else{
-        link = link.replace("<a","<a class='js_click_md'");
+        link = link.replace("<a",'<a class="js_click_md"');
       }
-      
 
       return link;
     };
@@ -71,6 +85,15 @@ const F = {
 
       return img;
     }
+
+    renderer.code = function(){
+      let code = marked.Renderer.prototype.code.apply(this, arguments);
+      if(_.includes(code, '<pre><code class="language-mermaid">')){
+        code = code.replace('<pre><code class="language-mermaid">', '<div class="mermaid">');
+        code = code.replace('</code></pre>', '</div>');
+      }
+      return code;
+    };
 
     marked.setOptions({
       renderer: renderer

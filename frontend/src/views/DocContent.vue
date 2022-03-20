@@ -1,8 +1,8 @@
 <template>
 <div class="c-page c-page1" ref="page">
-
+  <h4 v-if="title" class="t-tlt">{{title}}</h4>
   <section class="t-md" v-if="html" v-html="html"></section>
-  
+
 </div>  
 </template>
 <script>
@@ -12,6 +12,7 @@ import request from '../request';
 export default {
   data(){
     return {
+      title: null,
       html: null
     };
   },
@@ -25,6 +26,7 @@ export default {
     // jump to link point
     _.delay(()=>{
       this.jumpToLinkPoint(to);
+      mermaid.init(null, '.mermaid');
     }, 1000);
 
     next();
@@ -40,6 +42,8 @@ export default {
 
     _.delay(()=>{
       // this.jumpToLinkPoint(this.$route);
+
+      
     }, 1000);
   },
   methods: {
@@ -96,7 +100,8 @@ export default {
 
       const md = await request.get_doc_content(route.params.doc_path);
       if(md){
-        this.html = util.mdToHtml(md);
+        this.title = util.formatFileTitle(md.title);
+        this.html = util.mdToHtml(md.body);
       }
 
       $('html')[0].scrollTop = 0;
@@ -107,6 +112,12 @@ export default {
 }
 </script>
 <style lang="scss">
+.t-tlt{
+  margin: 0 0 40px 0;
+  font-size: 46px;
+  color: #000;
+  font-weight: bold;
+}
 .t-md{
 
   h1{
