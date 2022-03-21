@@ -92,6 +92,9 @@ const F = {
         code = code.replace('<pre><code class="language-mermaid">', '<div class="mermaid">');
         code = code.replace('</code></pre>', '</div>');
       }
+  
+      code = code.replace(/\n/g, '<br/>');
+      code = code.replace(/ {4}/g, '&nbsp;&nbsp;');
       return code;
     };
 
