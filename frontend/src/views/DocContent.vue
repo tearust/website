@@ -100,7 +100,7 @@ export default {
 
       const md = await request.get_doc_content(route.params.doc_path);
       if(md){
-        this.title = _.capitaliz(util.formatFileTitle(md.title));
+        this.title = _.capitalize(util.formatFileTitle(md.title));
         this.html = util.mdToHtml(md.body);
       }
 
