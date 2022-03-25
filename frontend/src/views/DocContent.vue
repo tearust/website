@@ -58,7 +58,7 @@ export default {
     _.delay(()=>{
       // this.jumpToLinkPoint(this.$route);
 
-      
+      mermaid.init(null, '.mermaid');
     }, 1000);
 
     const self = this;
