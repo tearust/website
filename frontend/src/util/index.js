@@ -1,6 +1,6 @@
 
 import PubSubJS from 'pubsub-js';
-import _ from 'lodash';
+import _, { escape } from 'lodash';
 import * as uuid from 'uuid';
 import * as marked from 'marked';
 
@@ -88,13 +88,17 @@ const F = {
 
     renderer.code = function(){
       let code = marked.Renderer.prototype.code.apply(this, arguments);
-      if(_.includes(code, '<pre><code class="language-mermaid">')){
-        code = code.replace('<pre><code class="language-mermaid">', '<div class="mermaid">');
-        code = code.replace('</code></pre>', '</div>');
-      }
+
+      const mermaid_reg = /(<pre><code(.*?[^>])?>)([\s\S]*)?(<\/code><\/pre>)/g;
+      code = code.replace(mermaid_reg, (all, pre_tag, bb, body, last_tag)=>{
+        if(_.trim(bb).includes('language-mermaid')){
+          return '<div class="mermaid js_mermaid" style="cursor:pointer;" data-html="'+body+'">'+body+'</div>';
+        }
+        return all.replace(/\n/g, '<br/>').replace(/\s{4}/g, '&nbsp;&nbsp;')
+      });
   
-      code = code.replace(/\n/g, '<br/>');
-      code = code.replace(/ {4}/g, '&nbsp;&nbsp;');
+      
+      // console.log(11, code);
       return code;
     };
 

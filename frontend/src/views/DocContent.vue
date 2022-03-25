@@ -1,7 +1,18 @@
 <template>
 <div class="c-page c-page1" ref="page">
   <h4 v-if="title" class="t-tlt">{{title}}</h4>
+  
   <section class="t-md" v-if="html" v-html="html"></section>
+
+  <el-dialog
+    title=""
+    :visible.sync="code_modal.visible"
+    :destroy-on-close="true"
+    width="90%"
+    top="20px"
+    >
+    <div v-html="code_modal.html"></div>
+  </el-dialog>
 
 </div>  
 </template>
@@ -13,7 +24,11 @@ export default {
   data(){
     return {
       title: null,
-      html: null
+      html: null,
+      code_modal: {
+        visible: false,
+        html: null
+      }
     };
   },
   beforeRouteUpdate(to, from, next){
@@ -45,6 +60,17 @@ export default {
 
       
     }, 1000);
+
+    const self = this;
+    $('body').on('click', '.js_mermaid', function(){
+      const el = $(this);
+      self.code_modal.html = '<div class="mermaid-box">'+el.data('html')+"</div>";
+      self.code_modal.visible = true;
+      _.delay(()=>{
+        mermaid.init(null, '.mermaid-box');
+      }, 10);
+      
+    })
   },
   methods: {
     jumpToLinkPoint(route){
