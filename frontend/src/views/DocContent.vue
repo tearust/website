@@ -11,7 +11,7 @@
     width="90%"
     top="20px"
     >
-    <div v-html="code_modal.html"></div>
+    <div class="t-md" v-html="code_modal.html"></div>
   </el-dialog>
 
 </div>  
@@ -223,6 +223,11 @@ export default {
       position: relative;
       text-align: left;
     }
+  }
+
+  svg{
+    height: auto !important;
+    margin: 10px auto;
   }
 }
 
