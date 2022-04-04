@@ -37,6 +37,7 @@ export default {
       await this.update(to);
 
     }, 100);
+    _.delay(this.initBind, 500);
 
     // jump to link point
     _.delay(()=>{
@@ -53,7 +54,7 @@ export default {
     _.delay(()=>{
       $('.js_footer').show();
     }, 200);
-    _.delay(this.initBind, 2000);
+    _.delay(this.initBind, 500);
 
     _.delay(()=>{
       // this.jumpToLinkPoint(this.$route);
@@ -93,9 +94,22 @@ export default {
 
     initBind(){
       const el = $(this.$el);
+      const path = decodeURIComponent(this.$route.path);
       el.on('click', '.js_click_md', (e)=>{
-        const file = $(e.target).attr('href');
-        const path = decodeURIComponent(this.$route.path);
+        const ea = $(e.target);
+        if(ea.attr('ra_href')){
+          this.$router.push('/doc_list/'+encodeURIComponent(ea.attr('ra_href')));
+          return false;
+        }
+
+        return true;
+      });
+
+      el.find('.js_click_md').each(function(){
+        const ea = $(this);
+        if(ea.data("rp_href")) return true;
+
+        const file = ea.attr('href');
         
         const t1 = file.split('/');
         const t2 = path.split('/');
@@ -115,11 +129,11 @@ export default {
           }
         });
         const tar = t2.join('/');
-        
-        this.$router.push('/doc_list/'+encodeURIComponent(tar));
 
-        return false;
-      })
+        ea.attr('href', '#/doc_list/'+encodeURIComponent(tar)).attr('rp_href', true);
+        ea.attr('ra_href', tar);
+        console.log('replace href: '+tar);
+      });
     },
     async update(route){
       this.$root.loading(true);
