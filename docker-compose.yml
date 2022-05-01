@@ -1,19 +1,19 @@
 version: "3.1"
 services:
 
-  # backend:
-  #   image: tearust/website-backend:0.6.14
-  #   container_name: tearust-backend
-  #   ports:
-  #     - 3001:3001
-  #   volumes: 
-  #     - ../tapp-tutor:/tapp-tutor
-  #   environment: 
-  #     - NODE_ENV=prod
-  #     - SERVER_PORT=3001
-  #     - LAYER1_URL=ws://64.227.57.97:9944
-  #     - LAYER1_ACCOUNT=Alice
-  #   command: "node index.js"
+  backend:
+    image: tearust/website-backend:0.6.14
+    container_name: tearust-backend
+    ports:
+      - 3001:3001
+    volumes: 
+      - ../tapp-tutor:/tapp-tutor
+    environment: 
+      - NODE_ENV=prod
+      - SERVER_PORT=3001
+      - LAYER1_URL=ws://64.227.57.97:9944
+      - LAYER1_ACCOUNT=Alice
+    command: "node index.js"
     
   frontend:
     image: tearust/website-frontend:0.6.14
