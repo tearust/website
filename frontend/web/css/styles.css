@@ -465,9 +465,19 @@ img {
 }
 
 .x-backers{
-  margin-top: 15px
+  margin-top: 5px
 }
 .x-backers .col-md-2{
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+}
+.x-backers .col-md-3{
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+}
+.x-backers .col-md-4{
   text-align: center;
   height: 200px;
   line-height: 200px;
