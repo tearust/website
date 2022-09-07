@@ -74,6 +74,7 @@ img {
 
 .header {
   position: relative;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -346,10 +347,12 @@ img {
 }
 
 .section-fixed {
+  position: -webkit-sticky;
   position: sticky;
 }
 
-.section-light {
+.section-light,
+.heading-light {
   background-color: #ffffff;
   color: #35A696;
 }
@@ -405,6 +408,7 @@ img {
 
 .heading {
   font-size: 80px;
+  font-family: "helvetica-n";
 }
 
 .section--3__blocks > div > div {
@@ -462,34 +466,6 @@ img {
 .sep {
   border-top: solid 1px #35A696;
   margin: 90px 0 90px 0;
-}
-
-.x-backers{
-  margin-top: 5px
-}
-.x-backers .col-md-2{
-  text-align: center;
-  height: 200px;
-  line-height: 200px;
-}
-.x-backers .col-md-3{
-  text-align: center;
-  height: 200px;
-  line-height: 200px;
-}
-.x-backers .col-md-4{
-  text-align: center;
-  height: 200px;
-  line-height: 200px;
-}
-.x-backers img{
-  width: auto;
-  position: relative;
-  
-}
-.x-backers img.bg{
-  background-color: #fff;
-  padding: 20px;
 }
 
 /********************
@@ -699,6 +675,4 @@ img {
   .top-section h1 {
     font-size: 50px;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

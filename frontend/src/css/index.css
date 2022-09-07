@@ -1,0 +1,171 @@
+.bg_1 {
+  background: #fff;
+}
+
+.bg_2 {
+  background: rgb(53, 166, 150);
+}
+
+.fc_1 {
+  color: #000;
+}
+
+.fc_2 {
+  color: #555;
+}
+
+.fc_3 {
+  color: rgb(53, 166, 150);
+}
+
+.fc_4 {
+  color: #9c9c9c;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  font-family: "Open Sans", sans-serif, "PT Mono", monospace, "Source Sans Pro";
+}
+
+body {
+  color: #797979;
+  background: #fff;
+  font-family: "PT Mono", monospace, "Source Sans Pro", "Open Sans", sans-serif;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size: 13px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+ul li {
+  list-style: none;
+}
+
+a, a:hover, a:focus, button:focus {
+  text-decoration: none;
+  outline: none !important;
+}
+
+/** common css **/
+.c-no-data {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background: #eee;
+}
+
+.c-main {
+  margin: 0;
+}
+.c-main > section {
+  min-height: 200px;
+}
+.c-main .bg-white {
+  background: #fff;
+}
+.c-main .c-head {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eff2f7;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.c-fullscreen-loading {
+  width: 150px;
+  height: 100px;
+  flex: 1;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 30%;
+}
+.c-fullscreen-loading .el-icon-loading {
+  font-size: 28px;
+  color: #fff;
+  font-weight: bold;
+}
+.c-fullscreen-loading .el-loading-text {
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* common */
+.c-m {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.c-page {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 32px 0 50px;
+  min-height: calc(100vh - 288px);
+}
+
+.c-md h1 {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaecef;
+  font-weight: bold;
+}
+.c-md h2 {
+  font-size: 28px;
+  color: #000;
+  margin: 20px 0 10px;
+  font-weight: bold;
+}
+.c-md h3 {
+  font-size: 24px;
+  color: #000;
+  margin: 20px 0 10px;
+  font-weight: bold;
+}
+.c-md h4 {
+  font-size: 22px;
+  color: #222;
+  margin: 12px 0 8px;
+}
+.c-md p, .c-md > div {
+  font-size: 15px;
+  color: #333;
+  margin: 5px 0;
+}
+.c-md ul {
+  font-size: 16px;
+  color: #333;
+}
+.c-md ul li {
+  list-style: circle;
+  font-size: 15px;
+  color: #333;
+}
+.c-md pre {
+  padding: 12px 15px;
+  background: #f3f3f3;
+  white-space: normal;
+}
+.c-md img {
+  max-width: 100%;
+  margin: 8px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .c-page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .c-page img {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=index.css.map */
