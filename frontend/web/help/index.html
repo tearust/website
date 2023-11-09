@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body style="text-align:center;">
+		<h1 id="js_div" style="margin: 50px auto;">Directing to </h1>
+	</body>
+</html>
+<script type="text/javascript">
+const url = location.href.replace("https://teaproject.org/help/index.html?", "");
+const a_url = decodeURIComponent(url);
+
+document.getElementById('js_div').innerHTML = 'Directing to '+a_url;
+
+setTimeout(()=>{
+  location.href = a_url;
+}, 3000);
+</script>
